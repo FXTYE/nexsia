@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="color-scheme" content="light only">
+<title>vidIQ vs TubeBuddy 2026: Which YouTube Tool Wins? | Nexsia</title>
+<meta name="description" content="vidIQ vs TubeBuddy compared for 2026 — pricing, keyword research, A/B testing, bulk tools and which YouTube SEO tool is right for your channel.">
+<style>
+  /* ============================================================
+     COMPARISON PAGE  —  shares the review-page design system.
+     [[EDIT]] markers show what to swap for a new A-vs-B page.
+     ============================================================ */
+  :root{
+    --ink:#0f1b2d;--body:#3d4b5c;--muted:#6b7887;--line:#e3e8ef;
+    --bg:#f6f8fb;--card:#fff;--brand:#1a56db;--brand-dark:#12409c;
+    --brand-tint:#eef3fe;--good:#188a5b;--good-tint:#e7f5ee;
+    --bad:#c23b52;--bad-tint:#fbeaed;--star:#f5a623;--cta:#ff6a2b;--cta-dark:#e5551a;
+    /* two brand accent colours for the head-to-head */
+    --a:#c4302b;   /* tool A accent (vidIQ red)   [[EDIT]] */
+    --b:#2a7de1;   /* tool B accent (TubeBuddy blue) [[EDIT]] */
+    --radius:12px;--shadow:0 1px 3px rgba(15,27,45,.06),0 8px 24px rgba(15,27,45,.05);--maxw:960px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;color-scheme:light;background:var(--bg)}
+  body{margin:0;background:var(--bg);color:var(--body);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{color:var(--ink);line-height:1.25;margin:0 0 .5em}
+  h1{font-size:1.95rem;letter-spacing:-.02em}
+  h2{font-size:1.4rem;letter-spacing:-.01em}
+  h3{font-size:1.05rem}
+  a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  section{padding:34px 0;border-top:1px solid var(--line)}
+  section:first-of-type{border-top:none}
+  .eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--brand);margin-bottom:8px}
+
+
+
+  .disclosure{background:var(--brand-tint);color:var(--muted);font-size:.8rem}
+  .disclosure .wrap{padding:10px 20px}
+
+  /* hero */
+  .hero{text-align:center;padding-top:36px}
+  .hero .eyebrow{display:block}
+  .vs-logos{display:flex;align-items:center;justify-content:center;gap:22px;margin:18px 0 6px}
+  .vs-mark{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.6rem;color:#fff}
+  .vs-mark.a{background:linear-gradient(135deg,#e0463f,#c4302b)}
+  .vs-mark.b{background:linear-gradient(135deg,#4a97ec,#2a7de1)}
+  .vs-badge{font-weight:800;color:var(--muted);font-size:1.1rem}
+  .hero p.lede{font-size:1.05rem;max-width:640px;margin:10px auto 0}
+  .updated{color:var(--muted);font-size:.82rem;margin-top:14px}
+
+  /* verdict-at-top */
+  .quickpick{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+  @media(max-width:640px){.quickpick{grid-template-columns:1fr}}
+  .pick{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+  .pick.a{border-top:4px solid var(--a)}
+  .pick.b{border-top:4px solid var(--b)}
+  .pick .who{font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+  .pick h3{margin:6px 0 4px;font-size:1.15rem}
+  .pick p{font-size:.92rem;margin:0 0 14px}
+  .cta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--cta);color:#fff;font-weight:700;font-size:.95rem;padding:11px 22px;border-radius:10px;box-shadow:0 4px 14px rgba(255,106,43,.3);transition:transform .12s,background .12s}
+  .cta-btn:hover{background:var(--cta-dark);text-decoration:none;transform:translateY(-1px)}
+  .cta-btn.ghost{background:#fff;color:var(--brand);border:1.5px solid var(--brand);box-shadow:none}
+  .cta-btn.ghost:hover{background:var(--brand-tint)}
+
+  /* big comparison table */
+  .tbl-scroll{overflow-x:auto}
+  .ctbl{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;font-size:.93rem}
+  .ctbl th,.ctbl td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  .ctbl thead th{font-size:.9rem;color:#fff}
+  .ctbl thead th:nth-child(1){background:var(--ink)}
+  .ctbl thead th:nth-child(2){background:var(--a)}
+  .ctbl thead th:nth-child(3){background:var(--b)}
+  .ctbl td:first-child{font-weight:600;color:var(--ink);width:30%}
+  .ctbl tbody tr:last-child td,.ctbl tr:last-child td{border-bottom:none}
+  .win{position:relative}
+  .win::after{content:"✓ Winner";display:inline-block;margin-left:6px;font-size:.68rem;font-weight:700;color:var(--good);background:var(--good-tint);padding:1px 7px;border-radius:5px;vertical-align:middle}
+
+  /* winner-by-category cards */
+  .cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:640px){.cat-grid{grid-template-columns:1fr}}
+  .cat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+  .cat .cat-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+  .cat h3{margin:0;font-size:.98rem}
+  .cat .winner-pill{font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:20px;color:#fff}
+  .cat .winner-pill.a{background:var(--a)}
+  .cat .winner-pill.b{background:var(--b)}
+  .cat p{font-size:.88rem;margin:0}
+
+  /* profile split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:640px){.split{grid-template-columns:1fr}}
+  .pbox{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+  .pbox.a{border-top:3px solid var(--a)}
+  .pbox.b{border-top:3px solid var(--b)}
+  .pbox h3{display:flex;align-items:center;gap:8px}
+  .pbox ul{margin:10px 0 0;padding-left:20px;font-size:.92rem}
+  .pbox li{margin-bottom:7px}
+
+  .verdict{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow)}
+  .verdict p{margin:0 0 10px;font-size:1.02rem;color:var(--ink)}
+  .verdict p:last-child{margin-bottom:0}
+
+  .faq details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;overflow:hidden}
+  .faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:.97rem}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:1.4rem;color:var(--brand)}
+  .faq details[open] summary::after{content:"–"}
+  .faq details[open] summary{border-bottom:1px solid var(--line)}
+  .faq .ans{padding:14px 20px;font-size:.92rem}
+
+  .disc-note{font-size:.8rem;color:var(--muted);font-style:italic;margin-top:14px}
+
+  /* ---- Sticky jump nav ---- */
+  .jump{position:sticky;top:56px;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .jump .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:0;padding-bottom:0;scrollbar-width:none}
+  .jump .wrap::-webkit-scrollbar{display:none}
+  .jump a{white-space:nowrap;color:var(--muted);font-size:.86rem;font-weight:600;padding:13px 12px;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+  .jump a:hover{color:var(--brand);text-decoration:none;border-bottom-color:var(--brand)}
+  .jump a.active{color:var(--brand);border-bottom-color:var(--brand)}
+  /* ---- interactive VS comparison slider (diagonal) ---- */
+  figure:has(.vsslider){margin:22px 0 8px}
+  .vsslider{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);user-select:none;touch-action:none;background:#0f1b2d;--vs-pos:50%;--vs-skew:34px}
+  .vsslider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+  .vsslider .vs-right{z-index:1}
+  /* LEFT image clipped along a diagonal: top edge sits further right than bottom edge */
+  .vsslider .vs-left{z-index:2;clip-path:polygon(0 0, calc(var(--vs-pos) + var(--vs-skew)) 0, calc(var(--vs-pos) - var(--vs-skew)) 100%, 0 100%)}
+  /* the diagonal seam line — CTA orange */
+  .vsslider .vs-seam{position:absolute;top:-8%;bottom:-8%;left:var(--vs-pos);width:2px;z-index:4;pointer-events:none;background:var(--cta,#ff6a2b);transform-origin:center;transform:translateX(-50%) rotate(var(--vs-angle,9deg))}
+  .vsslider .vs-seam i.core{position:absolute;inset:0;display:block}
+  /* the VS handle — CTA orange, tight against the line, always upright */
+  .vsslider .vs-handle{position:absolute;top:50%;left:var(--vs-pos);transform:translate(-50%,-50%);z-index:5;
+    width:110px;height:80px;display:flex;align-items:center;justify-content:center;cursor:ew-resize;background:none;border:none}
+  .vsslider .vs-handle .vs-word{position:relative;display:block;width:100%;height:100%;
+    font-weight:800;color:var(--cta,#ff6a2b);line-height:1;font-family:'Arial Narrow',Arial,sans-serif}
+  .vsslider .vs-handle .vs-word .v,.vsslider .vs-handle .vs-word .s{position:absolute;font-size:3.1rem;letter-spacing:-.03em}
+  .vsslider .vs-handle .vs-word .v{right:50%;top:0;margin-right:-10px}
+  .vsslider .vs-handle .vs-word .s{left:50%;bottom:0;margin-left:-10px}
+  .vsslider .vs-hint{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:6;font-size:.72rem;color:#fff;background:rgba(15,27,45,.6);padding:4px 12px;border-radius:20px;pointer-events:none;transition:opacity .3s}
+  .vsslider.touched .vs-hint{opacity:0}
+  /* placeholder state when no images are set */
+  .vs-ph{display:none;position:absolute;inset:0;z-index:7;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;color:#c7d2e0;background:repeating-linear-gradient(135deg,#16233a,#16233a 12px,#1b2b45 12px,#1b2b45 24px)}
+  .vsslider.vs-noimg .vs-ph{display:flex}
+  .vs-ph b{color:#fff;font-size:1rem;display:block;margin-bottom:6px}
+  .vs-ph span{font-size:.84rem;max-width:420px;line-height:1.5}
+  .vs-ph code{background:rgba(255,255,255,.12);padding:1px 6px;border-radius:5px;font-size:.85em}
+  .pc-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  @media(max-width:680px){.pc-cols{grid-template-columns:1fr}}
+  .col-h{display:flex;align-items:center;gap:10px;font-size:1.05rem;margin-bottom:14px}
+  .pc-detail{display:flex;flex-direction:column;gap:14px}
+  .pc-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px}
+  .pc-item .head{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+  .pc-item .tag{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 9px;border-radius:5px}
+  .pc-item.pro .tag{background:var(--good-tint);color:var(--good)}
+  .pc-item.con .tag{background:var(--bad-tint);color:var(--bad)}
+  .pc-item h3{margin:0;font-size:1rem}
+  .pc-item p{margin:4px 0 0;font-size:.93rem}
+  .quote{margin:12px 0 0;padding:10px 14px;background:var(--bg);border-left:3px solid var(--line);border-radius:0 8px 8px 0;font-size:.88rem;color:var(--body);font-style:italic}
+  .price-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media(max-width:680px){.price-cols{grid-template-columns:1fr}}
+  .price-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+  .price-card h3{margin:0 0 8px}
+  .price-card .mark{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;font-weight:700;font-size:.85rem;color:#fff}
+  .price-card .mark.a{background:var(--a,#1a56db)}
+  .price-card .mark.b{background:var(--b,#ff6a2b)}
+  .price-card .sub{font-size:.87rem;color:var(--muted);margin:0 0 14px}
+  .ptier{display:flex;justify-content:space-between;align-items:flex-start;padding:10px 0;border-top:1px solid var(--line);gap:12px}
+  .ptier:first-of-type{border-top:none}
+  .ptier .nm{font-size:.9rem;font-weight:600}
+  .ptier .nm small{display:block;font-weight:400;color:var(--muted);font-size:.8rem;margin-top:2px}
+  .ptier .amt{font-size:.95rem;font-weight:700;white-space:nowrap}
+  .feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:640px){.feat-grid{grid-template-columns:1fr}}
+  .feat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+  .feat h3{font-size:.95rem;margin-bottom:3px}
+  .feat p{font-size:.87rem;margin:0}
+</style>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+
+<div class="jump"><div class="wrap">
+  <a href="#compare">Compare</a><a href="#categories">Round by round</a>
+  <a href="#pros-cons">Pros &amp; Cons</a><a href="#features">Features</a>
+  <a href="#pricing">Pricing</a><a href="#fit">Best for</a><a href="#verdict">Verdict</a><a href="#faq">FAQs</a>
+</div></div>
+
+<div class="wrap">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <span class="eyebrow">Head-to-head comparison</span>
+    <div class="vs-logos">
+      <div class="vs-mark a">V</div>
+      <span class="vs-badge">vs</span>
+      <div class="vs-mark b">T</div>
+    </div>
+    <h1>vidIQ vs TubeBuddy: Which Wins in 2026?</h1>
+    <p class="lede">Both are the go-to YouTube SEO tools — but they've drifted apart. vidIQ leans into keyword research and AI; TubeBuddy owns A/B testing and bulk tools. Here's who each one is actually for.</p>
+    <p class="updated">Last updated August 2026 · Prices verified against each tool's site · Reviewed by [Your Name]</p>
+  </section>
+
+  <!-- ===== QUICK PICK (verdict at top) ===== -->
+  <section style="border-top:none;padding-top:6px">
+    <div class="quickpick">
+      <div class="pick a">
+        <div class="who">Pick vidIQ if…</div>
+        <h3>You live in keyword research</h3>
+        <p>Best-in-class keyword and competitor data, AI Daily Ideas, and an AI Coach. The stronger choice for search-driven channels: tutorials, how-to, reviews and explainers.</p>
+        <a class="cta-btn" href="#" data-aff="vidiq">Try vidIQ free →</a>
+      </div>
+      <div class="pick b">
+        <div class="who">Pick TubeBuddy if…</div>
+        <h3>You want testing &amp; bulk tools</h3>
+        <p>Cheaper entry price, plus A/B thumbnail testing, bulk catalog editing and retention analysis — features vidIQ simply doesn't have. Best for optimising an existing library.</p>
+        <a class="cta-btn ghost" href="#" data-aff="tubebuddy">Try TubeBuddy free →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SPEC TABLE ===== -->
+  <section id="compare">
+    <div class="eyebrow">Side by side</div>
+    <h2>The full comparison</h2>
+    <div class="tbl-scroll">
+      <table class="ctbl">
+        <thead>
+          <tr><th>&nbsp;</th><th>vidIQ</th><th>TubeBuddy</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Free plan</td><td>Yes (150 AI credits/mo)</td><td>Yes</td></tr>
+          <tr><td>Entry paid plan</td><td>Boost — ~$16.58/mo annual</td><td class="win">Pro — ~$4.99/mo (~$3 annual)</td></tr>
+          <tr><td>Top plan</td><td>Max — ~$39/mo annual</td><td class="win">Legend — ~$23–27/mo annual</td></tr>
+          <tr><td>Keyword research</td><td class="win">Best-in-class engine</td><td>Solid, less depth</td></tr>
+          <tr><td>A/B thumbnail testing</td><td>Not offered</td><td class="win">Yes (1k+ subs)</td></tr>
+          <tr><td>Bulk catalog tools</td><td>Limited</td><td class="win">Extensive</td></tr>
+          <tr><td>Retention analysis</td><td>No</td><td class="win">Yes</td></tr>
+          <tr><td>AI Coach / Daily Ideas</td><td class="win">Yes</td><td>Basic</td></tr>
+          <tr><td>Small-channel discount</td><td>No</td><td class="win">~50% under 1k subs</td></tr>
+          <tr><td>Best for</td><td>Research &amp; ideation</td><td>Optimising a back catalog</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="disc-note">Pricing changes often and vidIQ prices in AI credits — always confirm current numbers on vidiq.com/plans and tubebuddy.com/pricing before buying.</p>
+  </section>
+
+  <!-- ===== WINNER BY CATEGORY ===== -->
+  <section id="categories">
+    <div class="eyebrow">Round by round</div>
+    <h2>Who wins each category</h2>
+    <div class="cat-grid">
+      <div class="cat">
+        <div class="cat-top"><h3>Keyword research</h3><span class="winner-pill a">vidIQ</span></div>
+        <p>vidIQ's keyword engine and competitor tracking are deeper and more accurate — the main reason creators upgrade.</p>
+      </div>
+      <div class="cat">
+        <div class="cat-top"><h3>Price &amp; value</h3><span class="winner-pill b">TubeBuddy</span></div>
+        <p>Cheaper at entry and top tier, with a ~50% discount for channels under 1,000 subscribers.</p>
+      </div>
+      <div class="cat">
+        <div class="cat-top"><h3>A/B testing</h3><span class="winner-pill b">TubeBuddy</span></div>
+        <p>Real thumbnail and title split-testing with data behind it. vidIQ doesn't offer this at all.</p>
+      </div>
+      <div class="cat">
+        <div class="cat-top"><h3>AI &amp; ideation</h3><span class="winner-pill a">vidIQ</span></div>
+        <p>AI Daily Ideas and the AI Coach give vidIQ the edge for coming up with what to make next.</p>
+      </div>
+      <div class="cat">
+        <div class="cat-top"><h3>Bulk / back-catalog</h3><span class="winner-pill b">TubeBuddy</span></div>
+        <p>Bulk find-and-replace, thumbnail overlays and scheduled publishing win for large libraries.</p>
+      </div>
+      <div class="cat">
+        <div class="cat-top"><h3>Beginner friendliness</h3><span class="winner-pill b">TubeBuddy</span></div>
+        <p>Lower entry cost and simpler tooling make it the gentler on-ramp for new creators.</p>
+      </div>
+    </div>
+
+    <!-- ============ SCREENSHOT SLOT ============ -->
+    <!-- ============ INTERACTIVE VS SLIDER ============
+         Drag the VS handle to wipe between the two screenshots.
+         TO ADD YOUR IMAGES: capture a screenshot of each app, save them into an
+         images/ folder as images_demo_vidiq.png and images_demo_tubebuddy.png,
+         then this slider will show them automatically (it already points at
+         those filenames). Until then it shows a placeholder.
+           • vs-left  = vidIQ (revealed as you slide the handle RIGHT)
+           • vs-right = TubeBuddy (revealed as you slide the handle LEFT)
+         Update the alt text to describe your real screenshots. -->
+    <figure>
+      <div class="vsslider" id="vs-vidiq-tubebuddy" style="--vs-pos:50%">
+        <img class="vs-right" src="images_demo_tubebuddy.png" alt="TubeBuddy screenshot — swap for your own capture" data-src="images/tubebuddy-dashboard.png" onerror="this.closest('.vsslider').classList.add('vs-noimg')">
+        <img class="vs-left" src="images_demo_vidiq.png" alt="vidIQ screenshot — swap for your own capture" data-src="images/vidiq-dashboard.png" onerror="this.closest('.vsslider').classList.add('vs-noimg')">
+
+        <div class="vs-seam" aria-hidden="true"><i class="core"></i></div>
+        <div class="vs-handle" role="slider" tabindex="0" aria-label="Drag to compare vidIQ and TubeBuddy screenshots" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span class="vs-word"><span class="v">V</span><span class="s">S</span></span></div>
+        <span class="vs-hint">◄ Drag to compare ►</span>
+
+        <div class="vs-ph"><b><svg class="svg-ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg> Screenshot comparison</b><span>Two app screenshots load here with a draggable VS divider. Add <code>images_demo_vidiq.png</code> and <code>images_demo_tubebuddy.png</code> to see it live.</span></div>
+      </div>
+      <figcaption>Drag the VS handle to compare vidIQ and TubeBuddy (add your own screenshots to activate)</figcaption>
+    </figure>
+  </section>
+
+  <section id="pros-cons">
+    <div class="eyebrow">In depth</div>
+    <h2>Pros &amp; cons of each platform</h2>
+    <div class="pc-cols">
+      <div>
+        <h3 class="col-h"><span class="vs-mark a" style="width:24px;height:24px;font-size:.7rem;border-radius:6px;background:var(--a);color:#fff;display:inline-flex;align-items:center;justify-content:center">V</span> vidIQ</h3>
+        <div class="pc-detail">
+          <div class="pc-item pro"><div class="head"><span class="tag">Pro</span><h3>Stronger free tier</h3></div><p>The free plan gives more usable value before hitting a wall — the best starting point for channels under 1,000 subscribers.</p></div>
+          <div class="pc-item pro"><div class="head"><span class="tag">Pro</span><h3>AI ideation leads the category</h3></div><p>Daily Ideas and AI-powered trend detection are consistently the most-praised feature — genuinely useful for deciding what to make next, not just optimizing what's already made.</p></div>
+          <div class="pc-item con"><div class="head"><span class="tag">Con</span><h3>No real A/B testing</h3></div><p>vidIQ offers only limited A/B testing across its plans. If testing titles and thumbnails against real CTR data matters to you, this is a genuine gap.</p></div>
+          <div class="pc-item con"><div class="head"><span class="tag">Con</span><h3>Costs more at every paid tier</h3></div><p>vidIQ's first genuinely useful paid tier starts around $16.58/mo — its AI coaching, the main reason people upgrade, doesn't unlock until that point.</p></div>
+        </div>
+      </div>
+      <div>
+        <h3 class="col-h"><span class="vs-mark b" style="width:24px;height:24px;font-size:.7rem;border-radius:6px;background:var(--b);color:#fff;display:inline-flex;align-items:center;justify-content:center">T</span> TubeBuddy</h3>
+        <div class="pc-detail">
+          <div class="pc-item pro"><div class="head"><span class="tag">Pro</span><h3>Only tool with real A/B testing</h3></div><p>Test titles, thumbnails, descriptions and tag sets against actual CTR and watch-time outcomes — vidIQ has no equivalent at any tier.</p></div>
+          <div class="pc-item pro"><div class="head"><span class="tag">Pro</span><h3>Cheaper at every paid tier</h3></div><p>Pro starts around $12/mo (as low as ~$3-5/mo with the small-channel discount under 1,000 subscribers) — consistently less than vidIQ's equivalent tier, with bulk editing and retention analysis included.</p></div>
+          <div class="pc-item con"><div class="head"><span class="tag">Con</span><h3>Weaker AI ideation</h3></div><p>Content suggestion tools are less developed than vidIQ's — TubeBuddy is built more for optimizing existing videos than deciding what to film next.</p></div>
+          <div class="pc-item con"><div class="head"><span class="tag">Con</span><h3>Customer support draws consistent complaints</h3></div><p>Reviews cite TubeBuddy's support quality as a recurring weak point — vidIQ's support gets mixed reviews, but TubeBuddy's is more consistently criticized.</p></div>
+        </div>
+      </div>
+    </div>
+    <p class="disc-note" style="margin-top:16px">The honest split, echoed across multiple 2026 tests: <b>TubeBuddy wins on optimizing what you've already made</b> (A/B testing, bulk tools, price); <b>vidIQ wins on deciding what to make next</b> (AI ideation, trend detection). Many creators run both — one free, one paid.</p>
+  </section>
+
+  <section id="features">
+    <div class="eyebrow">Feature by feature</div>
+    <h2>What each tool gives you</h2>
+    <div class="feat-grid">
+      <div class="feat"><h3>Keyword research</h3><p>Effectively tied — one 2026 test found TubeBuddy's scores correlated with page-one ranking 64% of the time vs vidIQ's 61%, within margin of error.</p></div>
+      <div class="feat"><h3>A/B testing</h3><p><b>TubeBuddy:</b> full testing on titles, thumbnails, descriptions and tags. <b>vidIQ:</b> limited/no equivalent.</p></div>
+      <div class="feat"><h3>AI content ideas</h3><p><b>vidIQ:</b> Daily Ideas and trend detection lead the category. <b>TubeBuddy:</b> lighter AI suggestion tools.</p></div>
+      <div class="feat"><h3>Bulk processing</h3><p><b>TubeBuddy:</b> bulk find/replace, thumbnail overlays, scheduled publishing. <b>vidIQ:</b> not a focus.</p></div>
+      <div class="feat"><h3>Retention analysis</h3><p><b>TubeBuddy</b> includes built-in retention analysis on higher tiers; vidIQ does not offer an equivalent.</p></div>
+      <div class="feat"><h3>Competitor tracking</h3><p><b>vidIQ</b> has the edge on competitive intelligence and channel-level analytics.</p></div>
+      <div class="feat"><h3>Browser integration</h3><p>Both run as a Chrome/Firefox/Edge extension overlaying YouTube Studio directly.</p></div>
+      <div class="feat"><h3>Free plan</h3><p>Both offer a free tier — vidIQ's gives more usable value before you hit a paywall.</p></div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="eyebrow">What it costs</div>
+    <h2>Pricing side by side (2026)</h2>
+    <div class="price-cols">
+      <div class="price-card">
+        <h3><span class="mark a">V</span> vidIQ</h3>
+        <p class="sub">Free tier available. Prices shown are annual billing.</p>
+        <div class="ptier"><div class="nm">Free <small>Basic SEO scoring &amp; overlay</small></div><div class="amt">$0/mo</div></div>
+        <div class="ptier"><div class="nm">Boost <small>AI Daily Ideas unlock here</small></div><div class="amt">~$16.58/mo</div></div>
+        <div class="ptier"><div class="nm">Max <small>6,000 AI credits, Max Mode AI</small></div><div class="amt">~$39/mo</div></div>
+      </div>
+      <div class="price-card">
+        <h3><span class="mark b">T</span> TubeBuddy</h3>
+        <p class="sub">Free tier available. ~50% small-channel discount under 1,000 subs.</p>
+        <div class="ptier"><div class="nm">Pro <small>A/B testing included from here</small></div><div class="amt">~$12/mo</div></div>
+        <div class="ptier"><div class="nm">Legend <small>Bulk tools + retention analysis</small></div><div class="amt">~$26.39/mo</div></div>
+      </div>
+    </div>
+    <p class="disc-note" style="margin-top:14px">Prices verified against public 2026 sources and billed annually — both offer monthly billing at a higher rate. Confirm current numbers on vidiq.com/plans and tubebuddy.com/pricing before buying.</p>
+  </section>
+
+  <!-- ===== WHICH ONE ARE YOU ===== -->
+  <section id="fit">
+    <div class="eyebrow">Match it to your channel</div>
+    <h2>Which one fits you?</h2>
+    <div class="split">
+      <div class="pbox a">
+        <h3><span class="vs-mark a" style="width:26px;height:26px;font-size:.85rem;border-radius:7px">V</span> Choose vidIQ</h3>
+        <ul>
+          <li>Your growth depends on ranking in YouTube search</li>
+          <li>You make tutorials, how-tos, reviews or explainers</li>
+          <li>You want AI help deciding what to film next</li>
+          <li>Keyword and competitor data is your priority</li>
+        </ul>
+      </div>
+      <div class="pbox b">
+        <h3><span class="vs-mark b" style="width:26px;height:26px;font-size:.85rem;border-radius:7px">T</span> Choose TubeBuddy</h3>
+        <ul>
+          <li>You have a back catalog worth optimising in bulk</li>
+          <li>Thumbnail/title A/B testing matters to you</li>
+          <li>You're budget-conscious or under 1,000 subs</li>
+          <li>You want retention analysis built in</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VERDICT ===== -->
+  <section id="verdict">
+    <div class="eyebrow">Our verdict</div>
+    <div class="verdict">
+      <p><strong>There's no single winner — it depends on the job.</strong> For pure keyword research and AI-assisted ideation, vidIQ is the stronger tool and worth its Boost plan for search-driven channels. For A/B testing, bulk back-catalog work and raw value, TubeBuddy is both cheaper and more capable.</p>
+      <p>Many creators run <strong>vidIQ free for research alongside a paid TubeBuddy plan</strong> for testing and optimisation — a common, low-cost setup that gets the best of both. If you must pick one, let your bottleneck decide: stuck for ideas → vidIQ; sitting on unoptimised videos → TubeBuddy.</p>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:18px">
+      <a class="cta-btn" href="#" data-aff="vidiq">Start vidIQ free →</a>
+      <a class="cta-btn ghost" href="#" data-aff="tubebuddy">Start TubeBuddy free →</a>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq" id="faq">
+    <div class="eyebrow">Common questions</div>
+    <h2>vidIQ vs TubeBuddy FAQs</h2>
+    <details open>
+      <summary>Is vidIQ or TubeBuddy better for beginners?</summary>
+      <div class="ans">TubeBuddy is the gentler start — it's cheaper, and channels under 1,000 subscribers get roughly 50% off lower tiers. vidIQ's free plan is also a solid way to learn keyword research at no cost. Many beginners run both free plans before paying for either.</div>
+    </details>
+    <details>
+      <summary>Can I use vidIQ and TubeBuddy together?</summary>
+      <div class="ans">Yes, and it's a common setup. Creators often run vidIQ's free plan for keyword research and ideas while paying for TubeBuddy's A/B testing and bulk editing. The two extensions coexist fine in the same browser.</div>
+    </details>
+    <details>
+      <summary>Which is cheaper?</summary>
+      <div class="ans">TubeBuddy, at both ends. Its Pro plan starts around $4.99/month (~$3 billed annually) versus vidIQ Boost at ~$16.58/month annually, and TubeBuddy's top Legend tier also undercuts vidIQ's Max.</div>
+    </details>
+    <details>
+      <summary>Does vidIQ have A/B testing?</summary>
+      <div class="ans">No. Thumbnail and title A/B testing is one of TubeBuddy's key differentiators — vidIQ doesn't offer it at any tier. If split-testing is central to your strategy, that alone can decide it.</div>
+    </details>
+    <details>
+      <summary>Are these tools safe for my YouTube channel?</summary>
+      <div class="ans">Yes. Both are official YouTube partner tools that use the YouTube API, and are trusted by millions of creators. Neither violates YouTube's terms.</div>
+    </details>
+  </section>
+
+</div>
+
+<div id="site-footer"></div>
+
+<script>
+/* Scroll-spy: highlight the jump-nav tab for the section currently in view. */
+(function () {
+  var links = document.querySelectorAll(".jump a[href^='#']");
+  if (!links.length) return;
+  var map = {};
+  links.forEach(function (a) {
+    var id = a.getAttribute("href").slice(1);
+    var el = document.getElementById(id);
+    if (el) map[id] = { link: a, el: el };
+  });
+
+  var current = null;
+  function setActive(id) {
+    if (id === current) return;
+    current = id;
+    links.forEach(function (a) { a.classList.remove("active"); });
+    if (map[id]) {
+      map[id].link.classList.add("active");
+      // only nudge the tab strip horizontally if the active link is actually
+      // out of view within it -- never touch the page's own vertical scroll.
+      var linkEl = map[id].link;
+      var scrollParent = linkEl.closest(".jump .wrap") || linkEl.parentElement;
+      if (scrollParent && scrollParent.scrollWidth > scrollParent.clientWidth) {
+        var linkLeft = linkEl.offsetLeft;
+        var linkRight = linkLeft + linkEl.offsetWidth;
+        var viewLeft = scrollParent.scrollLeft;
+        var viewRight = viewLeft + scrollParent.clientWidth;
+        if (linkLeft < viewLeft || linkRight > viewRight) {
+          scrollParent.scrollTo({ left: linkLeft - scrollParent.clientWidth / 2 + linkEl.offsetWidth / 2, behavior: "smooth" });
+        }
+      }
+    }
+  }
+
+  // The topbar is injected asynchronously by nexsia.js, so wait for it
+  // to be in the DOM before measuring its height for the scroll offset.
+  function startObserving() {
+    var topbarH = (document.querySelector(".topbar") || {}).offsetHeight || 56;
+    var jumpH = topbarH + ((document.querySelector(".jump") || {}).offsetHeight || 50);
+    var observer = new IntersectionObserver(function (entries) {
+      var best = null;
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          if (!best || entry.boundingClientRect.top < best.boundingClientRect.top) best = entry;
+        }
+      });
+      if (best) setActive(best.target.id);
+    }, { rootMargin: "-" + (jumpH + 4) + "px 0px -70% 0px", threshold: 0 });
+
+    Object.keys(map).forEach(function (id) { observer.observe(map[id].el); });
+  }
+  if (document.querySelector(".topbar")) {
+    startObserving();
+  } else {
+    document.addEventListener("nexsia:chrome-ready", startObserving, { once: true });
+  }
+})();
+</script>
+<script>
+/* Interactive VS comparison slider — drag, touch or arrow-key to wipe. */
+(function () {
+  var s = document.getElementById("vs-vidiq-tubebuddy");
+  if (!s) return;
+  var left = s.querySelector(".vs-left"), right = s.querySelector(".vs-right");
+  var ph = s.querySelector(".vs-ph"), handle = s.querySelector(".vs-handle");
+
+  // Robustly detect broken images: if either fails to load, show the placeholder.
+  function checkImg(img) {
+    if (img.complete && img.naturalWidth === 0) {
+      s.classList.add("vs-noimg");
+    }
+    img.addEventListener("error", function () { s.classList.add("vs-noimg"); });
+    img.addEventListener("load", function () {
+      if (img.naturalWidth === 0) s.classList.add("vs-noimg");
+    });
+  }
+  checkImg(left); checkImg(right);
+
+  // Compute the seam angle so the black line matches the image clip EXACTLY.
+  // Clip offsets top edge +skew and bottom edge -skew from centre; over height H
+  // the line's tilt from vertical = atan(skew / (H/2)).
+  function syncAngle() {
+    var skew = parseFloat(getComputedStyle(s).getPropertyValue("--vs-skew")) || 70;
+    var h = s.getBoundingClientRect().height || 1;
+    var deg = Math.atan(skew / (h / 2)) * (180 / Math.PI);
+    s.style.setProperty("--vs-angle", deg.toFixed(2) + "deg");
+  }
+  syncAngle();
+  window.addEventListener("resize", syncAngle);
+
+  function setPos(pct) {
+    pct = Math.max(0, Math.min(100, pct));
+    s.style.setProperty("--vs-pos", pct + "%");
+    handle.setAttribute("aria-valuenow", Math.round(pct));
+  }
+  function fromEvent(e) {
+    var r = s.getBoundingClientRect();
+    var x = (e.touches ? e.touches[0].clientX : e.clientX) - r.left;
+    setPos((x / r.width) * 100);
+    s.classList.add("touched");
+  }
+  var dragging = false;
+  s.addEventListener("mousedown", function (e) { dragging = true; fromEvent(e); });
+  window.addEventListener("mousemove", function (e) { if (dragging) fromEvent(e); });
+  window.addEventListener("mouseup", function () { dragging = false; });
+  s.addEventListener("touchstart", function (e) { fromEvent(e); }, { passive: true });
+  s.addEventListener("touchmove", function (e) { fromEvent(e); }, { passive: true });
+  handle.addEventListener("keydown", function (e) {
+    var cur = parseFloat(s.style.getPropertyValue("--vs-pos")) || 50;
+    if (e.key === "ArrowLeft") { setPos(cur - 4); s.classList.add("touched"); }
+    if (e.key === "ArrowRight") { setPos(cur + 4); s.classList.add("touched"); }
+  });
+})();
+</script>
+<script src="nexsia.js"></script>
+</body>
+</html>

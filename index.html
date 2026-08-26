@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="color-scheme" content="light only">
+<title>Nexsia — Honest App Comparisons for Online Businesses</title>
+<meta name="description" content="Research-based reviews and comparisons of the software that runs online businesses — creator tools, sales funnels, course platforms and copywriting tools. No hype, just what works.">
+<style>
+  /* ============================================================
+     HOMEPAGE  —  shares the review design system.
+     ============================================================ */
+  :root{
+    --ink:#0f1b2d;--body:#3d4b5c;--muted:#6b7887;--line:#e3e8ef;
+    --bg:#f6f8fb;--card:#fff;--brand:#1a56db;--brand-dark:#12409c;
+    --brand-tint:#eef3fe;--good:#188a5b;--good-tint:#e7f5ee;
+    --bad:#c23b52;--star:#f5a623;--cta:#ff6a2b;--cta-dark:#e5551a;
+    --radius:12px;--shadow:0 1px 3px rgba(15,27,45,.06),0 8px 24px rgba(15,27,45,.05);--maxw:1000px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;color-scheme:light;background:var(--bg)}
+  body{margin:0;background:var(--bg);color:var(--body);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{color:var(--ink);line-height:1.22;margin:0 0 .5em}
+  h1{font-size:2.4rem;letter-spacing:-.03em}
+  h2{font-size:1.5rem;letter-spacing:-.01em}
+  h3{font-size:1.05rem}
+  a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  section{padding:42px 0}
+  .eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--brand);margin-bottom:8px}
+  .sec-head{text-align:center;max-width:620px;margin:0 auto 26px}
+  .sec-head p{margin:6px 0 0;color:var(--body)}
+
+  /* top bar */
+
+
+  /* ---- desktop mega-menu ---- */
+  @media(max-width:1040px){.mega{left:0;transform:none;min-width:560px}}
+
+  .cta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--cta);color:#fff;font-weight:700;font-size:1rem;padding:13px 26px;border-radius:10px;box-shadow:0 4px 14px rgba(255,106,43,.3);transition:transform .12s,background .12s;border:none;cursor:pointer}
+  .cta-btn:hover{background:var(--cta-dark);text-decoration:none;transform:translateY(-1px)}
+  .cta-btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5);box-shadow:none}
+  .cta-btn.ghost:hover{background:rgba(255,255,255,.1)}
+
+  /* hero */
+  .hero{background:linear-gradient(160deg,#0f1b2d 0%,#12409c 100%);color:#fff;text-align:center;padding:64px 0 72px}
+  .hero h1{color:#fff;max-width:760px;margin:0 auto .3em}
+  .hero .kicker{display:inline-block;background:rgba(91,155,255,.18);color:#a9c8ff;font-size:.8rem;font-weight:600;padding:6px 14px;border-radius:20px;margin-bottom:20px;letter-spacing:.02em}
+  .hero p.sub{font-size:1.12rem;color:#c7d6ef;max-width:600px;margin:0 auto 28px}
+  .hero-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .trust{margin-top:26px;font-size:.84rem;color:#93a7c6;display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+  .trust b{color:#fff}
+
+  /* category grid */
+  .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:760px){.cat-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.cat-grid{grid-template-columns:1fr}}
+  .cat-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);transition:transform .12s,box-shadow .12s;display:block}
+  .cat-card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(15,27,45,.1);text-decoration:none}
+  .cat-ic{width:44px;height:44px;border-radius:11px;background:var(--brand-tint);display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:12px}
+  .cat-card h3{margin-bottom:4px}
+  .cat-card p{font-size:.9rem;color:var(--body);margin:0 0 10px}
+  .cat-card .go{font-size:.85rem;font-weight:600;color:var(--brand)}
+
+  /* featured pick (editor's choice) */
+  .featured{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:1.1fr 1fr}
+  @media(max-width:720px){.featured{grid-template-columns:1fr}}
+  .featured .left{padding:30px}
+  .featured .badge{display:inline-block;background:var(--good-tint);color:var(--good);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:4px 11px;border-radius:20px;margin-bottom:12px}
+  .featured h3{font-size:1.5rem;margin-bottom:8px}
+  .featured .stars{color:var(--star);font-size:1.05rem;letter-spacing:2px}
+  .featured p{font-size:.95rem;margin:12px 0 18px}
+  .featured .right{background:linear-gradient(135deg,#1a56db,#5b9bff);color:#fff;padding:30px;display:flex;flex-direction:column;justify-content:center}
+  .featured .right ul{list-style:none;margin:0;padding:0}
+  .featured .right li{padding:7px 0 7px 26px;position:relative;font-size:.92rem;color:#eaf1ff}
+  .featured .right li::before{content:"✓";position:absolute;left:0;color:#fff;font-weight:700}
+
+  /* review list */
+  .rev-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:680px){.rev-grid{grid-template-columns:1fr}}
+  .rev{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow);display:flex;gap:14px;align-items:flex-start;transition:transform .12s}
+  .rev:hover{transform:translateY(-2px);text-decoration:none}
+  .rev .rmark{width:46px;height:46px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:1.2rem;flex-shrink:0}
+  .rev .rbody{flex:1}
+  .rev h3{margin:0 0 2px;font-size:1.02rem}
+  .rev .rstars{color:var(--star);font-size:.85rem;letter-spacing:1px}
+  .rev p{font-size:.86rem;margin:6px 0 0;color:var(--body)}
+  .rev .rrate{font-size:.78rem;color:var(--muted);margin-top:6px}
+
+  /* comparisons strip */
+  .cmp-list{display:flex;flex-direction:column;gap:12px}
+  .cmp{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;gap:14px;transition:transform .12s}
+  .cmp:hover{transform:translateX(3px);text-decoration:none}
+  .cmp .cmp-t{font-weight:600;color:var(--ink);font-size:1rem}
+  .cmp .cmp-d{font-size:.85rem;color:var(--muted)}
+  .cmp .arrow{color:var(--brand);font-weight:700;font-size:1.2rem;flex-shrink:0}
+
+  /* trust / how we review */
+  .how{background:var(--brand-tint);border-radius:16px;padding:32px}
+  .how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:18px}
+  @media(max-width:720px){.how-grid{grid-template-columns:1fr 1fr}}
+  .how-item{text-align:center}
+  .how-item .n{width:38px;height:38px;border-radius:50%;background:var(--brand);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+  .how-item h3{font-size:.95rem;margin-bottom:3px}
+  .how-item p{font-size:.84rem;margin:0}
+
+  /* newsletter */
+  .news{background:var(--ink);border-radius:16px;padding:38px;text-align:center;color:#fff}
+  .news h2{color:#fff}
+  .news p{color:#c7d2e0;max-width:480px;margin:6px auto 20px}
+  .news-form{display:flex;gap:10px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+  .news-form input{flex:1;min-width:220px;padding:13px 16px;border-radius:10px;border:1px solid #33455f;background:#1a2942;color:#fff;font-size:.95rem}
+  .news-form input::placeholder{color:#8296b3}
+  .news .fine{font-size:.76rem;color:#8296b3;margin-top:12px}
+
+  /* logo carousel */
+  .logos{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;overflow:hidden}
+  .logos .label{text-align:center;font-size:.74rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+  .marquee{display:flex;width:max-content;animation:scroll 36s linear infinite}
+  .logos:hover .marquee{animation-play-state:paused}
+  .marquee .track{display:flex;align-items:center;gap:46px;padding-right:46px}
+  .brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:1.15rem;color:#64748b;white-space:nowrap;opacity:.7;transition:opacity .2s}
+  .brand:hover{opacity:1}
+  .brand svg{flex-shrink:0}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @media(prefers-reduced-motion:reduce){.marquee{animation:none;flex-wrap:wrap;justify-content:center;gap:30px}}
+
+
+
+  /* ---- mobile pill nav + hamburger ---- */
+  @media(max-width:680px){
+    .topbar nav{display:flex;position:fixed;top:60px;left:0;right:0;bottom:0;flex-direction:column;
+      background:#0f1b2d;border-top:1px solid #22334d;padding:10px 16px 16px;gap:4px;
+      max-height:0;overflow:hidden;opacity:0;pointer-events:none;transition:max-height .3s ease,opacity .2s ease;
+      -webkit-overflow-scrolling:touch}
+  }
+</style>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<div id="site-header"></div>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <div class="wrap">
+    <span class="kicker">Independent · Research-based · No hype</span>
+    <h1>Which app should you actually use?</h1>
+    <p class="sub">Nexsia compares the software that runs online businesses — funnels, course platforms, creator tools and more — head to head, so you can pick the right one without the guesswork or the hype.</p>
+    <div class="hero-cta">
+      <a class="cta-btn" href="#categories">Browse comparisons →</a>
+      <a class="cta-btn ghost" href="#popular">Popular head-to-heads</a>
+    </div>
+    <div class="trust">
+      <span><b>Every</b> plan priced</span>
+      <span><b>0</b> paid placements</span>
+      <span><b>Updated</b> monthly</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== LOGO CAROUSEL ("tools we review" — editorial framing, no endorsement implied) ===== -->
+<div class="logos">
+  <div class="label">The apps we compare — across every category</div>
+  <div class="marquee">
+    <!-- Track A -->
+    <div class="track">
+      <span class="brand"><svg width="22" height="22" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.5 15.5v-7l6.5 3.5-6.5 3.5z"/></svg>YouTube</span>
+      <span class="brand"><svg width="20" height="20" viewBox="0 0 24 24" fill="#10A37F"><path d="M22 9.5a5.5 5.5 0 0 0-.5-4.6 5.6 5.6 0 0 0-6-2.7A5.5 5.5 0 0 0 2.5 5.1a5.5 5.5 0 0 0-3.7 2.7 5.6 5.6 0 0 0 .7 6.5 5.5 5.5 0 0 0 .5 4.6 5.6 5.6 0 0 0 6 2.7A5.5 5.5 0 0 0 21.5 18.9a5.5 5.5 0 0 0 3.7-2.7 5.6 5.6 0 0 0-.7-6.5z" transform="scale(0.9) translate(1 1)"/></svg>OpenAI</span>
+      <span class="brand"><svg width="20" height="20" viewBox="0 0 24 24" fill="#D97757"><path d="M12 2 3 20h4l1.8-4h6.4L17 20h4L12 2zm-1.6 10L12 8l1.6 4h-3.2z"/></svg>Claude</span>
+      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#c4302b"><circle cx="12" cy="12" r="10"/></svg>vidIQ</span>
+      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#2a7de1"><rect x="3" y="3" width="18" height="18" rx="5"/></svg>TubeBuddy</span>
+      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#1a56db"><path d="M4 4h16v16H4z" transform="rotate(45 12 12)"/></svg>OpusClip</span>
+      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#5b3df6"><circle cx="7" cy="12" r="3"/><circle cx="17" cy="12" r="3"/></svg>ElevenLabs</span>
+      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#111"><path d="M4 6h16v3H4zm0 6h16v3H4z"/></svg>Descript</span>
+      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#7c3aed"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>Jasper</span>
+      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#e11d48"><rect x="4" y="4" width="16" height="16" rx="8"/></svg>Pictory</span>
+    </div>
+    <!-- Track B (duplicate for seamless loop) -->
+    <div class="track" aria-hidden="true">
+      <span class="brand"><svg width="22" height="22" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.5 15.5v-7l6.5 3.5-6.5 3.5z"/></svg>YouTube</span>
+      <span class="brand"><svg width="20" height="20" viewBox="0 0 24 24" fill="#10A37F"><path d="M22 9.5a5.5 5.5 0 0 0-.5-4.6 5.6 5.6 0 0 0-6-2.7A5.5 5.5 0 0 0 2.5 5.1a5.5 5.5 0 0 0-3.7 2.7 5.6 5.6 0 0 0 .7 6.5 5.5 5.5 0 0 0 .5 4.6 5.6 5.6 0 0 0 6 2.7A5.5 5.5 0 0 0 21.5 18.9a5.5 5.5 0 0 0 3.7-2.7 5.6 5.6 0 0 0-.7-6.5z" transform="scale(0.9) translate(1 1)"/></svg>OpenAI</span>
+      <span class="brand"><svg width="20" height="20" viewBox="0 0 24 24" fill="#D97757"><path d="M12 2 3 20h4l1.8-4h6.4L17 20h4L12 2zm-1.6 10L12 8l1.6 4h-3.2z"/></svg>Claude</span>
+      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#c4302b"><circle cx="12" cy="12" r="10"/></svg>vidIQ</span>
+      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#2a7de1"><rect x="3" y="3" width="18" height="18" rx="5"/></svg>TubeBuddy</span>
+      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#1a56db"><path d="M4 4h16v16H4z" transform="rotate(45 12 12)"/></svg>OpusClip</span>
+      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#5b3df6"><circle cx="7" cy="12" r="3"/><circle cx="17" cy="12" r="3"/></svg>ElevenLabs</span>
+      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#111"><path d="M4 6h16v3H4zm0 6h16v3H4z"/></svg>Descript</span>
+      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#7c3aed"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>Jasper</span>
+      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#e11d48"><rect x="4" y="4" width="16" height="16" rx="8"/></svg>Pictory</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ===== TOP-LEVEL CATEGORIES ===== -->
+  <section id="categories">
+    <div class="sec-head">
+      <div class="eyebrow">Browse by category</div>
+      <h2>What kind of app are you comparing?</h2>
+      <p>Pick a category to see the head-to-head comparisons, or jump to a popular matchup below.</p>
+    </div>
+    <div class="cat-grid">
+      <a class="cat-card" href="best-ai-tools-for-youtubers.html">
+        <div class="cat-ic"><svg class="svg-ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 20 5l1 4-17 3.5z"/><path d="M4 12l16-3 1.5 8a2 2 0 0 1-1.6 2.3L6 21a2 2 0 0 1-2.3-1.6z"/><path d="M7.5 6.5 9 10M12.5 5.5 14 9M17.5 4.5 19 8"/></svg></div>
+        <h3>Creator Tools</h3>
+        <p>AI tools for YouTubers and creators — clipping, SEO, editing, voice and more.</p>
+        <span class="go">OpusClip, vidIQ, ElevenLabs &amp; more →</span>
+      </a>
+      <a class="cat-card" href="best-sales-funnel-software.html">
+        <div class="cat-ic"><svg class="svg-ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16l-6 8v7l-4 2v-9z"/></svg></div>
+        <h3>Sales Funnels &amp; All-in-One</h3>
+        <p>Funnel builders and business platforms — ClickFunnels, Kajabi, GoHighLevel.</p>
+        <span class="go">See the best sales funnel software →</span>
+      </a>
+      <a class="cat-card" href="kajabi-review.html">
+        <div class="cat-ic"><svg class="svg-ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9.5 12 5l10 4.5-10 4.5z"/><path d="M6 12v5c0 1.4 2.7 3 6 3s6-1.6 6-3v-5"/><path d="M21.5 9.5v6"/></svg></div>
+        <h3>Course Platforms</h3>
+        <p>Sell courses, memberships and communities — Kajabi, Skool, Teachable and Circle compared.</p>
+        <span class="go">See the course platform matchups →</span>
+      </a>
+      <a class="cat-card" href="best-ai-copywriting-tools.html">
+        <div class="cat-ic"><svg class="svg-ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div>
+        <h3>Copywriting &amp; Ad Tools</h3>
+        <p>AI writing, workflow automation and ad creative generators — Jasper, Copy.ai, AdCreative.ai compared.</p>
+        <span class="go">See the copywriting tool matchups →</span>
+      </a>
+      <a class="cat-card" href="best-email-marketing-software.html">
+        <div class="cat-ic"><svg class="svg-ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></div>
+        <h3>Email Marketing</h3>
+        <p>Email and automation platforms compared on price, deliverability and features.</p>
+        <span class="go">Mailchimp, Kit, ActiveCampaign & more →</span>
+      </a>
+      <a class="cat-card" href="best-web-hosting.html">
+        <div class="cat-ic"><svg class="svg-ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><circle cx="12" cy="15" r="3"/></svg></div>
+        <h3>Web Hosting</h3>
+        <p>Managed hosting compared on real renewal pricing, speed and support — not just the intro rate.</p>
+        <span class="go">Hostinger, SiteGround, Bluehost & more →</span>
+      </a>
+      <a class="cat-card" href="#categories" style="opacity:.62;pointer-events:none">
+        <div class="cat-ic"><svg class="svg-ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6z"/></svg></div>
+        <h3>VPN &amp; Security</h3>
+        <p>VPNs and security tools compared on speed, privacy and price.</p>
+        <span class="go">Coming soon</span>
+      </a>
+    </div>
+    <p style="text-align:center;font-size:.86rem;color:var(--muted);margin-top:20px">More categories are being added — the greyed-out ones are next on the roadmap.</p>
+  </section>
+
+  <!-- ===== EDITOR'S CHOICE ===== -->
+  <section id="best">
+    <div class="sec-head">
+      <div class="eyebrow">Editor's choice</div>
+      <h2>Our top pick right now</h2>
+    </div>
+    <div class="featured">
+      <div class="left">
+        <span class="badge">★ Best for repurposing</span>
+        <h3>OpusClip</h3>
+        <div class="stars">★★★★½ <span style="color:var(--muted);font-size:.85rem">4.4 / 5</span></div>
+        <p>If you publish long-form video and want a steady stream of Shorts without hiring an editor, OpusClip is the fastest way there in 2026. It finds your best moments, captions them and reframes to vertical — you just add a quick polish.</p>
+        <a class="cta-btn" href="opusclip-review.html">Read our OpusClip review →</a>
+      </div>
+      <div class="right">
+        <ul>
+          <li>Auto-picks the most clippable moments</li>
+          <li>Virality score ranks what to post first</li>
+          <li>Captions, reframing &amp; B-roll built in</li>
+          <li>Free plan to try before you pay</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LATEST REVIEWS ===== -->
+  <section id="reviews">
+    <div class="sec-head">
+      <div class="eyebrow">Latest reviews</div>
+      <h2>Fresh, hands-on verdicts</h2>
+      <p>In-depth reviews behind our comparisons — real testing, never a paid placement.</p>
+    </div>
+    <div class="rev-grid">
+      <a class="rev" href="opusclip-review.html">
+        <div class="rmark" style="background:linear-gradient(135deg,#1a56db,#5b9bff)">O</div>
+        <div class="rbody">
+          <h3>OpusClip Review</h3>
+          <div class="rstars">★★★★½</div>
+          <p>The AI clipping tool most YouTubers should start with — fast, accurate, not quite hands-off.</p>
+          <div class="rrate">Best for: repurposing · From $15/mo</div>
+        </div>
+      </a>
+      <a class="rev" href="vidiq-review.html">
+        <div class="rmark" style="background:linear-gradient(135deg,#e0463f,#c4302b)">V</div>
+        <div class="rbody">
+          <h3>vidIQ Review</h3>
+          <div class="rstars">★★★★☆</div>
+          <p>Best-in-class keyword research, weaker on turning that data into packaging.</p>
+          <div class="rrate">Best for: SEO research · From $16.58/mo</div>
+        </div>
+      </a>
+      <a class="rev" href="tubebuddy-review.html">
+        <div class="rmark" style="background:linear-gradient(135deg,#4a97ec,#2a7de1)">T</div>
+        <div class="rbody">
+          <h3>TubeBuddy Review</h3>
+          <div class="rstars">★★★★☆</div>
+          <p>A/B testing and bulk tools make it the value pick for optimising a back catalog.</p>
+          <div class="rrate">Best for: optimisation · From $4.99/mo</div>
+        </div>
+      </a>
+      <a class="rev" href="elevenlabs-review.html">
+        <div class="rmark" style="background:linear-gradient(135deg,#5b3df6,#8b74ff)">E</div>
+        <div class="rbody">
+          <h3>ElevenLabs Review</h3>
+          <div class="rstars">★★★★½</div>
+          <p>The most natural AI voice and dubbing for taking your channel multilingual.</p>
+          <div class="rrate">Best for: voice/dubbing · From $5/mo</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== POPULAR COMPARISONS (mixed categories) ===== -->
+  <section id="popular">
+    <div class="sec-head">
+      <div class="eyebrow">Head-to-head</div>
+      <h2>Popular comparisons</h2>
+      <p>Torn between two apps? We've done the side-by-side so you don't have to.</p>
+    </div>
+    <div class="cmp-list">
+      <a class="cmp" href="clickfunnels-vs-kajabi.html">
+        <div><div class="cmp-t">ClickFunnels vs Kajabi <span style="font-size:.7rem;font-weight:700;color:#7c3aed;background:#f3ecfe;padding:1px 8px;border-radius:20px;margin-left:6px">Funnels</span></div><div class="cmp-d">Funnel builder vs course platform — which fits your business model.</div></div>
+        <span class="arrow">→</span>
+      </a>
+      <a class="cmp" href="clickfunnels-vs-gohighlevel.html">
+        <div><div class="cmp-t">ClickFunnels vs GoHighLevel <span style="font-size:.7rem;font-weight:700;color:#7c3aed;background:#f3ecfe;padding:1px 8px;border-radius:20px;margin-left:6px">Funnels</span></div><div class="cmp-d">Polished funnel builder vs all-in-one agency platform with white-label.</div></div>
+        <span class="arrow">→</span>
+      </a>
+      <a class="cmp" href="vidiq-vs-tubebuddy.html">
+        <div><div class="cmp-t">vidIQ vs TubeBuddy <span style="font-size:.7rem;font-weight:700;color:#1a56db;background:var(--brand-tint);padding:1px 8px;border-radius:20px;margin-left:6px">Creator</span></div><div class="cmp-d">The two biggest YouTube SEO tools, compared on price and features.</div></div>
+        <span class="arrow">→</span>
+      </a>
+      <a class="cmp" href="descript-vs-capcut.html">
+        <div><div class="cmp-t">Descript vs CapCut <span style="font-size:.7rem;font-weight:700;color:#1a56db;background:var(--brand-tint);padding:1px 8px;border-radius:20px;margin-left:6px">Creator</span></div><div class="cmp-d">Text-based editing vs template-driven short-form — for creators.</div></div>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== HOW WE REVIEW (trust) ===== -->
+  <section id="how">
+    <div class="how">
+      <div class="sec-head" style="margin-bottom:6px">
+        <div class="eyebrow">Why trust us</div>
+        <h2>How we review</h2>
+        <p>A simple, honest process — and we tell you when the best tool for a job isn't one we earn from.</p>
+      </div>
+      <div class="how-grid">
+        <div class="how-item">
+          <div class="n">1</div>
+          <h3>Hands-on &amp; research</h3>
+          <p>We test tools directly and cross-check public sentiment from G2, Trustpilot and Reddit.</p>
+        </div>
+        <div class="how-item">
+          <div class="n">2</div>
+          <h3>The same criteria, every time</h3>
+          <p>Scored on what actually matters: output quality, speed, price and learning curve.</p>
+        </div>
+        <div class="how-item">
+          <div class="n">3</div>
+          <h3>Honest about free tools</h3>
+          <p>When a free or non-affiliate tool is the best answer, we say so — plainly.</p>
+        </div>
+        <div class="how-item">
+          <div class="n">4</div>
+          <h3>Always updated</h3>
+          <p>Prices and features change fast. We revisit reviews monthly and date every one.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section>
+    <div class="news">
+      <div class="eyebrow" style="color:#5b9bff">Free newsletter</div>
+      <h2>The honest software pick, monthly</h2>
+      <p>One email a month: the newest tools worth trying, honest verdicts, and deals we actually rate. No spam.</p>
+      <div class="news-form">
+        <input type="email" placeholder="you@email.com" aria-label="Email address">
+        <button class="cta-btn" type="button">Subscribe</button>
+      </div>
+      <div class="fine">Join people picking the right tool the first time. Unsubscribe anytime.</div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div id="site-footer"></div>
+
+<script src="nexsia.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="color-scheme" content="light only">
+<title>Contact Us | Nexsia</title>
+<meta name="description" content="Get in touch with Nexsia — questions, corrections, or suggestions for what we should review next.">
+<style>
+  :root{--ink:#0f1b2d;--body:#3d4b5c;--muted:#6b7887;--line:#e3e8ef;--bg:#f6f8fb;--card:#fff;--brand:#1a56db;--brand-tint:#eef3fe;--good:#188a5b;--cta:#ff6a2b;--cta-dark:#e5551a;--radius:12px;--shadow:0 1px 3px rgba(15,27,45,.06),0 8px 24px rgba(15,27,45,.05);--maxw:760px}
+  *{box-sizing:border-box}html{color-scheme:light;background:var(--bg);scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--body);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.65}
+  h1,h2,h3{color:var(--ink);line-height:1.28;margin:0 0 .5em}h1{font-size:2rem;letter-spacing:-.02em}h2{font-size:1.3rem;margin-top:0}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}a{color:var(--brand)}
+  .topbar .wrap,footer .wrap{max-width:960px}
+
+  .head{background:linear-gradient(160deg,#0f1b2d,#12409c);color:#fff;padding:40px 0}.head h1{color:#fff;margin:0}.head p{color:#c7d6ef;margin:8px 0 0}
+  section{padding:26px 0;border-top:1px solid var(--line)}section:first-of-type{border-top:none;padding-top:32px}
+  .lead{font-size:1.08rem;color:var(--ink)}
+  ul.pts{list-style:none;padding:0;margin:16px 0}
+  ul.pts li{position:relative;padding:8px 0 8px 28px;font-size:.97rem}
+  ul.pts li::before{content:"✓";position:absolute;left:0;top:8px;color:var(--good);font-weight:700}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow);margin-top:16px}
+  .card h3{margin-bottom:6px;font-size:1.05rem}
+  .stepnum{display:inline-flex;width:26px;height:26px;border-radius:7px;background:var(--brand);color:#fff;font-weight:700;align-items:center;justify-content:center;font-size:.85rem;margin-right:8px}
+  .note{font-size:.9rem;color:var(--muted);font-style:italic;margin-top:16px}
+  .contact-form{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+  .f-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:560px){.f-row{grid-template-columns:1fr}}
+  .f-field{margin-bottom:16px;display:flex;flex-direction:column}
+  .f-field label{font-size:.85rem;font-weight:600;color:var(--ink);margin-bottom:6px}
+  .f-field input,.f-field select,.f-field textarea{font:inherit;font-size:.95rem;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);width:100%}
+  .f-field input:focus,.f-field select:focus,.f-field textarea:focus{outline:2px solid var(--brand);outline-offset:1px}
+  .f-field textarea{resize:vertical;font-family:inherit}
+  .f-note{font-size:.82rem;color:var(--muted);margin:12px 0 0;text-align:center}
+  .cta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--cta);color:#fff;font-weight:700;font-size:1rem;padding:13px 26px;border:none;border-radius:10px;cursor:pointer;font-family:inherit;text-decoration:none}
+  .cta-btn:hover{background:var(--cta-dark)}
+</style>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+<div id="site-header"></div>
+<div class="head"><div class="wrap"><h1>Contact Us</h1><p>Questions, corrections, or a tool you think we should cover next.</p></div></div>
+<div class="wrap">
+
+  <section>
+    <p class="lead">Got a question, spotted an error, or think we should be covering a tool we haven't? All of that goes here. We read everything — we just can't always promise a fast reply.</p>
+  </section>
+
+  <section>
+    <h2>Send us a message</h2>
+    <form id="contact-form" class="contact-form">
+      <div class="f-row">
+        <div class="f-field">
+          <label for="c-name">Your name</label>
+          <input type="text" id="c-name" name="name" required placeholder="Jane Smith">
+        </div>
+        <div class="f-field">
+          <label for="c-email">Your email</label>
+          <input type="email" id="c-email" name="email" required placeholder="you@email.com">
+        </div>
+      </div>
+      <div class="f-field">
+        <label for="c-topic">What's this about?</label>
+        <select id="c-topic" name="topic">
+          <option value="General question">General question</option>
+          <option value="Correction / error on the site">Correction / error on the site</option>
+          <option value="Suggest a tool to review">Suggest a tool to review</option>
+          <option value="Advertising / partnership">Advertising / partnership</option>
+          <option value="Something else">Something else</option>
+        </select>
+      </div>
+      <div class="f-field">
+        <label for="c-message">Message</label>
+        <textarea id="c-message" name="message" rows="6" required placeholder="What's on your mind? If you're suggesting a tool or comparison for us to review next, tell us which one and why — that's genuinely the most useful kind of message we get."></textarea>
+      </div>
+      <button type="submit" class="cta-btn" style="width:100%;justify-content:center">Send message →</button>
+      <p class="f-note">This opens your email app with the message pre-filled to <b>hello@nexsia.ai</b> — nothing is sent automatically or stored on our server.</p>
+    </form>
+  </section>
+
+  <section>
+    <h2>Suggest what we review next</h2>
+    <p>Genuinely one of the best reasons to write in. If there's a tool, platform, or head-to-head comparison you wish existed on Nexsia, use the form above and pick <b>"Suggest a tool to review"</b> — tell us the tool name and, if it's a comparison, what you'd want it measured against. We can't promise every suggestion gets covered, but we do read all of them and they genuinely shape what we build next.</p>
+  </section>
+
+  <section>
+    <h2>Prefer email?</h2>
+    <p>You can also reach us directly at <a href="mailto:hello@nexsia.ai">hello@nexsia.ai</a>.</p>
+    <p class="note">For anything affiliate or advertising-related, see our <a href="affiliate-disclosure.html">affiliate disclosure</a> first — it answers most of the common questions.</p>
+  </section>
+
+</div>
+<div id="site-footer"></div>
+<script>
+(function () {
+  var form = document.getElementById("contact-form");
+  if (!form) return;
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = form.name.value.trim();
+    var email = form.email.value.trim();
+    var topic = form.topic.value;
+    var message = form.message.value.trim();
+    var subject = "Nexsia contact: " + topic;
+    var body = "Name: " + name + "\nEmail: " + email + "\n\n" + message;
+    var mailto = "mailto:hello@nexsia.ai?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    window.location.href = mailto;
+  });
+})();
+</script>
+<script src="nexsia.js"></script>
+</body>
+</html>

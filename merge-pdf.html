@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="color-scheme" content="light only">
+<title>Merge PDF — Combine PDFs Free, No Upload | Nexsia</title>
+<meta name="description" content="Combine multiple PDF files into one for free. Runs entirely in your browser — your files are never uploaded anywhere. No signup, no watermark, no file limit.">
+<style>
+  /* ============================================================
+     MERGE PDF TOOL — shares the Nexsia design system.
+     ============================================================ */
+  :root{
+    --ink:#0f1b2d;--body:#3d4b5c;--muted:#6b7887;--line:#e3e8ef;
+    --bg:#f6f8fb;--card:#fff;--brand:#1a56db;--brand-dark:#12409c;
+    --brand-tint:#eef3fe;--good:#188a5b;--good-tint:#e7f5ee;
+    --bad:#c23b52;--star:#f5a623;--cta:#ff6a2b;--cta-dark:#e5551a;
+    --radius:12px;--shadow:0 1px 3px rgba(15,27,45,.06),0 8px 24px rgba(15,27,45,.05);--maxw:1000px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;color-scheme:light;background:var(--bg)}
+  body{margin:0;background:var(--bg);color:var(--body);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{color:var(--ink);line-height:1.22;margin:0 0 .5em}
+  h1{font-size:2.1rem;letter-spacing:-.03em}
+  h2{font-size:1.4rem;letter-spacing:-.01em}
+  h3{font-size:1.02rem}
+  a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  .wrap-narrow{max-width:720px;margin:0 auto;padding:0 20px}
+  section{padding:42px 0}
+  .eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--brand);margin-bottom:8px}
+
+  /* top bar (verbatim from site) */
+
+
+  @media(max-width:1040px){.mega{left:0;transform:none;min-width:560px}}
+
+  @media(max-width:680px){
+    .topbar nav{display:flex;position:fixed;top:60px;left:0;right:0;bottom:0;flex-direction:column;
+      background:#0f1b2d;border-top:1px solid #22334d;padding:10px 16px 16px;gap:4px;
+      max-height:0;overflow:hidden;opacity:0;pointer-events:none;transition:max-height .3s ease,opacity .2s ease;
+      -webkit-overflow-scrolling:touch}
+  }
+
+  .cta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--cta);color:#fff;font-weight:700;font-size:1rem;padding:13px 26px;border-radius:10px;box-shadow:0 4px 14px rgba(255,106,43,.3);transition:transform .12s,background .12s;border:none;cursor:pointer}
+  .cta-btn:hover{background:var(--cta-dark);text-decoration:none;transform:translateY(-1px)}
+  .cta-btn:disabled{background:#b9c4d4;box-shadow:none;cursor:not-allowed;transform:none}
+  .cta-btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);box-shadow:none}
+  .cta-btn.ghost:hover{background:var(--brand-tint)}
+
+  /* tool hero */
+  .tool-hero{background:linear-gradient(160deg,#0f1b2d 0%,#12409c 100%);color:#fff;text-align:center;padding:52px 0 40px}
+  .tool-hero h1{color:#fff;max-width:680px;margin:0 auto .3em}
+  .tool-hero .kicker{display:inline-block;background:rgba(91,155,255,.18);color:#a9c8ff;font-size:.8rem;font-weight:600;padding:6px 14px;border-radius:20px;margin-bottom:18px;letter-spacing:.02em}
+  .tool-hero p.sub{font-size:1.06rem;color:#c7d6ef;max-width:560px;margin:0 auto}
+  .trust-row{margin-top:22px;font-size:.84rem;color:#93a7c6;display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+  .trust-row b{color:#dce8ff}
+
+  /* ---- the tool widget ---- */
+  .tool-card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 4px 20px rgba(15,27,45,.08);margin-top:-30px;position:relative;z-index:2;overflow:hidden}
+  .drop-zone{border:2px dashed #c7d2e0;border-radius:12px;margin:22px;padding:44px 20px;text-align:center;cursor:pointer;transition:border-color .15s,background .15s}
+  .drop-zone:hover,.drop-zone.drag-over{border-color:var(--brand);background:var(--brand-tint)}
+  .drop-zone .ic{font-size:2.2rem;margin-bottom:10px}
+  .drop-zone b{color:var(--ink);font-size:1.05rem;display:block;margin-bottom:4px}
+  .drop-zone span{color:var(--muted);font-size:.88rem}
+  .drop-zone input[type=file]{display:none}
+
+  .file-grid{display:flex;flex-direction:column;gap:10px;padding:0 22px;margin-bottom:6px}
+  .file-thumb{position:relative;border-radius:10px;border:1px solid var(--line);background:#fff;cursor:grab;display:flex;align-items:center;gap:14px;padding:12px 14px}
+  .file-thumb.dragging{opacity:.4}
+  .file-thumb .doc-ic{flex-shrink:0;width:40px;height:48px;background:var(--brand-tint);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--brand)}
+  .file-thumb .doc-info{flex:1;min-width:0}
+  .file-thumb .doc-info .nm{font-size:.92rem;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+  .file-thumb .doc-info .meta{font-size:.8rem;color:var(--muted)}
+  .file-thumb .pg{flex-shrink:0;background:var(--bg);color:var(--muted);font-size:.72rem;font-weight:700;padding:4px 9px;border-radius:6px}
+  .file-thumb .drag-handle{flex-shrink:0;color:var(--muted);cursor:grab;display:flex;align-items:center}
+  .file-thumb .rm{flex-shrink:0;background:var(--bg);color:var(--muted);width:26px;height:26px;border-radius:50%;border:none;cursor:pointer;font-size:.9rem;line-height:1;display:flex;align-items:center;justify-content:center}
+  .file-thumb .rm:hover{background:var(--bad);color:#fff}
+
+  .options-row{display:flex;gap:18px;flex-wrap:wrap;align-items:center;padding:18px 22px;border-top:1px solid var(--line);background:var(--bg)}
+  .opt-group{display:flex;flex-direction:column;gap:5px}
+  .opt-group label{font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  .opt-group select{padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:.9rem;font-family:inherit}
+  .tool-actions{display:flex;gap:10px;align-items:center;margin-left:auto;flex-wrap:wrap}
+  .file-count{font-size:.86rem;color:var(--muted)}
+
+  .status-bar{padding:14px 22px;border-top:1px solid var(--line);display:none;align-items:center;gap:12px}
+  .status-bar.show{display:flex}
+  .status-bar.error{background:#fdf0f2;color:var(--bad)}
+  .status-bar.success{background:var(--good-tint);color:var(--good)}
+  .status-bar.working{background:var(--brand-tint);color:var(--brand)}
+  .spinner{width:16px;height:16px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:spin .7s linear infinite;flex-shrink:0}
+  @keyframes spin{to{transform:rotate(360deg)}}
+
+  .privacy-note{display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--muted);justify-content:center;margin-top:16px}
+  .privacy-note svg{flex-shrink:0}
+
+  /* content sections below the tool */
+  .steps{counter-reset:step}
+  .step{display:flex;gap:16px;margin-bottom:18px}
+  .step .n{counter-increment:step;flex-shrink:0;width:32px;height:32px;border-radius:9px;background:var(--brand);color:#fff;font-weight:700;font-size:.95rem;display:flex;align-items:center;justify-content:center}
+  .step p{margin:0;padding-top:4px}
+  .step h3{margin-bottom:3px}
+
+  .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:18px}
+  .related-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+  .related-card h3{margin-bottom:4px;font-size:.98rem}
+  .related-card p{font-size:.86rem;color:var(--muted);margin:0 0 10px}
+  .related-card .soon{display:inline-block;font-size:.72rem;font-weight:700;color:var(--muted);background:var(--bg);padding:3px 9px;border-radius:999px}
+
+  .faq details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;overflow:hidden}
+  .faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:.98rem}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:1.4rem;color:var(--brand);font-weight:400}
+  .faq details[open] summary::after{content:"–"}
+  .faq details[open] summary{border-bottom:1px solid var(--line)}
+  .faq .ans{padding:14px 20px;font-size:.92rem}
+
+
+
+  @media(max-width:600px){
+    .tool-hero{padding:40px 0 32px}
+    h1{font-size:1.7rem}
+    .tool-card{margin:-24px 0 0;border-radius:14px}
+    .drop-zone{margin:16px;padding:32px 14px}
+    .options-row{flex-direction:column;align-items:stretch}
+    .tool-actions{margin-left:0;justify-content:stretch}
+    .tool-actions .cta-btn{flex:1;justify-content:center}
+  }
+</style>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<div class="tool-hero">
+  <div class="wrap">
+    <span class="kicker">Free Tool · No Signup</span>
+    <h1>Merge PDF</h1>
+    <p class="sub">Combine multiple PDF files into one document in seconds. Everything happens in your browser — nothing is ever uploaded to a server.</p>
+    <div class="trust-row">
+      <span><b>100%</b> private</span>
+      <span><b>0</b> file limit</span>
+      <span><b>No</b> watermark</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap-narrow">
+  <div class="tool-card">
+    <div class="drop-zone" id="dropZone" tabindex="0" role="button" aria-label="Choose or drop PDF files">
+      <div class="ic"><svg class="svg-ic" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 15h6M9 11h3"/></svg></div>
+      <b>Drop PDFs here, or click to choose</b>
+      <span>PDF files only · your files never leave this device</span>
+      <input type="file" id="fileInput" accept="application/pdf" multiple>
+    </div>
+
+    <div class="file-grid" id="fileGrid"></div>
+
+    <div class="options-row" id="optionsRow" style="display:none">
+      <div class="tool-actions" style="margin-left:0">
+        <span class="file-count" id="fileCount"></span>
+        <button class="cta-btn ghost" id="clearBtn" type="button">Clear all</button>
+        <button class="cta-btn" id="convertBtn" type="button">Merge PDFs →</button>
+      </div>
+    </div>
+
+    <div class="status-bar" id="statusBar"></div>
+  </div>
+
+  <p class="privacy-note">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3z"/></svg>
+    Your PDFs are processed entirely in your browser using JavaScript. They are never sent to Nexsia or anyone else.
+  </p>
+</div>
+
+<div class="wrap">
+
+  <section>
+    <div class="wrap-narrow" style="padding:0">
+      <div class="eyebrow">How it works</div>
+      <h2>Merge PDFs in 3 steps</h2>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><div><h3>Add your PDFs</h3><p>Drop in two or more PDF files, or click to browse. Drag to reorder them — that's the order they'll appear in the merged document.</p></div></div>
+        <div class="step"><div class="n">2</div><div><h3>Check the order</h3><p>Each file shows its page count, so you can confirm everything's there before merging. Reorder anytime by dragging.</p></div></div>
+        <div class="step"><div class="n">3</div><div><h3>Merge and download</h3><p>Click merge — your combined PDF is built instantly on your device and downloads straight away. Nothing is uploaded, so there's no wait and no privacy risk.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:1px solid var(--line)">
+    <div class="wrap-narrow" style="padding:0">
+      <div class="eyebrow">More free tools</div>
+      <h2>Related PDF tools</h2>
+      <div class="related-grid">
+        <div class="related-card"><h3>JPG to PDF</h3><p>Turn your photos and images into a PDF document.</p><a href="jpg-to-pdf.html" style="font-size:.86rem;font-weight:600">Try it free →</a></div>
+        <div class="related-card"><h3>PDF to JPG</h3><p>Turn each page of a PDF into a downloadable image.</p><a href="pdf-to-jpg.html" style="font-size:.86rem;font-weight:600">Try it free →</a></div>
+        <div class="related-card"><h3>Compress PDF</h3><p>Shrink a PDF's file size without losing quality.</p><span class="soon">Coming soon</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" style="border-top:1px solid var(--line)">
+    <div class="wrap-narrow" style="padding:0">
+      <div class="eyebrow">Common questions</div>
+      <h2>Merge PDF FAQs</h2>
+      <details open><summary>Is this really free?</summary><div class="ans">Yes — there's no signup, no watermark, no page limit and no hidden paywall. The tool runs entirely in your browser, so there's no server cost on our end to pass on to you.</div></details>
+      <details><summary>Are my PDFs uploaded anywhere?</summary><div class="ans">No. The merge happens entirely on your device using JavaScript in your browser. Your files are never sent to Nexsia or any third party — closing the tab is the same as deleting them.</div></details>
+      <details><summary>Is there a file size or file count limit?</summary><div class="ans">No hard limit, though very large or numerous PDFs will take longer since your device is doing the work instead of a server. For most use cases — combining a handful of documents — merging is near-instant.</div></details>
+      <details><summary>Does this work on my phone?</summary><div class="ans">Yes — you can select PDFs directly from your phone's files app, reorder them, and merge, all from the mobile browser.</div></details>
+      <details><summary>Can I merge password-protected PDFs?</summary><div class="ans">Not currently — encrypted or password-protected PDFs need to be unlocked first before they can be merged. Unprotected PDFs of any other kind work fine.</div></details>
+      <details><summary>Will the page order match what I see on screen?</summary><div class="ans">Yes — drag the files into the order you want before merging. Each source document's own internal page order is preserved; only the order of the documents themselves changes.</div></details>
+    </div>
+  </section>
+
+</div>
+
+<div id="site-footer"></div>
+
+<script src="nexsia.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+<script src="merge-pdf.js"></script>
+</body>
+</html>

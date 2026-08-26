@@ -1,0 +1,76 @@
+/* ============================================================
+   shared.css — styling for the site chrome (topbar, mega-menu,
+   mobile nav, footer, and a couple of small icon utility classes
+   used throughout). Loaded once by every page via <link>, so a
+   change here applies everywhere instantly — no per-page rollout.
+
+   Page-specific styles (hero, review layout, etc.) stay in each
+   page's own <style> block, since those genuinely differ per page.
+   ============================================================ */
+
+.topbar{background:var(--ink);color:#fff;position:sticky;top:0;z-index:30}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{font-weight:800;color:#fff;font-size:1.35rem;letter-spacing:-.02em;font-family:Sora,-apple-system,BlinkMacSystemFont,sans-serif}
+.logo span{background:linear-gradient(90deg,#22d3ee,#3b82f6);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.topbar nav a{color:#c7d2e0;font-size:.9rem;margin-left:22px}
+.topbar nav a:hover{color:#fff;text-decoration:none}
+
+/* ---- desktop mega-menu ---- */
+.topbar nav{display:flex;align-items:center}
+.nav-item{position:relative;margin-left:24px}
+.nav-item:first-child{margin-left:0}
+.nav-trig{background:none;border:none;color:#c7d2e0;font-size:.92rem;font-family:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:5px;padding:8px 0}
+.nav-trig:hover{color:#fff}
+.nav-trig .chev{transition:transform .15s ease;flex-shrink:0}
+.nav-item.open .nav-trig{color:#fff}
+.nav-item.open .chev{transform:rotate(180deg)}
+.mega{position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);background:#fff;border-radius:14px;box-shadow:0 12px 40px rgba(15,27,45,.22);padding:22px;display:none;gap:28px;min-width:640px;z-index:40}
+.nav-item.open .mega{display:flex}
+.mega-col{display:flex;flex-direction:column;min-width:140px}
+.topbar nav .mega-col a,.topbar nav .mega-col .mega-head{color:#3d4b5c;font-size:.87rem;text-decoration:none;padding:5px 0;white-space:nowrap;margin-left:0}
+.topbar nav .mega-col a:hover{color:#1a56db}
+.mega-head{color:var(--cta,#ff6a2b)!important;font-weight:700;font-size:.8rem!important;text-transform:uppercase;letter-spacing:.03em;margin-bottom:8px;padding-bottom:8px!important;border-bottom:1px solid #e3e8ef}
+.mega-head:hover{color:#1a56db!important}
+.svg-ic{vertical-align:-3px;flex-shrink:0}
+.cat-ic .svg-ic,.value .ic .svg-ic{vertical-align:middle;width:22px;height:22px}
+@media(max-width:1040px){.mega{left:0;transform:none;min-width:560px}}
+
+/* ---- footer ---- */
+footer{background:var(--ink);color:#9fb0c4;font-size:.85rem;padding:34px 0;border-top:1px solid #22334d}
+footer a{color:#c7d2e0}
+.foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px}
+.foot-col h4{color:#fff;font-size:.85rem;text-transform:uppercase;letter-spacing:.05em;margin:0 0 10px}
+.foot-col a{display:block;color:#9fb0c4;font-size:.88rem;margin-bottom:7px}
+.foot-bottom{text-align:center;margin-top:26px;padding-top:18px;border-top:1px solid #22334d;font-size:.8rem;color:#7c8da3}
+
+/* ---- mobile pill nav + hamburger ---- */
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;margin-left:auto}
+.nav-toggle span{display:block;width:22px;height:2px;background:#fff;border-radius:2px;transition:.25s;margin:4px 0}
+.nav-toggle.is-open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav-toggle.is-open span:nth-child(2){opacity:0}
+.nav-toggle.is-open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+@media(max-width:680px){
+  .nav-toggle{display:block}
+  .topbar nav{display:flex;position:fixed;top:60px;left:0;right:0;bottom:0;flex-direction:column;
+    background:#0f1b2d;border-top:1px solid #22334d;padding:10px 16px 16px;gap:4px;
+    max-height:0;overflow:hidden;opacity:0;pointer-events:none;transition:max-height .3s ease,opacity .2s ease;
+    -webkit-overflow-scrolling:touch}
+  .topbar nav.nav-open{max-height:none;opacity:1;pointer-events:auto;overflow-y:auto}
+  .topbar nav a{margin:0;padding:12px 16px;border-radius:999px;font-size:1rem}
+  .topbar nav a:hover,.topbar nav a:active{background:rgba(91,155,255,.14)}
+  .nav-item{margin-left:0;width:100%}
+  .nav-trig{width:100%;justify-content:space-between;padding:12px 16px;font-size:1rem;color:#c7d2e0}
+  .nav-trig:hover{color:#fff}
+  .mega{position:static;transform:none;box-shadow:none;background:rgba(255,255,255,.08);border-radius:10px;padding:6px 8px 6px 20px;min-width:0;display:none;flex-direction:column;gap:2px;margin-bottom:4px}
+  .nav-item.open .mega{display:flex}
+  .mega-col{min-width:0}
+  .topbar nav .mega-col a,.topbar nav .mega-col .mega-head{color:#fff;padding:9px 8px;font-size:.95rem}
+  .mega-head{color:var(--cta,#ff6a2b)!important;border-bottom-color:#3d4f6b}
+  .topbar nav .mega-col a:hover{background:rgba(255,255,255,.08);border-radius:6px;color:#fff}
+  .fig-desktop{display:none}
+  .fig-mobile{display:block;width:100%;height:auto}
+}
+@media(min-width:681px){
+  .fig-mobile{display:none}
+  .fig-desktop{display:block;width:100%;height:auto}
+}
