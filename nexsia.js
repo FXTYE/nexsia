@@ -49,6 +49,12 @@ const AFFILIATE_LINKS = {
   siteground:  "#",  // siteground.com — verify current program
   bluehost:    "#",  // bluehost.com — verify current program
   cloudways:   "#",  // cloudways.com — Slab (up to $125/sale) or Hybrid ($30 + 7% lifetime recurring), 90-day cookie
+  // --- AI video generators ---
+  sora:        "#",  // openai.com — access via ChatGPT Plus/Pro (no separate affiliate program)
+  kling:       "#",  // klingai.com — verify current program
+  veo:         "#",  // gemini.google.com / Flow — access via Google AI Pro/Ultra (no separate affiliate program)
+  runway:      "#",  // runwayml.com — verify current program
+  higgsfield:  "#",  // higgsfield.ai — verify current program
 };
 
 /* ============================================================================

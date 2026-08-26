@@ -9,6 +9,7 @@
   <url><loc>https://www.example.com/contact.html</loc><changefreq>weekly</changefreq><priority>0.4</priority></url>
   <url><loc>https://www.example.com/best-ai-copywriting-tools.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.example.com/best-ai-tools-for-youtubers.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.example.com/best-ai-video-generators.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.example.com/best-email-marketing-software.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.example.com/best-sales-funnel-software.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.example.com/best-web-hosting.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
@@ -34,7 +35,12 @@
   <url><loc>https://www.example.com/hostinger-review.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/hostinger-vs-bluehost.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/hostinger-vs-siteground.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/higgsfield-review.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/index.html</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.example.com/kling-review.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/kling-vs-veo.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/kling-vs-runway.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/kling-vs-higgsfield.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/jasper-review.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/jasper-vs-copyai.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/jpg-to-pdf.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
@@ -52,11 +58,21 @@
   <url><loc>https://www.example.com/pdf-to-jpg.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/pictory-review.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/review-methodology.html</loc><changefreq>weekly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://www.example.com/runway-review.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/runway-vs-higgsfield.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/siteground-review.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/sora-review.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/sora-vs-kling.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/sora-vs-veo.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/sora-vs-runway.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/sora-vs-higgsfield.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/skool-review.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/skool-vs-circle.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/skool-vs-kajabi.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/tubebuddy-review.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/veo-review.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/veo-vs-runway.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/veo-vs-higgsfield.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/vidiq-review.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/vidiq-vs-tubebuddy.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 </urlset>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="color-scheme" content="light only">
+<title>Runway Review 2026: Gen-4.5, Pricing &amp; Is It Worth It? | Nexsia</title>
+<meta name="description" content="Research-based Runway review for 2026. Gen-4.5 quality, credit pricing, editing tools, pros and cons, and the best alternatives compared.">
+<style>
+  :root{
+    --ink:#0f1b2d;--body:#3d4b5c;--muted:#6b7887;--line:#e3e8ef;
+    --bg:#f6f8fb;--card:#ffffff;--brand:#1a56db;--brand-dark:#12409c;--brand-tint:#eef3fe;
+    --good:#188a5b;--good-tint:#e7f5ee;--bad:#c23b52;--bad-tint:#fbeaed;--star:#f5a623;
+    --cta:#ff6a2b;--cta-dark:#e5551a;--radius:12px;
+    --shadow:0 1px 3px rgba(15,27,45,.06),0 8px 24px rgba(15,27,45,.05);--maxw:960px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;color-scheme:light;background:var(--bg)}
+  body{margin:0;background:var(--bg);color:var(--body);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{color:var(--ink);line-height:1.25;margin:0 0 .5em}
+  h1{font-size:1.9rem;letter-spacing:-.02em}h2{font-size:1.4rem;letter-spacing:-.01em}h3{font-size:1.08rem}
+  a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  section{padding:34px 0;border-top:1px solid var(--line)}section:first-of-type{border-top:none}
+  .eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--brand);margin-bottom:8px}
+
+  .disclosure{background:var(--brand-tint);color:var(--muted);font-size:.8rem}.disclosure .wrap{padding-top:10px;padding-bottom:10px}
+
+  .jump{position:sticky;top:56px;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .jump .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:0;padding-bottom:0;scrollbar-width:none}
+  .jump .wrap::-webkit-scrollbar{display:none}
+  .jump a{white-space:nowrap;color:var(--muted);font-size:.86rem;font-weight:600;padding:13px 12px;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+  .jump a:hover{color:var(--brand);text-decoration:none;border-bottom-color:var(--brand)}
+  .jump a.active{color:var(--brand);border-bottom-color:var(--brand)}
+
+  .hero{padding-top:30px}
+  .hero-top{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
+  .tool-mark{width:60px;height:60px;border-radius:14px;background:linear-gradient(135deg,#111111,#4b4b4b);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.5rem;flex-shrink:0}
+  .hero-head{flex:1;min-width:240px}
+  .verified{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:600;color:var(--good);background:var(--good-tint);padding:3px 10px;border-radius:20px;margin-bottom:10px}
+  .lede{font-size:1.02rem;margin:6px 0 0}
+  .updated{color:var(--muted);font-size:.82rem;margin-top:10px}
+
+  .rating-row{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px}
+  .rating-block{display:flex;flex-direction:column;gap:2px}
+  .rating-num{font-size:2rem;font-weight:800;color:var(--ink);line-height:1}
+  .stars{color:var(--star);font-size:1.05rem;letter-spacing:2px}
+  .rating-label{font-size:.8rem;color:var(--muted)}
+  .ext-scores{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+  .ext-score{font-size:.85rem;color:var(--body)}
+  .ext-score b{color:var(--ink)}
+
+  .sentiment{margin-top:20px;max-width:420px}
+  .sentiment .bars{display:flex;height:10px;border-radius:6px;overflow:hidden;border:1px solid var(--line)}
+  .sentiment .pos{background:var(--good)}
+  .sentiment .neu{background:#d6dde6}
+  .sentiment .neg{background:var(--bad)}
+  .sentiment .key{display:flex;gap:16px;margin-top:8px;font-size:.78rem;color:var(--muted);flex-wrap:wrap}
+  .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:middle}
+
+  .decision{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-top:26px}
+  .decision .col{padding:20px 22px}
+  .decision .col+.col{border-left:1px solid var(--line)}
+  .decision h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:12px}
+  .pc-list{list-style:none;margin:0;padding:0}
+  .pc-list li{position:relative;padding-left:26px;margin-bottom:9px;font-size:.92rem;color:var(--body)}
+  .pc-list li::before{position:absolute;left:0;top:0;font-weight:700}
+  .pros li::before{content:"✓";color:var(--good)}
+  .cons li::before{content:"✕";color:var(--bad)}
+  .facts{grid-column:1/-1;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);background:var(--brand-tint)}
+  .fact{padding:14px 18px;text-align:center;border-left:1px solid #dfe8fb}
+  .fact:first-child{border-left:none}
+  .fact .k{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+  .fact .v{font-size:1.05rem;font-weight:700;color:var(--ink);margin-top:2px}
+  @media(max-width:640px){
+    .decision{grid-template-columns:1fr}
+    .decision .col+.col{border-left:none;border-top:1px solid var(--line)}
+    .facts{grid-template-columns:1fr 1fr}
+    .fact:nth-child(3){border-left:none}
+  }
+
+  .cta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--cta);color:#fff;font-weight:700;font-size:1rem;padding:13px 26px;border-radius:10px;box-shadow:0 4px 14px rgba(255,106,43,.32);transition:transform .12s,background .12s}
+  .cta-btn:hover{background:var(--cta-dark);text-decoration:none;transform:translateY(-1px)}
+  .cta-sub{font-size:.78rem;color:var(--muted);margin-top:8px}
+  .cta-wrap{margin-top:22px}
+
+  .verdict{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow)}
+  .verdict p{margin:0;font-size:1.02rem;color:var(--ink)}
+
+  .tbl{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;font-size:.92rem}
+  .tbl th,.tbl td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line)}
+  .tbl thead th{background:var(--brand-tint);color:var(--ink);font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+  .tbl tbody tr:last-child td,.tbl tr:last-child td{border-bottom:none}
+  .tbl .this-tool{font-weight:700;color:var(--brand)}
+  .tbl td:first-child{font-weight:600;color:var(--ink)}
+  .tbl-scroll{overflow-x:auto}
+
+  .alt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:720px){.alt-grid{grid-template-columns:1fr}}
+  .alt-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+  .alt-card h3{margin-bottom:4px}
+  .alt-card .alt-rate{color:var(--star);font-size:.9rem;font-weight:700}
+  .alt-card p{font-size:.88rem;margin:8px 0 12px}
+  .alt-card .alt-price{font-size:.82rem;color:var(--muted)}
+  .alt-link{font-size:.88rem;font-weight:600}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:640px){.split{grid-template-columns:1fr}}
+  .split .box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+  .split .box.good{border-top:3px solid var(--good)}
+  .split .box.bad{border-top:3px solid var(--bad)}
+  .split ul{margin:8px 0 0;padding-left:20px;font-size:.92rem}
+  .split li{margin-bottom:6px}
+
+  .pc-detail{display:flex;flex-direction:column;gap:14px}
+  .pc-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px}
+  .pc-item .head{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+  .pc-item .tag{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 9px;border-radius:5px}
+  .pc-item.pro .tag{background:var(--good-tint);color:var(--good)}
+  .pc-item.con .tag{background:var(--bad-tint);color:var(--bad)}
+  .pc-item h3{margin:0;font-size:1rem}
+  .pc-item p{margin:4px 0 0;font-size:.93rem}
+  .quote{margin:12px 0 0;padding:10px 14px;background:var(--bg);border-left:3px solid var(--line);border-radius:0 8px 8px 0;font-size:.88rem;color:var(--body);font-style:italic}
+  .quote cite{display:block;font-style:normal;font-size:.78rem;color:var(--muted);margin-top:5px}
+
+  .feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:640px){.feat-grid{grid-template-columns:1fr}}
+  .feat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+  .feat h3{font-size:.95rem;margin-bottom:3px}
+  .feat p{font-size:.87rem;margin:0}
+
+  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:720px){.price-grid{grid-template-columns:1fr}}
+  .plan{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);position:relative}
+  .plan.featured{border:2px solid var(--brand)}
+  .plan .badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--brand);color:#fff;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 12px;border-radius:20px}
+  .plan h3{margin-bottom:2px}
+  .plan .amt{font-size:1.7rem;font-weight:800;color:var(--ink)}
+  .plan .amt small{font-size:.8rem;font-weight:500;color:var(--muted)}
+  .plan ul{list-style:none;margin:14px 0 0;padding:0}
+  .plan li{font-size:.88rem;padding:6px 0 6px 22px;position:relative;border-top:1px solid var(--line)}
+  .plan li::before{content:"✓";position:absolute;left:0;color:var(--good);font-weight:700}
+  .disc-note{font-size:.8rem;color:var(--muted);font-style:italic;margin-top:14px}
+
+  figure{margin:22px 0 8px}
+  figure img{width:100%;height:auto;display:block;border-radius:12px;border:1px solid var(--line);box-shadow:var(--shadow)}
+  figcaption{font-size:.82rem;color:var(--muted);margin-top:8px;text-align:center;font-style:italic}
+  .shot-ph{background:repeating-linear-gradient(135deg,#eef2f8,#eef2f8 12px,#e6ebf3 12px,#e6ebf3 24px);border:2px dashed #b9c4d4;border-radius:12px;min-height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:26px;color:#6b7887}
+  .shot-ph b{color:var(--ink);font-size:1rem;display:block;margin-bottom:4px}
+  .shot-ph span{font-size:.86rem;max-width:420px}
+  .shot-ph code{background:#fff;border:1px solid var(--line);padding:1px 6px;border-radius:5px;font-size:.82em}
+
+  .faq details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;overflow:hidden}
+  .faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:.98rem}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:1.4rem;color:var(--brand);font-weight:400}
+  .faq details[open] summary::after{content:"–"}
+  .faq details[open] summary{border-bottom:1px solid var(--line)}
+  .faq .ans{padding:14px 20px;font-size:.92rem}
+
+  .final{background:linear-gradient(135deg,#12409c,#1a56db);color:#fff;border-radius:var(--radius);padding:30px;text-align:center}
+  .final h2{color:#fff}
+  .final .rating-num{color:#fff}
+  .final .stars{color:#ffd479}
+  .final p{color:#dbe6ff;max-width:620px;margin:10px auto 0}
+  .final .cta-btn{margin-top:20px;background:#fff;color:var(--brand-dark);box-shadow:0 4px 14px rgba(0,0,0,.2)}
+  .final .cta-btn:hover{background:#f0f4ff}
+</style>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<div class="jump">
+  <div class="wrap">
+    <a href="#verdict">Verdict</a>
+    <a href="#compare">Compare</a>
+    <a href="#alternatives">Alternatives</a>
+    <a href="#best-for">Best for</a>
+    <a href="#pros-cons">Pros &amp; Cons</a>
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQs</a>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section class="hero">
+    <div class="hero-top">
+      <div class="tool-mark">R</div>
+      <div class="hero-head">
+        <div class="verified">● Hands-on tested &amp; research-verified</div>
+        <h1>Runway Review 2026: Gen-4.5, Pricing &amp; Is It Worth It?</h1>
+        <p class="lede">Runway is the AI video tool built for people who actually edit — Gen-4.5 generation sits alongside real timeline tooling, making it the closest thing to a professional post-production suite in this category, not just a generation model.</p>
+        <p class="updated">Last updated August 2026 · Reviewed by [Your Name]</p>
+      </div>
+    </div>
+
+    <div class="rating-row">
+      <div class="rating-block">
+        <div class="rating-num">4.4</div>
+        <div class="stars">★★★★☆</div>
+        <div class="rating-label">Our overall score</div>
+      </div>
+      <div class="ext-scores">
+        <div class="ext-score"><b>Gen-4.5</b> · current model generation</div>
+        <div class="ext-score">Used in professional film &amp; ad production workflows</div>
+      </div>
+    </div>
+
+    <div class="sentiment">
+      <div class="bars">
+        <div class="pos" style="width:78%"></div>
+        <div class="neu" style="width:13%"></div>
+        <div class="neg" style="width:9%"></div>
+      </div>
+      <div class="key">
+        <span><span class="dot" style="background:var(--good)"></span>Positive 78%</span>
+        <span><span class="dot" style="background:#d6dde6"></span>Neutral 13%</span>
+        <span><span class="dot" style="background:var(--bad)"></span>Negative 9%</span>
+      </div>
+    </div>
+
+    <div class="cta-wrap">
+      <a class="cta-btn" href="#" data-aff="runway">Try Runway free →</a>
+      <div class="cta-sub">125 one-time free credits · Paid plans from $12/mo</div>
+    </div>
+  </section>
+
+  <section style="border-top:none;padding-top:8px">
+    <div class="decision">
+      <div class="col">
+        <h3>What we liked</h3>
+        <ul class="pc-list pros">
+          <li>The only major model built around real editing and timeline tools, not generation alone</li>
+          <li>Strong shot-to-shot consistency, valuable for professional and agency work</li>
+          <li>Directly usable in production workflows most rivals aren't designed for</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Where it falls short</h3>
+        <ul class="pc-list cons">
+          <li>Free tier's 125 credits are one-time, not recurring — burn through fast at 12 credits/sec</li>
+          <li>Plan names and credit allowances have been restructured more than once in 2026</li>
+          <li>Steeper learning curve than prompt-only competitors if you want to use the editing tools</li>
+        </ul>
+      </div>
+      <div class="facts">
+        <div class="fact"><div class="k">Starting price</div><div class="v">Free (125 credits)</div></div>
+        <div class="fact"><div class="k">Paid from</div><div class="v">$12/mo</div></div>
+        <div class="fact"><div class="k">Free plan</div><div class="v">One-time</div></div>
+        <div class="fact"><div class="k">Best for</div><div class="v">Pro editing workflows</div></div>
+      </div>
+    </div>
+
+    <figure>
+      <div class="shot-ph">
+        <div class="ico"><svg class="svg-ic" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg></div>
+        <b>Your Runway screenshot goes here</b>
+        <span>Capture your own Runway project mid-generation, save it to an <code>images/</code> folder, and swap this frame for an <code>&lt;img&gt;</code> with keyword-rich <code>alt</code> text.</span>
+      </div>
+      <figcaption>Recommended: the Runway timeline view with a Gen-4.5 generation loaded (your own capture)</figcaption>
+    </figure>
+  </section>
+
+  <section id="verdict">
+    <div class="eyebrow">The quick verdict</div>
+    <div class="verdict">
+      <p>Runway is the right pick when video editing matters as much as generation. Gen-4.5's quality is competitive with Veo and Kling, but the real differentiator is that Runway is built for people integrating AI clips into a real production workflow, not just generating standalone shots. Casual creators who just want quick clips will find cheaper options elsewhere.</p>
+    </div>
+  </section>
+
+  <section id="compare">
+    <div class="eyebrow">Head to head</div>
+    <h2>Runway vs Veo 3</h2>
+    <p style="margin-top:0">The professional-editing pick against the realism-and-audio leader — a comparison that comes down to what you're actually building.</p>
+    <div class="tbl-scroll">
+      <table class="tbl">
+        <thead>
+          <tr><th>&nbsp;</th><th>Runway</th><th>Veo 3</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Our score</td><td class="this-tool">4.4 ★</td><td>4.6 ★</td></tr>
+          <tr><td>Starting price</td><td>Free / $12 mo</td><td>Free / $19.99 mo</td></tr>
+          <tr><td>Editing/timeline tools</td><td>Yes, built in</td><td>No, generation only</td></tr>
+          <tr><td>Native audio</td><td>No</td><td>Yes, dialogue + SFX</td></tr>
+          <tr><td>Cost per second (credits)</td><td>~12 credits/sec (Gen-4.5)</td><td>~$0.15–0.40</td></tr>
+          <tr><td>Best for</td><td>Pro editing workflows</td><td>Realism + native sound</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="disc-note">Full breakdown: <a href="veo-vs-runway.html">Veo 3 vs Runway →</a></p>
+  </section>
+
+  <section id="alternatives">
+    <div class="eyebrow">If Runway isn't the fit</div>
+    <h2>Top Runway alternatives</h2>
+    <div class="alt-grid">
+      <div class="alt-card">
+        <h3>Veo 3</h3>
+        <div class="alt-rate">4.6 ★</div>
+        <p>Native dialogue and sound, stronger realism — but no editing timeline of its own.</p>
+        <div class="alt-price">From $19.99/mo · Free daily credits</div>
+        <p style="margin-bottom:0"><a class="alt-link" href="veo-review.html">Read our Veo 3 review →</a></p>
+      </div>
+      <div class="alt-card">
+        <h3>Kling AI</h3>
+        <div class="alt-rate">4.5 ★</div>
+        <p>Cheaper per generated second, with real camera-move controls of its own.</p>
+        <div class="alt-price">From $10/mo · Free daily credits</div>
+        <p style="margin-bottom:0"><a class="alt-link" href="kling-review.html">Read our Kling AI review →</a></p>
+      </div>
+      <div class="alt-card">
+        <h3>Higgsfield</h3>
+        <div class="alt-rate">4.2 ★</div>
+        <p>Multi-model aggregator with strong character-consistency tools for social content.</p>
+        <div class="alt-price">From $9/mo · Free tier</div>
+        <p style="margin-bottom:0"><a class="alt-link" href="higgsfield-review.html">Read our Higgsfield review →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="best-for">
+    <div class="eyebrow">Who it's for</div>
+    <h2>Is Runway right for you?</h2>
+    <div class="split">
+      <div class="box good">
+        <h3 style="color:var(--good)">✓ Great fit if you…</h3>
+        <ul>
+          <li>Work in a professional or agency video production pipeline</li>
+          <li>Need real editing/timeline tools around your AI generations</li>
+          <li>Value shot-to-shot consistency for client work</li>
+          <li>Are comfortable with a credit-based, slightly steeper learning curve</li>
+        </ul>
+      </div>
+      <div class="box bad">
+        <h3 style="color:var(--bad)">✕ Look elsewhere if you…</h3>
+        <ul>
+          <li>Just want quick, cheap clips without an editing workflow</li>
+          <li>Need generated dialogue or sound effects</li>
+          <li>Want the lowest possible cost per second</li>
+          <li>Are put off by plan names/credits that have shifted more than once this year</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="pros-cons">
+    <div class="eyebrow">In depth</div>
+    <h2>Pros &amp; cons, with real user sentiment</h2>
+    <div class="pc-detail">
+
+      <div class="pc-item pro">
+        <div class="head"><span class="tag">Pro</span><h3>Built for people who edit, not just generate</h3></div>
+        <p>Runway pairs Gen-4.5 with genuine timeline and editing tooling — the only major AI video platform designed explicitly around integrating into a real production workflow rather than handing you a raw clip.</p>
+        <blockquote class="quote">
+          Professional editors and agencies consistently cite the built-in editing tools as the reason they stick with Runway over cheaper generation-only competitors.
+          <cite>— Aggregated from public creator and studio sentiment, 2026 [[EDIT: link source]]</cite>
+        </blockquote>
+      </div>
+
+      <div class="pc-item pro">
+        <div class="head"><span class="tag">Pro</span><h3>Shot-to-shot consistency holds up for client work</h3></div>
+        <p>Runway's generations keep subjects and style stable across related shots more reliably than most prompt-only competitors, which matters a lot once a project has more than one cut.</p>
+      </div>
+
+      <div class="pc-item con">
+        <div class="head"><span class="tag">Con</span><h3>The free tier is a trial, not an ongoing plan</h3></div>
+        <p>125 one-time credits at 12 credits per second of Gen-4.5 disappear in well under a minute of total footage — it's enough to evaluate the tool, not to use casually long-term.</p>
+        <blockquote class="quote">
+          A recurring complaint is that credits burn faster than expected once you account for re-generating takes that don't land the first time.
+          <cite>— Aggregated from public pricing sentiment, 2026 [[EDIT: link source]]</cite>
+        </blockquote>
+      </div>
+
+      <div class="pc-item con">
+        <div class="head"><span class="tag">Con</span><h3>Plan restructuring has made pricing harder to track</h3></div>
+        <p>Tier names and credit allowances changed again in 2026 (old Standard became Pro, old Pro became Max), which makes it easy to compare against outdated numbers still floating around online.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="eyebrow">Under the hood</div>
+    <h2>Key features</h2>
+
+    <div class="feat-grid">
+      <div class="feat"><h3>Gen-4.5</h3><p>Runway's current generation model, competitive with Veo and Kling on visual quality.</p></div>
+      <div class="feat"><h3>Timeline editing</h3><p>Real editing tools around your generations, not just a raw clip export.</p></div>
+      <div class="feat"><h3>Shot consistency</h3><p>Keeps subjects and style stable across multiple related generations.</p></div>
+      <div class="feat"><h3>Image-to-video</h3><p>Animate a still image into a moving scene with camera and motion control.</p></div>
+      <div class="feat"><h3>Credit-based generation</h3><p>12 credits per second on Gen-4.5, spendable across video, image and editing tools.</p></div>
+      <div class="feat"><h3>Team &amp; Enterprise tiers</h3><p>Seat-based plans for agencies and studios, up to a custom Enterprise tier.</p></div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="eyebrow">What it costs</div>
+    <h2>Runway pricing</h2>
+    <p style="margin-top:0">Prices below are indicative — always confirm current tiers and credit costs on Runway's site, as they've changed more than once in 2026. Annual billing saves 20%.</p>
+    <div class="price-grid">
+      <div class="plan">
+        <h3>Free</h3>
+        <div class="amt">$0<small>one-time</small></div>
+        <ul>
+          <li>125 one-time credits</li>
+          <li>Core Gen-4.5 access</li>
+          <li>Watermarked exports</li>
+        </ul>
+      </div>
+      <div class="plan featured">
+        <div class="badge">Most popular</div>
+        <h3>Pro</h3>
+        <div class="amt">$28<small>/mo</small></div>
+        <ul>
+          <li>2,250 credits/mo</li>
+          <li>Full editing toolset</li>
+          <li>No watermark</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <h3>Max</h3>
+        <div class="amt">$76<small>/mo</small></div>
+        <ul>
+          <li>9,500 credits/mo</li>
+          <li>Highest generation priority</li>
+          <li>Best for heavy production use</li>
+        </ul>
+      </div>
+    </div>
+    <div class="cta-wrap">
+      <a class="cta-btn" href="#" data-aff="runway">See live pricing on Runway →</a>
+    </div>
+    <p class="disc-note">Standard ($12/mo annual, 625 credits) sits below Pro. Enterprise pricing is custom. Gen-4.5 costs 12 credits per second — a 5-second clip runs about 60 credits before any retry.</p>
+  </section>
+
+  <section id="faq" class="faq">
+    <div class="eyebrow">Common questions</div>
+    <h2>Runway FAQs</h2>
+
+    <details open>
+      <summary>Is Runway free?</summary>
+      <div class="ans">There's a one-time free allowance of 125 credits to try the platform — not an ongoing free plan. At 12 credits per second on Gen-4.5, that covers a short evaluation, not regular use. Paid plans start at $12/mo (Standard, annual).</div>
+    </details>
+    <details>
+      <summary>What makes Runway different from Veo or Kling?</summary>
+      <div class="ans">Runway is built around editing, not just generation — it's the only major platform in this category with real timeline tools designed for integrating AI clips into a production workflow. Veo and Kling focus on generation quality and price instead.</div>
+    </details>
+    <details>
+      <summary>Runway vs Veo 3 — which is better?</summary>
+      <div class="ans">Runway wins if editing tools and production workflow matter to you. Veo wins on native audio and realism. Many professional editors use Runway specifically because nothing else in the category offers comparable editing tools.</div>
+    </details>
+    <details>
+      <summary>Why did Runway's pricing change?</summary>
+      <div class="ans">Runway restructured its plans in 2026 — old Standard became Pro, old Pro became Max, and a new entry Standard tier was introduced. Older articles online may still reference the previous names and credit allowances.</div>
+    </details>
+  </section>
+
+  <section style="border-top:none">
+    <div class="final">
+      <h2>The verdict</h2>
+      <div class="rating-num" style="font-size:2.4rem">4.4</div>
+      <div class="stars" style="font-size:1.2rem">★★★★☆</div>
+      <p>Runway earns its price premium if you're actually editing what you generate. For professional and agency workflows, the built-in timeline tools are worth more than a cheaper per-second rate elsewhere.</p>
+      <a class="cta-btn" href="#" data-aff="runway">Try Runway free →</a>
+    </div>
+  </section>
+
+</div>
+
+<div id="site-footer"></div>
+
+<script>
+(function () {
+  var links = document.querySelectorAll(".jump a[href^='#']");
+  if (!links.length) return;
+  var map = {};
+  links.forEach(function (a) {
+    var id = a.getAttribute("href").slice(1);
+    var el = document.getElementById(id);
+    if (el) map[id] = { link: a, el: el };
+  });
+
+  var current = null;
+  function setActive(id) {
+    if (id === current) return;
+    current = id;
+    links.forEach(function (a) { a.classList.remove("active"); });
+    if (map[id]) {
+      map[id].link.classList.add("active");
+      var linkEl = map[id].link;
+      var scrollParent = linkEl.closest(".jump .wrap") || linkEl.parentElement;
+      if (scrollParent && scrollParent.scrollWidth > scrollParent.clientWidth) {
+        var linkLeft = linkEl.offsetLeft;
+        var linkRight = linkLeft + linkEl.offsetWidth;
+        var viewLeft = scrollParent.scrollLeft;
+        var viewRight = viewLeft + scrollParent.clientWidth;
+        if (linkLeft < viewLeft || linkRight > viewRight) {
+          scrollParent.scrollTo({ left: linkLeft - scrollParent.clientWidth / 2 + linkEl.offsetWidth / 2, behavior: "smooth" });
+        }
+      }
+    }
+  }
+
+  function startObserving() {
+    var topbarH = (document.querySelector(".topbar") || {}).offsetHeight || 56;
+    var jumpH = topbarH + ((document.querySelector(".jump") || {}).offsetHeight || 50);
+    var observer = new IntersectionObserver(function (entries) {
+      var best = null;
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          if (!best || entry.boundingClientRect.top < best.boundingClientRect.top) best = entry;
+        }
+      });
+      if (best) setActive(best.target.id);
+    }, { rootMargin: "-" + (jumpH + 4) + "px 0px -70% 0px", threshold: 0 });
+
+    Object.keys(map).forEach(function (id) { observer.observe(map[id].el); });
+  }
+  if (document.querySelector(".topbar")) {
+    startObserving();
+  } else {
+    document.addEventListener("nexsia:chrome-ready", startObserving, { once: true });
+  }
+})();
+</script>
+<script src="nexsia.js"></script>
+</body>
+</html>

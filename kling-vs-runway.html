@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="color-scheme" content="light only">
+<title>Kling AI vs Runway 2026: Value vs Editing Platform | Nexsia</title>
+<meta name="description" content="Kling AI vs Runway compared for 2026 — pricing, camera controls, editing tools, and which AI video platform fits your workflow.">
+<style>
+  :root{
+    --ink:#0f1b2d;--body:#3d4b5c;--muted:#6b7887;--line:#e3e8ef;
+    --bg:#f6f8fb;--card:#fff;--brand:#1a56db;--brand-dark:#12409c;
+    --brand-tint:#eef3fe;--good:#188a5b;--good-tint:#e7f5ee;
+    --bad:#c23b52;--bad-tint:#fbeaed;--star:#f5a623;--cta:#ff6a2b;--cta-dark:#e5551a;
+    --a:#0ea5e9;   /* Kling cyan */
+    --b:#4b4b4b;   /* Runway grey/black */
+    --radius:12px;--shadow:0 1px 3px rgba(15,27,45,.06),0 8px 24px rgba(15,27,45,.05);--maxw:960px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;color-scheme:light;background:var(--bg)}
+  body{margin:0;background:var(--bg);color:var(--body);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{color:var(--ink);line-height:1.25;margin:0 0 .5em}
+  h1{font-size:1.95rem;letter-spacing:-.02em}h2{font-size:1.4rem;letter-spacing:-.01em}h3{font-size:1.05rem}
+  a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  section{padding:34px 0;border-top:1px solid var(--line)}section:first-of-type{border-top:none}
+  .eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--brand);margin-bottom:8px}
+
+  .disclosure{background:var(--brand-tint);color:var(--muted);font-size:.8rem}.disclosure .wrap{padding:10px 20px}
+  .hero{text-align:center;padding-top:36px}.hero .eyebrow{display:block}
+  .vs-logos{display:flex;align-items:center;justify-content:center;gap:22px;margin:18px 0 6px}
+  .vs-mark{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.6rem;color:#fff}
+  .vs-mark img{max-width:100%;max-height:100%;object-fit:contain}
+  .vs-mark.a{background:var(--a)}
+  .vs-mark.b{background:var(--b)}
+  .vs-badge{font-weight:800;color:var(--muted);font-size:1.1rem}
+  .hero p.lede{font-size:1.05rem;max-width:640px;margin:10px auto 0}
+  .updated{color:var(--muted);font-size:.82rem;margin-top:14px}
+  .quickpick{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+  @media(max-width:640px){.quickpick{grid-template-columns:1fr}}
+  .pick{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+  .pick.a{border-top:4px solid var(--a)}.pick.b{border-top:4px solid var(--b)}
+  .pick .who{font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+  .pick h3{margin:6px 0 4px;font-size:1.15rem}.pick p{font-size:.92rem;margin:0 0 14px}
+  .cta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--cta);color:#fff;font-weight:700;font-size:.95rem;padding:11px 22px;border-radius:10px;box-shadow:0 4px 14px rgba(255,106,43,.3);transition:transform .12s,background .12s}
+  .cta-btn:hover{background:var(--cta-dark);text-decoration:none;transform:translateY(-1px)}
+  .cta-btn.ghost{background:#fff;color:var(--brand);border:1.5px solid var(--brand);box-shadow:none}.cta-btn.ghost:hover{background:var(--brand-tint)}
+  .tbl-scroll{overflow-x:auto}
+  .ctbl{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;font-size:.93rem}
+  .ctbl th,.ctbl td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  .ctbl thead th{font-size:.9rem;color:#fff}
+  .ctbl thead th:nth-child(1){background:var(--ink)}.ctbl thead th:nth-child(2){background:var(--a)}.ctbl thead th:nth-child(3){background:var(--b)}
+  .ctbl td:first-child{font-weight:600;color:var(--ink);width:30%}.ctbl tr:last-child td{border-bottom:none}
+  .win::after{content:"✓ Winner";display:inline-block;margin-left:6px;font-size:.68rem;font-weight:700;color:var(--good);background:var(--good-tint);padding:1px 7px;border-radius:5px;vertical-align:middle}
+  .cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:640px){.cat-grid{grid-template-columns:1fr}}
+  .cat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+  .cat .cat-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+  .cat h3{margin:0;font-size:.98rem}
+  .cat .winner-pill{font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:20px;color:#fff}
+  .cat .winner-pill.a{background:var(--a)}.cat .winner-pill.b{background:var(--b)}
+  .cat p{font-size:.88rem;margin:0}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:640px){.split{grid-template-columns:1fr}}
+  .pbox{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+  .pbox.a{border-top:3px solid var(--a)}.pbox.b{border-top:3px solid var(--b)}
+  .pbox h3{display:flex;align-items:center;gap:8px}
+  .pbox ul{margin:10px 0 0;padding-left:20px;font-size:.92rem}.pbox li{margin-bottom:7px}
+  .verdict{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow)}
+  .verdict p{margin:0 0 10px;font-size:1.02rem;color:var(--ink)}.verdict p:last-child{margin-bottom:0}
+  .faq details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;overflow:hidden}
+  .faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:.97rem}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:1.4rem;color:var(--brand)}.faq details[open] summary::after{content:"–"}
+  .faq details[open] summary{border-bottom:1px solid var(--line)}.faq .ans{padding:14px 20px;font-size:.92rem}
+  .disc-note{font-size:.8rem;color:var(--muted);font-style:italic;margin-top:14px}
+
+  .jump{position:sticky;top:56px;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .jump .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:0;padding-bottom:0;scrollbar-width:none}
+  .jump .wrap::-webkit-scrollbar{display:none}
+  .jump a{white-space:nowrap;color:var(--muted);font-size:.86rem;font-weight:600;padding:13px 12px;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+  .jump a:hover{color:var(--brand);text-decoration:none;border-bottom-color:var(--brand)}
+  .jump a.active{color:var(--brand);border-bottom-color:var(--brand)}
+  figure:has(.vsslider){margin:22px 0 8px}
+  .vsslider{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);user-select:none;touch-action:none;background:#0f1b2d;--vs-pos:50%;--vs-skew:34px}
+  .vsslider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+  .vsslider .vs-right{z-index:1}
+  .vsslider .vs-left{z-index:2;clip-path:polygon(0 0, calc(var(--vs-pos) + var(--vs-skew)) 0, calc(var(--vs-pos) - var(--vs-skew)) 100%, 0 100%)}
+  .vsslider .vs-seam{position:absolute;top:-8%;bottom:-8%;left:var(--vs-pos);width:2px;z-index:4;pointer-events:none;background:var(--cta,#ff6a2b);transform-origin:center;transform:translateX(-50%) rotate(var(--vs-angle,9deg))}
+  .vsslider .vs-seam i.core{position:absolute;inset:0;display:block}
+  .vsslider .vs-handle{position:absolute;top:50%;left:var(--vs-pos);transform:translate(-50%,-50%);z-index:5;
+    width:110px;height:80px;display:flex;align-items:center;justify-content:center;cursor:ew-resize;background:none;border:none}
+  .vsslider .vs-handle .vs-word{position:relative;display:block;width:100%;height:100%;
+    font-weight:800;color:var(--cta,#ff6a2b);line-height:1;font-family:'Arial Narrow',Arial,sans-serif}
+  .vsslider .vs-handle .vs-word .v,.vsslider .vs-handle .vs-word .s{position:absolute;font-size:3.1rem;letter-spacing:-.03em}
+  .vsslider .vs-handle .vs-word .v{right:50%;top:0;margin-right:-10px}
+  .vsslider .vs-handle .vs-word .s{left:50%;bottom:0;margin-left:-10px}
+  .vsslider .vs-hint{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:6;font-size:.72rem;color:#fff;background:rgba(15,27,45,.6);padding:4px 12px;border-radius:20px;pointer-events:none;transition:opacity .3s}
+  .vsslider.touched .vs-hint{opacity:0}
+  .vs-ph{display:none;position:absolute;inset:0;z-index:7;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;color:#c7d2e0;background:repeating-linear-gradient(135deg,#16233a,#16233a 12px,#1b2b45 12px,#1b2b45 24px)}
+  .vsslider.vs-noimg .vs-ph{display:flex}
+  .vs-ph b{color:#fff;font-size:1rem;display:block;margin-bottom:6px}
+  .vs-ph span{font-size:.84rem;max-width:420px;line-height:1.5}
+  .vs-ph code{background:rgba(255,255,255,.12);padding:1px 6px;border-radius:5px;font-size:.85em}
+  .pc-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  @media(max-width:680px){.pc-cols{grid-template-columns:1fr}}
+  .col-h{display:flex;align-items:center;gap:10px;font-size:1.05rem;margin-bottom:14px}
+  .pc-detail{display:flex;flex-direction:column;gap:14px}
+  .pc-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px}
+  .pc-item .head{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+  .pc-item .tag{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 9px;border-radius:5px}
+  .pc-item.pro .tag{background:var(--good-tint);color:var(--good)}
+  .pc-item.con .tag{background:var(--bad-tint);color:var(--bad)}
+  .pc-item h3{margin:0;font-size:1rem}
+  .pc-item p{margin:4px 0 0;font-size:.93rem}
+  .quote{margin:12px 0 0;padding:10px 14px;background:var(--bg);border-left:3px solid var(--line);border-radius:0 8px 8px 0;font-size:.88rem;color:var(--body);font-style:italic}
+  .price-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media(max-width:680px){.price-cols{grid-template-columns:1fr}}
+  .price-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+  .price-card h3{margin:0 0 8px}
+  .price-card .mark{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;font-weight:700;font-size:.85rem;color:#fff}
+  .price-card .mark.a{background:var(--a,#1a56db)}
+  .price-card .mark.b{background:var(--b,#ff6a2b)}
+  .price-card .sub{font-size:.87rem;color:var(--muted);margin:0 0 14px}
+  .ptier{display:flex;justify-content:space-between;align-items:flex-start;padding:10px 0;border-top:1px solid var(--line);gap:12px}
+  .ptier:first-of-type{border-top:none}
+  .ptier .nm{font-size:.9rem;font-weight:600}
+  .ptier .nm small{display:block;font-weight:400;color:var(--muted);font-size:.8rem;margin-top:2px}
+  .ptier .amt{font-size:.95rem;font-weight:700;white-space:nowrap}
+  .feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:640px){.feat-grid{grid-template-columns:1fr}}
+  .feat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+  .feat h3{font-size:.95rem;margin-bottom:3px}
+  .feat p{font-size:.87rem;margin:0}
+</style>
+<link rel="stylesheet" href="shared.css">
+
+</head>
+<body>
+
+<div id="site-header"></div>
+
+
+<div class="jump"><div class="wrap">
+  <a href="#compare">Compare</a><a href="#categories">Round by round</a>
+  <a href="#pros-cons">Pros &amp; Cons</a><a href="#features">Features</a>
+  <a href="#pricing">Pricing</a><a href="#fit">Best for</a><a href="#verdict">Verdict</a><a href="#faq">FAQs</a>
+</div></div>
+
+<div class="wrap">
+
+  <section class="hero">
+    <span class="eyebrow">Head-to-head comparison</span>
+    <div class="vs-logos"><div class="vs-mark a">K</div><span class="vs-badge">vs</span><div class="vs-mark b">R</div></div>
+    <h1>Kling AI vs Runway: Cheap Generation or Full Editing Platform?</h1>
+    <p class="lede">Kling wins on cost per generation and camera controls. Runway wins the moment you need to actually edit what you generate. The right pick depends on whether you're building a workflow or just need clips.</p>
+    <p class="updated">Last updated August 2026 · Prices verified against each provider's site · Reviewed by [Your Name]</p>
+  </section>
+
+  <section style="border-top:none;padding-top:6px">
+    <div class="quickpick">
+      <div class="pick a">
+        <div class="who">Pick Kling AI if…</div>
+        <h3>Cost per generation matters most</h3>
+        <p>Roughly $0.10/second with real camera-move controls — the best access economics in the category.</p>
+        <a class="cta-btn ghost" href="#" data-aff="kling">Try Kling AI →</a>
+      </div>
+      <div class="pick b">
+        <div class="who">Pick Runway if…</div>
+        <h3>You're editing what you generate</h3>
+        <p>Real timeline tools around Gen-4.5 generation, built for professional and agency production.</p>
+        <a class="cta-btn" href="#" data-aff="runway">Try Runway →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="compare">
+    <div class="eyebrow">Side by side</div>
+    <h2>The full comparison</h2>
+    <div class="tbl-scroll"><table class="ctbl">
+      <thead><tr><th>&nbsp;</th><th>Kling AI</th><th>Runway</th></tr></thead>
+      <tbody><tr><td>Our score</td><td class="win">4.5 ★</td><td>4.4 ★</td></tr><tr><td>Free plan</td><td class="win">Yes, 66 credits/day</td><td>125 one-time credits</td></tr><tr><td>Entry paid plan</td><td class="win">$10/mo (Standard)</td><td>$12/mo (Standard)</td></tr><tr><td>Cost per second</td><td class="win">~$0.10</td><td>~12 credits/sec (Gen-4.5)</td></tr><tr><td>Camera controls</td><td class="win">Yes (dolly, pan, orbit)</td><td>Via generation prompts</td></tr><tr><td>Editing/timeline tools</td><td>No</td><td class="win">Yes, built in</td></tr><tr><td>Best for</td><td>Value + directorial control</td><td>Pro editing workflows</td></tr></tbody>
+    </table></div>
+    <p class="disc-note">Runway's plan names and credit allowances changed in 2026 — confirm current tiers on runwayml.com and klingai.com before buying.</p>
+  </section>
+
+  <section id="categories">
+    <div class="eyebrow">Round by round</div>
+    <h2>Who wins each category</h2>
+    <div class="cat-grid"><div class="cat"><div class="cat-top"><h3>Price per generation</h3><span class="winner-pill a">Kling AI</span></div><p>At roughly $0.10/sec, Kling undercuts Runway's Gen-4.5 credit cost for most standard generations.</p></div><div class="cat"><div class="cat-top"><h3>Editing tools</h3><span class="winner-pill b">Runway</span></div><p>Runway is the only one of the two with a real editing timeline built around its generations.</p></div><div class="cat"><div class="cat-top"><h3>Camera control</h3><span class="winner-pill a">Kling AI</span></div><p>Explicit dolly, pan and orbit controls give more directorial precision than prompt-based direction.</p></div><div class="cat"><div class="cat-top"><h3>Production readiness</h3><span class="winner-pill b">Runway</span></div><p>Used across professional post-production workflows in a way Kling alone isn't designed for.</p></div><div class="cat"><div class="cat-top"><h3>Free tier usability</h3><span class="winner-pill a">Kling AI</span></div><p>Recurring daily credits beat Runway's one-time 125-credit trial for ongoing casual use.</p></div><div class="cat"><div class="cat-top"><h3>Team/agency plans</h3><span class="winner-pill b">Runway</span></div><p>Runway's seat-based Pro/Max/Enterprise tiers are built for teams working on client deliverables.</p></div></div>
+
+    <figure>
+      <div class="vsslider" id="vs-kling-runway" style="--vs-pos:50%">
+        <img class="vs-right" src="images_demo_runway.png" alt="Runway screenshot — swap for your own capture" data-src="images/runway-dashboard.png" onerror="this.closest('.vsslider').classList.add('vs-noimg')">
+        <img class="vs-left" src="images_demo_kling.png" alt="Kling AI screenshot — swap for your own capture" data-src="images/kling-dashboard.png" onerror="this.closest('.vsslider').classList.add('vs-noimg')">
+
+        <div class="vs-seam" aria-hidden="true"><i class="core"></i></div>
+        <div class="vs-handle" role="slider" tabindex="0" aria-label="Drag to compare Kling AI and Runway screenshots" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span class="vs-word"><span class="v">V</span><span class="s">S</span></span></div>
+        <span class="vs-hint">◄ Drag to compare ►</span>
+
+        <div class="vs-ph"><b><svg class="svg-ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg> Screenshot comparison</b><span>Two app screenshots load here with a draggable VS divider. Add <code>images_demo_kling.png</code> and <code>images_demo_runway.png</code> to see it live.</span></div>
+      </div>
+      <figcaption>Drag the VS handle to compare Kling AI and Runway</figcaption>
+    </figure>
+  </section>
+
+  <section id="pros-cons">
+    <div class="eyebrow">In depth</div>
+    <h2>Pros &amp; cons of each platform</h2>
+    <div class="pc-cols">
+      <div>
+        <h3 class="col-h"><span style="width:24px;height:24px;font-size:.7rem;border-radius:6px;background:var(--a);color:#fff;display:inline-flex;align-items:center;justify-content:center">K</span> Kling AI</h3>
+        <div class="pc-detail">
+          <div class="pc-item pro"><div class="head"><span class="tag">Pro</span><h3>The best access economics in the category</h3></div><p>Roughly $0.10/sec, well under Runway's Gen-4.5 credit cost for most standard generations.</p></div>
+          <div class="pc-item pro"><div class="head"><span class="tag">Pro</span><h3>Real camera-move controls</h3></div><p>Dolly, pan and orbit controls give explicit directorial intent Runway relies on prompts for instead.</p></div>
+          <div class="pc-item con"><div class="head"><span class="tag">Con</span><h3>No editing tools of its own</h3></div><p>Generations come out as raw clips — anything beyond that needs a separate editor.</p></div>
+        </div>
+      </div>
+      <div>
+        <h3 class="col-h"><span style="width:24px;height:24px;font-size:.7rem;border-radius:6px;background:var(--b);color:#fff;display:inline-flex;align-items:center;justify-content:center">R</span> Runway</h3>
+        <div class="pc-detail">
+          <div class="pc-item pro"><div class="head"><span class="tag">Pro</span><h3>Built for people who edit, not just generate</h3></div><p>Gen-4.5 plus real timeline tooling — the differentiator Kling doesn't offer.</p></div>
+          <div class="pc-item pro"><div class="head"><span class="tag">Pro</span><h3>Strong shot-to-shot consistency for client work</h3></div><p>Keeps subjects and style stable across related shots, valuable for agency deliverables.</p></div>
+          <div class="pc-item con"><div class="head"><span class="tag">Con</span><h3>Higher cost per generation at scale</h3></div><p>12 credits/sec on Gen-4.5 adds up faster than Kling's per-second pricing for high-volume work.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="eyebrow">Feature by feature</div>
+    <h2>What each tool gives you</h2>
+    <div class="feat-grid">
+      <div class="feat"><h3>Camera controls</h3><p><b>Kling:</b> explicit dolly/pan/orbit. <b>Runway:</b> via generation prompts.</p></div>
+      <div class="feat"><h3>Editing tools</h3><p><b>Runway:</b> real timeline built in. <b>Kling:</b> generation only.</p></div>
+      <div class="feat"><h3>Cost per second</h3><p><b>Kling:</b> ~$0.10. <b>Runway:</b> ~12 credits/sec on Gen-4.5.</p></div>
+      <div class="feat"><h3>Team plans</h3><p><b>Kling:</b> $79/seat/mo pooled credits. <b>Runway:</b> seat-based Pro/Max/Enterprise.</p></div>
+      <div class="feat"><h3>Free tier</h3><p><b>Kling:</b> 66 credits/day, recurring. <b>Runway:</b> 125 credits, one-time.</p></div>
+      <div class="feat"><h3>Audio</h3><p>Neither generates native audio — both need a separate voice/sound tool.</p></div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="eyebrow">What it costs</div>
+    <h2>Pricing side by side (2026)</h2>
+    <div class="price-cols">
+      <div class="price-card">
+        <h3><span class="mark a">K</span> Kling AI</h3>
+        <p class="sub">Free: 66 credits/day, expire in 24hr.</p>
+        <div class="ptier"><div class="nm">Standard <small>Entry paid tier</small></div><div class="amt">$10/mo</div></div>
+        <div class="ptier"><div class="nm">Pro <small>Full model access incl. Kling 3.0</small></div><div class="amt">$37/mo</div></div>
+      </div>
+      <div class="price-card">
+        <h3><span class="mark b">R</span> Runway</h3>
+        <p class="sub">Free: 125 one-time credits.</p>
+        <div class="ptier"><div class="nm">Pro <small>2,250 credits/mo</small></div><div class="amt">$28/mo</div></div>
+        <div class="ptier"><div class="nm">Max <small>9,500 credits/mo</small></div><div class="amt">$76/mo</div></div>
+      </div>
+    </div>
+    <p class="disc-note" style="margin-top:14px">Kling's annual billing saves ~34% on Standard/Pro/Premier. Runway's Standard tier ($12/mo annual) sits below Pro. Confirm current tiers on klingai.com and runwayml.com before buying.</p>
+  </section>
+
+  <section id="fit">
+    <div class="eyebrow">Match it to your project</div>
+    <h2>Which one fits you?</h2>
+
+    <figure>
+      <svg class="fig-desktop" viewBox="0 0 900 210" role="img" aria-label="Decision guide: if cost per generation and camera control matter most choose Kling AI; if you need to edit what you generate choose Runway">
+        <rect width="900" height="210" fill="#f6f8fb"/>
+        <rect x="300" y="18" width="300" height="46" rx="10" fill="#0f1b2d"/>
+        <text x="450" y="46" font-size="15" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial">What matters most?</text>
+        <path d="M450 64 L230 110" stroke="#b9c4d4" stroke-width="2"/><path d="M450 64 L670 110" stroke="#b9c4d4" stroke-width="2"/>
+        <rect x="60" y="112" width="340" height="94" rx="12" fill="#fff" stroke="#e3e8ef"/>
+        <text x="80" y="140" font-size="13" fill="#3d4b5c" font-family="Arial">Cost per generation, camera control</text>
+        <rect x="80" y="152" width="110" height="26" rx="6" fill="#0ea5e9"/><text x="135" y="170" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial">Kling AI</text>
+        <text x="80" y="200" font-size="11.5" fill="#6b7887" font-family="Arial">Best access economics</text>
+        <rect x="500" y="112" width="340" height="94" rx="12" fill="#fff" stroke="#e3e8ef"/>
+        <text x="520" y="140" font-size="13" fill="#3d4b5c" font-family="Arial">Editing/production workflow</text>
+        <rect x="520" y="152" width="100" height="26" rx="6" fill="#4b4b4b"/><text x="570" y="170" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial">Runway</text>
+        <text x="520" y="200" font-size="11.5" fill="#6b7887" font-family="Arial">Gen-4.5 + real timeline tools</text>
+      </svg>
+      <svg class="fig-mobile" viewBox="0 0 380 380" role="img" aria-label="Decision guide: if cost per generation and camera control matter most choose Kling AI; if you need to edit what you generate choose Runway">
+        <rect width="380" height="380" fill="#f6f8fb"/>
+        <rect x="40" y="16" width="300" height="48" rx="10" fill="#0f1b2d"/>
+        <text x="190" y="45" font-size="14" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial">What matters most?</text>
+        <path d="M190 64 L190 84" stroke="#b9c4d4" stroke-width="2.5"/>
+        <rect x="30" y="86" width="320" height="106" rx="12" fill="#fff" stroke="#e3e8ef"/>
+        <text x="50" y="114" font-size="14" fill="#3d4b5c" font-family="Arial">Cost per generation, camera control</text>
+        <rect x="50" y="126" width="120" height="30" rx="7" fill="#0ea5e9"/><text x="110" y="147" font-size="14" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial">Kling AI</text>
+        <text x="50" y="178" font-size="12.5" fill="#6b7887" font-family="Arial">Best access economics</text>
+        <rect x="30" y="200" width="320" height="106" rx="12" fill="#fff" stroke="#e3e8ef"/>
+        <text x="50" y="228" font-size="14" fill="#3d4b5c" font-family="Arial">Editing/production workflow</text>
+        <rect x="50" y="240" width="100" height="30" rx="7" fill="#4b4b4b"/><text x="100" y="261" font-size="14" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial">Runway</text>
+        <text x="50" y="292" font-size="12.5" fill="#6b7887" font-family="Arial">Gen-4.5 + real timeline tools</text>
+      </svg>
+      <figcaption>Quick decision guide: match the tool to what your workflow actually needs</figcaption>
+    </figure>
+
+    <div class="split">
+      <div class="pbox a"><h3><span class="vs-mark a" style="width:26px;height:26px;font-size:.8rem;border-radius:7px">K</span> Choose Kling AI</h3><ul><li>Generate a high volume of clips regularly</li><li>Want explicit camera-move controls</li><li>Don't need built-in editing tools</li></ul></div>
+      <div class="pbox b"><h3><span class="vs-mark b" style="width:26px;height:26px;font-size:.8rem;border-radius:7px">R</span> Choose Runway</h3><ul><li>Work in a professional or agency production pipeline</li><li>Need real editing/timeline tools</li><li>Value shot-to-shot consistency for client work</li></ul></div>
+    </div>
+  </section>
+
+  <section id="verdict">
+    <div class="eyebrow">Our verdict</div>
+    <div class="verdict"><p><strong>These solve different jobs, so the "winner" depends on your workflow.</strong> Kling AI is the better value for high-volume generation and directorial control. Runway earns its premium the moment editing becomes part of the job — the only one of the two built for that.</p><p>Some creators use both: Kling for volume generation, Runway for the pieces that need real post-production.</p></div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:18px">
+      <a class="cta-btn ghost" href="#" data-aff="kling">Try Kling AI →</a>
+      <a class="cta-btn" href="#" data-aff="runway">Try Runway →</a>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="eyebrow">Common questions</div>
+    <h2>Kling AI vs Runway FAQs</h2>
+    <details open><summary>Which is better, Kling AI or Runway?</summary><div class="ans">Kling wins on price and camera-control tools; Runway wins if you need real editing/timeline tools around your generations. For high-volume, budget-conscious work, Kling is stronger. For production workflows, Runway is worth the premium.</div></details>
+    <details><summary>Which is cheaper?</summary><div class="ans">Kling AI, generally — its per-second generation cost (~$0.10) runs below Runway's Gen-4.5 credit cost (12 credits/sec), and its free tier renews daily rather than being a one-time trial.</div></details>
+    <details><summary>Can I edit videos with Kling AI?</summary><div class="ans">No — Kling produces raw generations with no built-in editing tools. Runway is built specifically around editing what you generate, with a real timeline and production tooling.</div></details>
+    <details><summary>Which has better camera controls?</summary><div class="ans">Kling AI's dolly, pan and orbit controls are more explicit and directly directable than Runway's, which relies more on prompt-based direction for similar effects.</div></details>
+  </section>
+
+</div>
+
+<div id="site-footer"></div>
+
+<script>
+/* Scroll-spy: highlight the jump-nav tab for the section currently in view. */
+(function () {
+  var links = document.querySelectorAll(".jump a[href^='#']");
+  if (!links.length) return;
+  var map = {};
+  links.forEach(function (a) {
+    var id = a.getAttribute("href").slice(1);
+    var el = document.getElementById(id);
+    if (el) map[id] = { link: a, el: el };
+  });
+
+  var current = null;
+  function setActive(id) {
+    if (id === current) return;
+    current = id;
+    links.forEach(function (a) { a.classList.remove("active"); });
+    if (map[id]) {
+      map[id].link.classList.add("active");
+      var linkEl = map[id].link;
+      var scrollParent = linkEl.closest(".jump .wrap") || linkEl.parentElement;
+      if (scrollParent && scrollParent.scrollWidth > scrollParent.clientWidth) {
+        var linkLeft = linkEl.offsetLeft;
+        var linkRight = linkLeft + linkEl.offsetWidth;
+        var viewLeft = scrollParent.scrollLeft;
+        var viewRight = viewLeft + scrollParent.clientWidth;
+        if (linkLeft < viewLeft || linkRight > viewRight) {
+          scrollParent.scrollTo({ left: linkLeft - scrollParent.clientWidth / 2 + linkEl.offsetWidth / 2, behavior: "smooth" });
+        }
+      }
+    }
+  }
+
+  function startObserving() {
+    var topbarH = (document.querySelector(".topbar") || {}).offsetHeight || 56;
+    var jumpH = topbarH + ((document.querySelector(".jump") || {}).offsetHeight || 50);
+    var observer = new IntersectionObserver(function (entries) {
+      var best = null;
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          if (!best || entry.boundingClientRect.top < best.boundingClientRect.top) best = entry;
+        }
+      });
+      if (best) setActive(best.target.id);
+    }, { rootMargin: "-" + (jumpH + 4) + "px 0px -70% 0px", threshold: 0 });
+
+    Object.keys(map).forEach(function (id) { observer.observe(map[id].el); });
+  }
+  if (document.querySelector(".topbar")) {
+    startObserving();
+  } else {
+    document.addEventListener("nexsia:chrome-ready", startObserving, { once: true });
+  }
+})();
+</script>
+<script>
+/* Interactive VS comparison slider — drag, touch or arrow-key to wipe. */
+(function () {
+  var s = document.getElementById("vs-kling-runway");
+  if (!s) return;
+  var left = s.querySelector(".vs-left"), right = s.querySelector(".vs-right");
+  var ph = s.querySelector(".vs-ph"), handle = s.querySelector(".vs-handle");
+
+  function checkImg(img) {
+    if (img.complete && img.naturalWidth === 0) {
+      s.classList.add("vs-noimg");
+    }
+    img.addEventListener("error", function () { s.classList.add("vs-noimg"); });
+    img.addEventListener("load", function () {
+      if (img.naturalWidth === 0) s.classList.add("vs-noimg");
+    });
+  }
+  checkImg(left); checkImg(right);
+
+  function syncAngle() {
+    var skew = parseFloat(getComputedStyle(s).getPropertyValue("--vs-skew")) || 70;
+    var h = s.getBoundingClientRect().height || 1;
+    var deg = Math.atan(skew / (h / 2)) * (180 / Math.PI);
+    s.style.setProperty("--vs-angle", deg.toFixed(2) + "deg");
+  }
+  syncAngle();
+  window.addEventListener("resize", syncAngle);
+
+  function setPos(pct) {
+    pct = Math.max(0, Math.min(100, pct));
+    s.style.setProperty("--vs-pos", pct + "%");
+    handle.setAttribute("aria-valuenow", Math.round(pct));
+  }
+  function fromEvent(e) {
+    var r = s.getBoundingClientRect();
+    var x = (e.touches ? e.touches[0].clientX : e.clientX) - r.left;
+    setPos((x / r.width) * 100);
+    s.classList.add("touched");
+  }
+  var dragging = false;
+  s.addEventListener("mousedown", function (e) { dragging = true; fromEvent(e); });
+  window.addEventListener("mousemove", function (e) { if (dragging) fromEvent(e); });
+  window.addEventListener("mouseup", function () { dragging = false; });
+  s.addEventListener("touchstart", function (e) { fromEvent(e); }, { passive: true });
+  s.addEventListener("touchmove", function (e) { fromEvent(e); }, { passive: true });
+  handle.addEventListener("keydown", function (e) {
+    var cur = parseFloat(s.style.getPropertyValue("--vs-pos")) || 50;
+    if (e.key === "ArrowLeft") { setPos(cur - 4); s.classList.add("touched"); }
+    if (e.key === "ArrowRight") { setPos(cur + 4); s.classList.add("touched"); }
+  });
+})();
+</script>
+<script src="nexsia.js"></script>
+</body>
+</html>
