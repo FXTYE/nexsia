@@ -366,12 +366,11 @@ function filterSitePages(query) {
 
 /* Header search box: always visible (no click to reveal), shows a live
    preview of the top matches as you type, and sends you to search.html
-   for the full result list -- via Enter, the search icon/link, or the
-   "See all N results" link once there are more matches than fit here. */
+   for the full result list -- via Enter or the "See all N results" link
+   once there are more matches than fit here. */
 function initSiteSearch() {
   var input = document.querySelector(".search-input");
   var results = document.querySelector(".search-results");
-  var goLink = document.querySelector(".search-go");
   if (!input || !results) return;
 
   var MAX_PREVIEW = 6;
@@ -418,15 +417,6 @@ function initSiteSearch() {
     if (e.key === "Enter") { e.preventDefault(); goToSearchPage(); }
     if (e.key === "Escape") { results.classList.remove("show"); input.blur(); }
   });
-
-  // the search icon is a plain link to search.html so it still works
-  // without JS -- when there's a query, send the query along with it
-  if (goLink) {
-    goLink.addEventListener("click", function (e) {
-      var q = input.value.trim();
-      if (q) { e.preventDefault(); goToSearchPage(); }
-    });
-  }
 
   document.addEventListener("click", function (e) {
     if (!e.target.closest(".nav-search")) results.classList.remove("show");
