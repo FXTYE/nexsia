@@ -250,6 +250,148 @@ function injectPartials() {
   return Promise.all(tasks);
 }
 
+/* Site search index: every real page's <title> (minus " | Nexsia") and
+   filename, used by the header search box. Keep in sync when adding or
+   renaming pages -- there's no build step to generate this automatically. */
+var SITE_PAGES = [
+  {t:"About Nexsia — Why We Compare Software Honestly",u:"about.html"},
+  {t:"ActiveCampaign Review 2026: Pricing, Features, Pros & Cons",u:"activecampaign-review.html"},
+  {t:"AdCreative.ai Review 2026: Worth It for Ad Creatives?",u:"adcreative-review.html"},
+  {t:"Affiliate Disclosure",u:"affiliate-disclosure.html"},
+  {t:"Best AI Copywriting & Ad Tools 2026: Jasper vs Copy.ai vs AdCreative.ai",u:"best-ai-copywriting-tools.html"},
+  {t:"Best AI Tools for YouTubers in 2026 (Tested & Compared)",u:"best-ai-tools-for-youtubers.html"},
+  {t:"Best AI Video Generators 2026: Veo 3 vs Kling vs Runway vs Sora",u:"best-ai-video-generators.html"},
+  {t:"Best Email Marketing Software 2026: Mailchimp vs Kit vs ActiveCampaign",u:"best-email-marketing-software.html"},
+  {t:"Best Sales Funnel Software 2026: ClickFunnels vs Kajabi vs GoHighLevel",u:"best-sales-funnel-software.html"},
+  {t:"Best Web Hosting 2026: Hostinger vs SiteGround vs Bluehost",u:"best-web-hosting.html"},
+  {t:"Bluehost Review 2026: Pricing, Features, Pros & Cons",u:"bluehost-review.html"},
+  {t:"Bluehost vs SiteGround 2026: Which Web Host Wins?",u:"bluehost-vs-siteground.html"},
+  {t:"ClickFunnels Review 2026: Pricing, Features, Pros & Cons",u:"clickfunnels-review.html"},
+  {t:"ClickFunnels vs GoHighLevel 2026: Funnels vs All-in-One",u:"clickfunnels-vs-gohighlevel.html"},
+  {t:"ClickFunnels vs Kajabi 2026: Which One Fits Your Business?",u:"clickfunnels-vs-kajabi.html"},
+  {t:"ClickFunnels vs Systeme.io 2026: Which Funnel Builder Wins?",u:"clickfunnels-vs-systeme.html"},
+  {t:"Cloudways Review 2026: Pricing, Features, Pros & Cons",u:"cloudways-review.html"},
+  {t:"Cloudways vs Bluehost 2026: Which Web Host Wins?",u:"cloudways-vs-bluehost.html"},
+  {t:"Cloudways vs Hostinger 2026: Which Web Host Wins?",u:"cloudways-vs-hostinger.html"},
+  {t:"Cloudways vs SiteGround 2026: Which Web Host Wins?",u:"cloudways-vs-siteground.html"},
+  {t:"Contact Us",u:"contact.html"},
+  {t:"Copy.ai Review 2026: GTM Platform or Overpriced Writer?",u:"copyai-review.html"},
+  {t:"Descript Review 2026: Best AI Video Editor for Creators?",u:"descript-review.html"},
+  {t:"Descript vs CapCut 2026: Best Editor for YouTubers?",u:"descript-vs-capcut.html"},
+  {t:"ElevenLabs Review 2026: Best AI Voice for Creators?",u:"elevenlabs-review.html"},
+  {t:"ElevenLabs vs Murf 2026: Best AI Voice for YouTubers?",u:"elevenlabs-vs-murf.html"},
+  {t:"GetResponse Review 2026: Pricing, Features, Pros & Cons",u:"getresponse-review.html"},
+  {t:"GetResponse vs ActiveCampaign 2026: Which Email Platform Wins?",u:"getresponse-vs-activecampaign.html"},
+  {t:"GetResponse vs Mailchimp 2026: Which Email Platform Wins?",u:"getresponse-vs-mailchimp.html"},
+  {t:"GoHighLevel Review 2026: Pricing, Features, Pros & Cons",u:"gohighlevel-review.html"},
+  {t:"Higgsfield AI Review 2026: Pricing, Soul ID & Verdict",u:"higgsfield-review.html"},
+  {t:"Hostinger Review 2026: Pricing, Features, Pros & Cons",u:"hostinger-review.html"},
+  {t:"Hostinger vs Bluehost 2026: Which Web Host Wins?",u:"hostinger-vs-bluehost.html"},
+  {t:"Hostinger vs SiteGround 2026: Which Web Host Wins?",u:"hostinger-vs-siteground.html"},
+  {t:"Nexsia — Honest App Comparisons for Online Businesses",u:"index.html"},
+  {t:"Jasper Review 2026: Is the AI Writer Worth It for Creators?",u:"jasper-review.html"},
+  {t:"Jasper vs Copy.ai 2026: Best AI Writer for Creators?",u:"jasper-vs-copyai.html"},
+  {t:"JPG to PDF — Free, Private Converter (No Upload)",u:"jpg-to-pdf.html"},
+  {t:"Kajabi Review 2026: Pricing, Features, Pros & Cons",u:"kajabi-review.html"},
+  {t:"Kajabi vs Teachable 2026: Which Course Platform Wins?",u:"kajabi-vs-teachable.html"},
+  {t:"Kit (ConvertKit) Review 2026: Pricing, Features, Pros & Cons",u:"kit-review.html"},
+  {t:"Kit vs ActiveCampaign 2026: Which Email Platform Wins?",u:"kit-vs-activecampaign.html"},
+  {t:"Kling AI Review 2026: Pricing, Features, Is It Worth It?",u:"kling-review.html"},
+  {t:"Kling AI vs Higgsfield 2026: Direct Model vs Character Platform",u:"kling-vs-higgsfield.html"},
+  {t:"Kling AI vs Runway 2026: Value vs Editing Platform",u:"kling-vs-runway.html"},
+  {t:"Kling AI vs Veo 3 2026: Value vs Native Audio",u:"kling-vs-veo.html"},
+  {t:"Mailchimp Review 2026: Pricing, Features, Pros & Cons",u:"mailchimp-review.html"},
+  {t:"Mailchimp vs ActiveCampaign 2026: Which Email Platform Wins?",u:"mailchimp-vs-activecampaign.html"},
+  {t:"Mailchimp vs Kit 2026: Which Email Platform Wins?",u:"mailchimp-vs-kit.html"},
+  {t:"Merge PDF — Combine PDFs Free, No Upload",u:"merge-pdf.html"},
+  {t:"OpusClip Review 2026: Features, Pricing, Pros & Cons",u:"opusclip-review.html"},
+  {t:"OpusClip vs Vidyo.ai 2026: Best AI Clipping Tool?",u:"opusclip-vs-vidyo.html"},
+  {t:"OutlierKit Review 2026: YouTube Outlier Research Tool",u:"outlierkit-review.html"},
+  {t:"PDF to JPG — Convert PDF Pages to Images Free",u:"pdf-to-jpg.html"},
+  {t:"Pictory Review 2026: Turn Scripts & Blogs into Video",u:"pictory-review.html"},
+  {t:"Privacy Policy",u:"privacy.html"},
+  {t:"Review Methodology — How We Test AI Tools",u:"review-methodology.html"},
+  {t:"Runway Review 2026: Gen-4.5, Pricing & Is It Worth It?",u:"runway-review.html"},
+  {t:"Runway vs Higgsfield 2026: Editing Platform vs AI Characters",u:"runway-vs-higgsfield.html"},
+  {t:"SiteGround Review 2026: Pricing, Features, Pros & Cons",u:"siteground-review.html"},
+  {t:"Skool Review 2026: Pricing, Features, Pros & Cons",u:"skool-review.html"},
+  {t:"Skool vs Circle 2026: Which Community Platform Wins?",u:"skool-vs-circle.html"},
+  {t:"Skool vs Kajabi 2026: Which Platform Wins?",u:"skool-vs-kajabi.html"},
+  {t:"Sora Review 2026: Is It Still Available? (Status Explained)",u:"sora-review.html"},
+  {t:"Sora vs Higgsfield 2026: Single Model vs Multi-Model Platform",u:"sora-vs-higgsfield.html"},
+  {t:"Sora vs Kling AI 2026: Photorealism vs Value",u:"sora-vs-kling.html"},
+  {t:"Sora vs Runway 2026: Raw Model vs Editing Platform",u:"sora-vs-runway.html"},
+  {t:"Sora vs Veo 3 2026: Which AI Video Model Should You Use?",u:"sora-vs-veo.html"},
+  {t:"Terms of Service",u:"terms.html"},
+  {t:"TubeBuddy Review 2026: Pricing, Features, Pros & Cons",u:"tubebuddy-review.html"},
+  {t:"Veo 3 Review 2026: Google's AI Video Model, Tested",u:"veo-review.html"},
+  {t:"Veo 3 vs Higgsfield 2026: Native Audio vs AI Characters",u:"veo-vs-higgsfield.html"},
+  {t:"Veo 3 vs Runway 2026: Native Audio vs Editing Platform",u:"veo-vs-runway.html"},
+  {t:"vidIQ Review 2026: Pricing, Features, Pros & Cons",u:"vidiq-review.html"},
+  {t:"vidIQ vs TubeBuddy 2026: Which YouTube Tool Wins?",u:"vidiq-vs-tubebuddy.html"}
+];
+
+/* Header search box: filters SITE_PAGES by title as the user types and
+   renders matching links. No backend -- pure client-side substring match
+   against page titles, which is enough for ~75 pages. */
+function initSiteSearch() {
+  var input = document.querySelector(".search-input");
+  var results = document.querySelector(".search-results");
+  var trig = document.querySelector(".search-trig");
+  if (!input || !results) return;
+
+  var MAX_RESULTS = 8;
+
+  function render(query) {
+    results.innerHTML = "";
+    var q = query.trim().toLowerCase();
+    if (!q) return;
+
+    var matches = SITE_PAGES.filter(function (p) {
+      return p.t.toLowerCase().indexOf(q) !== -1;
+    }).slice(0, MAX_RESULTS);
+
+    if (!matches.length) {
+      var empty = document.createElement("div");
+      empty.className = "search-empty";
+      empty.textContent = "No matches for “" + query.trim() + "”";
+      results.appendChild(empty);
+      return;
+    }
+
+    matches.forEach(function (p) {
+      var a = document.createElement("a");
+      a.href = p.u;
+      a.textContent = p.t;
+      results.appendChild(a);
+    });
+  }
+
+  input.addEventListener("input", function () {
+    render(input.value);
+  });
+
+  // pressing Enter goes straight to the top result
+  input.addEventListener("keydown", function (e) {
+    if (e.key !== "Enter") return;
+    var first = results.querySelector("a");
+    if (first) {
+      e.preventDefault();
+      window.location.href = first.getAttribute("href");
+    }
+  });
+
+  // autofocus the input as soon as the search dropdown opens
+  if (trig) {
+    trig.addEventListener("click", function () {
+      var item = trig.closest(".nav-item");
+      if (item && item.classList.contains("open")) {
+        setTimeout(function () { input.focus(); }, 0);
+      }
+    });
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   initAnalytics();
   injectPartials().then(function () {
@@ -257,6 +399,7 @@ document.addEventListener("DOMContentLoaded", function () {
     trackAffiliateClicks();
     initMobileMenu();
     initMegaMenu();
+    initSiteSearch();
     // let any per-page inline scripts (e.g. the jump-nav scroll-spy) know
     // the header/footer are now in the DOM and safe to measure.
     document.dispatchEvent(new CustomEvent("nexsia:chrome-ready"));
