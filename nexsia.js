@@ -331,65 +331,106 @@ var SITE_PAGES = [
   {t:"vidIQ vs TubeBuddy 2026: Which YouTube Tool Wins?",u:"vidiq-vs-tubebuddy.html"}
 ];
 
-/* Header search box: filters SITE_PAGES by title as the user types and
-   renders matching links. No backend -- pure client-side substring match
-   against page titles, which is enough for ~75 pages. */
+/* Ranks a page URL into a rough "kind" so results can be sorted with the
+   most direct answer first (a tool's own review) ahead of the pages that
+   merely mention it (comparisons, roundups). Shared by the header search
+   box and search.html so both rank results identically. */
+var SITE_SEARCH_KIND_RANK = { review: 0, best: 1, vs: 2, other: 3 };
+function siteSearchKind(u) {
+  if (u.indexOf("best-") === 0) return "best";
+  if (u.indexOf("-vs-") !== -1) return "vs";
+  if (u.indexOf("-review.html") !== -1) return "review";
+  return "other";
+}
+
+/* Filters SITE_PAGES by title substring. No backend -- pure client-side
+   match against page titles, which is enough for ~75 pages. Results are
+   sorted so titles starting with the query beat titles that merely
+   contain it, and within a tier, a tool's own review page beats roundups
+   and "X vs Y" comparisons that just happen to mention it. */
+function filterSitePages(query) {
+  var q = query.trim().toLowerCase();
+  if (!q) return [];
+  var wordRe = new RegExp("\\b" + q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+
+  return SITE_PAGES
+    .filter(function (p) { return p.t.toLowerCase().indexOf(q) !== -1; })
+    .map(function (p) {
+      var titleLower = p.t.toLowerCase();
+      var tier = titleLower.indexOf(q) === 0 ? 0 : (wordRe.test(titleLower) ? 1 : 2);
+      return { p: p, tier: tier, kind: SITE_SEARCH_KIND_RANK[siteSearchKind(p.u)] };
+    })
+    .sort(function (a, b) { return a.tier - b.tier || a.kind - b.kind; })
+    .map(function (x) { return x.p; });
+}
+
+/* Header search box: always visible (no click to reveal), shows a live
+   preview of the top matches as you type, and sends you to search.html
+   for the full result list -- via Enter, the search icon/link, or the
+   "See all N results" link once there are more matches than fit here. */
 function initSiteSearch() {
   var input = document.querySelector(".search-input");
   var results = document.querySelector(".search-results");
-  var trig = document.querySelector(".search-trig");
+  var goLink = document.querySelector(".search-go");
   if (!input || !results) return;
 
-  var MAX_RESULTS = 8;
+  var MAX_PREVIEW = 6;
 
-  function render(query) {
+  function renderPreview(query) {
     results.innerHTML = "";
-    var q = query.trim().toLowerCase();
-    if (!q) return;
+    var q = query.trim();
+    if (!q) { results.classList.remove("show"); return; }
 
-    var matches = SITE_PAGES.filter(function (p) {
-      return p.t.toLowerCase().indexOf(q) !== -1;
-    }).slice(0, MAX_RESULTS);
-
+    var matches = filterSitePages(query);
     if (!matches.length) {
       var empty = document.createElement("div");
       empty.className = "search-empty";
-      empty.textContent = "No matches for “" + query.trim() + "”";
+      empty.textContent = "No matches for “" + q + "”";
       results.appendChild(empty);
+      results.classList.add("show");
       return;
     }
 
-    matches.forEach(function (p) {
+    matches.slice(0, MAX_PREVIEW).forEach(function (p) {
       var a = document.createElement("a");
       a.href = p.u;
       a.textContent = p.t;
       results.appendChild(a);
     });
+    if (matches.length > MAX_PREVIEW) {
+      var more = document.createElement("a");
+      more.className = "search-view-all";
+      more.href = "search.html?q=" + encodeURIComponent(q);
+      more.textContent = "See all " + matches.length + " results →";
+      results.appendChild(more);
+    }
+    results.classList.add("show");
   }
 
-  input.addEventListener("input", function () {
-    render(input.value);
-  });
+  function goToSearchPage() {
+    var q = input.value.trim();
+    window.location.href = "search.html" + (q ? "?q=" + encodeURIComponent(q) : "");
+  }
 
-  // pressing Enter goes straight to the top result
+  input.addEventListener("input", function () { renderPreview(input.value); });
+  input.addEventListener("focus", function () { renderPreview(input.value); });
   input.addEventListener("keydown", function (e) {
-    if (e.key !== "Enter") return;
-    var first = results.querySelector("a");
-    if (first) {
-      e.preventDefault();
-      window.location.href = first.getAttribute("href");
-    }
+    if (e.key === "Enter") { e.preventDefault(); goToSearchPage(); }
+    if (e.key === "Escape") { results.classList.remove("show"); input.blur(); }
   });
 
-  // autofocus the input as soon as the search dropdown opens
-  if (trig) {
-    trig.addEventListener("click", function () {
-      var item = trig.closest(".nav-item");
-      if (item && item.classList.contains("open")) {
-        setTimeout(function () { input.focus(); }, 0);
-      }
+  // the search icon is a plain link to search.html so it still works
+  // without JS -- when there's a query, send the query along with it
+  if (goLink) {
+    goLink.addEventListener("click", function (e) {
+      var q = input.value.trim();
+      if (q) { e.preventDefault(); goToSearchPage(); }
     });
   }
+
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".nav-search")) results.classList.remove("show");
+  });
 }
 
 document.addEventListener("DOMContentLoaded", function () {
