@@ -51,8 +51,10 @@
   .hero .eyebrow{display:block}
   .vs-logos{display:flex;align-items:center;justify-content:center;gap:22px;margin:18px 0 6px}
   .vs-mark{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.6rem;color:#fff}
+  .vs-mark img{max-width:100%;max-height:100%;object-fit:contain}
   .vs-mark.a{background:linear-gradient(135deg,#e0463f,#c4302b)}
   .vs-mark.b{background:linear-gradient(135deg,#4a97ec,#2a7de1)}
+  .vs-logos .vs-mark.a,.vs-logos .vs-mark.b{background:#fff}
   .vs-badge{font-weight:800;color:var(--muted);font-size:1.1rem}
   .hero p.lede{font-size:1.05rem;max-width:640px;margin:10px auto 0}
   .updated{color:var(--muted);font-size:.82rem;margin-top:14px}
@@ -202,9 +204,9 @@
   <section class="hero">
     <span class="eyebrow">Head-to-head comparison</span>
     <div class="vs-logos">
-      <div class="vs-mark a">V</div>
+      <div class="vs-mark a"><img src="images/vidiq-logo-clean.png" alt="vidiq logo"></div>
       <span class="vs-badge">vs</span>
-      <div class="vs-mark b">T</div>
+      <div class="vs-mark b"><img src="images/tubebuddy-logo-clean.png" alt="tubebuddy logo"></div>
     </div>
     <h1>vidIQ vs TubeBuddy: Which Wins in 2026?</h1>
     <p class="lede">Both are the go-to YouTube SEO tools — but they've drifted apart. vidIQ leans into keyword research and AI; TubeBuddy owns A/B testing and bulk tools. Here's who each one is actually for.</p>
