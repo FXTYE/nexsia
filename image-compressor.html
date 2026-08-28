@@ -11,11 +11,11 @@
 <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
 <link rel="shortcut icon" href="favicon.ico">
 <meta name="color-scheme" content="light only">
-<title>JPG to PDF — Free, Private Converter (No Upload) | Nexsia</title>
-<meta name="description" content="Convert JPG, PNG or WebP images to PDF for free. Runs entirely in your browser — your images are never uploaded anywhere. No signup, no watermark, no file limit.">
+<title>Image Compressor — Free, Private, No Upload | Nexsia</title>
+<meta name="description" content="Compress JPG, PNG or WebP images for free, right in your browser. Adjustable quality, see the size saved before you download. No signup, no upload, no watermark.">
 <style>
   /* ============================================================
-     JPG TO PDF TOOL — shares the Nexsia design system.
+     IMAGE COMPRESSOR TOOL — shares the Nexsia design system.
      ============================================================ */
   :root{
     --ink:#0f1b2d;--body:#3d4b5c;--muted:#6b7887;--line:#e3e8ef;
@@ -37,11 +37,7 @@
   section{padding:42px 0}
   .eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--brand);margin-bottom:8px}
 
-  /* top bar (verbatim from site) */
-
-
   @media(max-width:1040px){.mega{left:0;transform:none;min-width:560px}}
-
   @media(max-width:680px){
     .topbar nav{display:flex;position:fixed;top:60px;left:0;right:0;bottom:0;flex-direction:column;
       background:#0f1b2d;border-top:1px solid #22334d;padding:10px 16px 16px;gap:4px;
@@ -54,8 +50,8 @@
   .cta-btn:disabled{background:#b9c4d4;box-shadow:none;cursor:not-allowed;transform:none}
   .cta-btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);box-shadow:none}
   .cta-btn.ghost:hover{background:var(--brand-tint)}
+  .cta-btn.small{padding:9px 16px;font-size:.88rem}
 
-  /* tool hero */
   .tool-hero{background:linear-gradient(160deg,#0f1b2d 0%,#12409c 100%);color:#fff;text-align:center;padding:52px 0 40px}
   .tool-hero h1{color:#fff;max-width:680px;margin:0 auto .3em}
   .tool-hero .kicker{display:inline-block;background:rgba(91,155,255,.18);color:#a9c8ff;font-size:.8rem;font-weight:600;padding:6px 14px;border-radius:20px;margin-bottom:18px;letter-spacing:.02em}
@@ -63,7 +59,6 @@
   .trust-row{margin-top:22px;font-size:.84rem;color:#93a7c6;display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
   .trust-row b{color:#dce8ff}
 
-  /* ---- the tool widget ---- */
   .tool-card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 4px 20px rgba(15,27,45,.08);margin-top:-30px;position:relative;z-index:2;overflow:hidden}
   .drop-zone{border:2px dashed #c7d2e0;border-radius:12px;margin:22px;padding:44px 20px;text-align:center;cursor:pointer;transition:border-color .15s,background .15s}
   .drop-zone:hover,.drop-zone.drag-over{border-color:var(--brand);background:var(--brand-tint)}
@@ -72,19 +67,28 @@
   .drop-zone span{color:var(--muted);font-size:.88rem}
   .drop-zone input[type=file]{display:none}
 
-  .file-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:12px;padding:0 22px;margin-bottom:6px}
-  .file-thumb{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--bg);aspect-ratio:3/4;cursor:grab}
-  .file-thumb.dragging{opacity:.4}
+  .file-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:14px;padding:0 22px;margin-bottom:6px}
+  .file-thumb{position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--bg)}
+  .file-thumb .im-wrap{aspect-ratio:4/3;overflow:hidden;background:var(--bg)}
   .file-thumb img{width:100%;height:100%;object-fit:cover;display:block}
-  .file-thumb .pg{position:absolute;top:6px;left:6px;background:rgba(15,27,45,.75);color:#fff;font-size:.7rem;font-weight:700;padding:2px 7px;border-radius:6px}
-  .file-thumb .rm{position:absolute;top:6px;right:6px;background:rgba(15,27,45,.75);color:#fff;width:22px;height:22px;border-radius:50%;border:none;cursor:pointer;font-size:.85rem;line-height:1;display:flex;align-items:center;justify-content:center}
+  .file-thumb .rm{position:absolute;top:6px;right:6px;background:rgba(15,27,45,.75);color:#fff;width:22px;height:22px;border-radius:50%;border:none;cursor:pointer;font-size:.85rem;line-height:1;display:flex;align-items:center;justify-content:center;z-index:2}
   .file-thumb .rm:hover{background:var(--bad)}
-  .file-thumb .nm{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(15,27,45,.85));color:#fff;font-size:.68rem;padding:12px 6px 5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .file-thumb .foot{padding:8px 10px}
+  .file-thumb .nm{font-size:.78rem;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block}
+  .file-thumb .sz{font-size:.74rem;color:var(--muted);display:block;margin-top:2px}
+  .file-thumb .sz .saved{color:var(--good);font-weight:700}
+  .file-thumb .dl-row{display:flex;justify-content:flex-end;padding:0 10px 8px}
+  .file-thumb .dl{color:var(--brand);cursor:pointer;background:none;border:none;padding:2px;display:flex;align-items:center}
+  .file-thumb .dl:hover{color:var(--brand-dark)}
 
-  .options-row{display:flex;gap:18px;flex-wrap:wrap;align-items:center;padding:18px 22px;border-top:1px solid var(--line);background:var(--bg)}
+  .options-row{display:flex;gap:22px;flex-wrap:wrap;align-items:center;padding:18px 22px;border-top:1px solid var(--line);background:var(--bg)}
   .opt-group{display:flex;flex-direction:column;gap:5px}
   .opt-group label{font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
   .opt-group select{padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:.9rem;font-family:inherit}
+  .opt-group.slider{min-width:180px}
+  .opt-group .slider-row{display:flex;align-items:center;gap:10px}
+  .opt-group input[type=range]{flex:1}
+  .opt-group .qval{font-size:.9rem;font-weight:700;color:var(--ink);width:38px;text-align:right}
   .tool-actions{display:flex;gap:10px;align-items:center;margin-left:auto;flex-wrap:wrap}
   .file-count{font-size:.86rem;color:var(--muted)}
 
@@ -96,10 +100,13 @@
   .spinner{width:16px;height:16px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:spin .7s linear infinite;flex-shrink:0}
   @keyframes spin{to{transform:rotate(360deg)}}
 
+  .results-actions{display:none;padding:14px 22px;border-top:1px solid var(--line);align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .results-actions.show{display:flex}
+  .results-actions .rs-count{font-size:.86rem;color:var(--muted);font-weight:600}
+
   .privacy-note{display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--muted);justify-content:center;margin-top:16px}
   .privacy-note svg{flex-shrink:0}
 
-  /* content sections below the tool */
   .steps{counter-reset:step}
   .step{display:flex;gap:16px;margin-bottom:18px}
   .step .n{counter-increment:step;flex-shrink:0;width:32px;height:32px;border-radius:9px;background:var(--brand);color:#fff;font-weight:700;font-size:.95rem;display:flex;align-items:center;justify-content:center}
@@ -120,8 +127,6 @@
   .faq details[open] summary{border-bottom:1px solid var(--line)}
   .faq .ans{padding:14px 20px;font-size:.92rem}
 
-
-
   @media(max-width:600px){
     .tool-hero{padding:40px 0 32px}
     h1{font-size:1.7rem}
@@ -141,8 +146,8 @@
 <div class="tool-hero">
   <div class="wrap">
     <span class="kicker">Free Tool · No Signup</span>
-    <h1>JPG to PDF Converter</h1>
-    <p class="sub">Turn your photos and images into a PDF in seconds. Everything happens in your browser — nothing is ever uploaded to a server.</p>
+    <h1>Image Compressor</h1>
+    <p class="sub">Shrink JPG, PNG or WebP files without a visible quality drop. Everything happens in your browser — nothing is ever uploaded to a server.</p>
     <div class="trust-row">
       <span><b>100%</b> private</span>
       <span><b>0</b> file limit</span>
@@ -163,38 +168,34 @@
     <div class="file-grid" id="fileGrid"></div>
 
     <div class="options-row" id="optionsRow" style="display:none">
-      <div class="opt-group">
-        <label for="pageSize">Page size</label>
-        <select id="pageSize">
-          <option value="auto">Fit to image</option>
-          <option value="a4">A4</option>
-          <option value="letter">Letter</option>
-        </select>
+      <div class="opt-group slider">
+        <label for="quality">Quality</label>
+        <div class="slider-row">
+          <input type="range" id="quality" min="10" max="95" value="75" step="5">
+          <span class="qval" id="qualityVal">75%</span>
+        </div>
       </div>
       <div class="opt-group">
-        <label for="orientation">Orientation</label>
-        <select id="orientation">
-          <option value="auto">Auto</option>
-          <option value="portrait">Portrait</option>
-          <option value="landscape">Landscape</option>
-        </select>
-      </div>
-      <div class="opt-group">
-        <label for="margin">Margin</label>
-        <select id="margin">
-          <option value="0">None</option>
-          <option value="20" selected>Small</option>
-          <option value="48">Large</option>
+        <label for="outFormat">Output format</label>
+        <select id="outFormat">
+          <option value="keep">Keep original</option>
+          <option value="image/jpeg">JPG</option>
+          <option value="image/webp">WebP</option>
         </select>
       </div>
       <div class="tool-actions">
         <span class="file-count" id="fileCount"></span>
         <button class="cta-btn ghost" id="clearBtn" type="button">Clear all</button>
-        <button class="cta-btn" id="convertBtn" type="button">Convert to PDF →</button>
+        <button class="cta-btn" id="compressBtn" type="button">Compress →</button>
       </div>
     </div>
 
     <div class="status-bar" id="statusBar"></div>
+
+    <div class="results-actions" id="resultsActions">
+      <span class="rs-count" id="resultCount"></span>
+      <button class="cta-btn small" id="downloadAllBtn" type="button">Download all (ZIP)</button>
+    </div>
   </div>
 
   <p class="privacy-note">
@@ -208,11 +209,11 @@
   <section>
     <div class="wrap-narrow" style="padding:0">
       <div class="eyebrow">How it works</div>
-      <h2>Convert JPG to PDF in 3 steps</h2>
+      <h2>Compress images in 3 steps</h2>
       <div class="steps">
-        <div class="step"><div class="n">1</div><div><h3>Add your images</h3><p>Drop in one or more JPG, PNG or WebP files, or click to browse. Drag the thumbnails to reorder them — that's the order they'll appear in the PDF.</p></div></div>
-        <div class="step"><div class="n">2</div><div><h3>Choose your options</h3><p>Pick a page size (or let each page auto-fit its image), an orientation, and a margin. The defaults work well for most scans and photos.</p></div></div>
-        <div class="step"><div class="n">3</div><div><h3>Convert and download</h3><p>Click convert — your PDF is built instantly on your device and downloads straight away. Nothing is uploaded, so there's no wait and no privacy risk.</p></div></div>
+        <div class="step"><div class="n">1</div><div><h3>Add your images</h3><p>Drop in one or more JPG, PNG or WebP files, or click to browse.</p></div></div>
+        <div class="step"><div class="n">2</div><div><h3>Set your quality</h3><p>Drag the quality slider — lower values mean smaller files with more visible compression. 75-85% is a good balance for most photos.</p></div></div>
+        <div class="step"><div class="n">3</div><div><h3>Compress and download</h3><p>Each thumbnail shows the new file size and how much was saved. Download files one at a time or grab them all as a ZIP.</p></div></div>
       </div>
     </div>
   </section>
@@ -220,11 +221,12 @@
   <section style="border-top:1px solid var(--line)">
     <div class="wrap-narrow" style="padding:0">
       <div class="eyebrow">More free tools</div>
-      <h2>Related PDF tools</h2>
+      <h2>Related image &amp; PDF tools</h2>
       <div class="related-grid">
-        <div class="related-card"><h3>PDF to JPG</h3><p>Turn each page of a PDF into a downloadable image.</p><a href="pdf-to-jpg.html" style="font-size:.86rem;font-weight:600">Try it free →</a></div>
-        <div class="related-card"><h3>Merge PDF</h3><p>Combine multiple PDF files into one document.</p><a href="merge-pdf.html" style="font-size:.86rem;font-weight:600">Try it free →</a></div>
-        <div class="related-card"><h3>Image Compressor</h3><p>Shrink your images before converting for a smaller PDF.</p><a href="image-compressor.html" style="font-size:.86rem;font-weight:600">Try it free →</a></div>
+        <div class="related-card"><h3>Image Resizer</h3><p>Resize images to exact dimensions or a percentage.</p><a href="image-resizer.html" style="font-size:.86rem;font-weight:600">Try it free →</a></div>
+        <div class="related-card"><h3>Image Converter</h3><p>Convert between JPG, PNG and WebP.</p><a href="image-converter.html" style="font-size:.86rem;font-weight:600">Try it free →</a></div>
+        <div class="related-card"><h3>Background Remover</h3><p>Remove the background from a photo automatically.</p><a href="background-remover.html" style="font-size:.86rem;font-weight:600">Try it free →</a></div>
+        <div class="related-card"><h3>JPG to PDF</h3><p>Turn your images into a single PDF file.</p><a href="jpg-to-pdf.html" style="font-size:.86rem;font-weight:600">Try it free →</a></div>
       </div>
     </div>
   </section>
@@ -232,12 +234,12 @@
   <section class="faq" style="border-top:1px solid var(--line)">
     <div class="wrap-narrow" style="padding:0">
       <div class="eyebrow">Common questions</div>
-      <h2>JPG to PDF FAQs</h2>
-      <details open><summary>Is this really free?</summary><div class="ans">Yes — there's no signup, no watermark, no page limit and no hidden paywall. The tool runs entirely in your browser, so there's no server cost on our end to pass on to you.</div></details>
-      <details><summary>Are my images uploaded anywhere?</summary><div class="ans">No. The conversion happens entirely on your device using JavaScript in your browser. Your files are never sent to Nexsia or any third party — closing the tab is the same as deleting them.</div></details>
-      <details><summary>Is there a file size or file count limit?</summary><div class="ans">No hard limit, though very large batches (dozens of high-resolution photos) will take longer since your device is doing the work instead of a server. For most use cases — a handful of scans or photos — conversion is near-instant.</div></details>
-      <details><summary>Does this work on my phone?</summary><div class="ans">Yes — you can select photos directly from your phone's camera roll, reorder them, and convert, all from the mobile browser.</div></details>
-      <details><summary>What image formats are supported?</summary><div class="ans">JPG/JPEG, PNG and WebP. If you need to convert a HEIC file (the default format on iPhones), convert it to JPG first — iPhones typically do this automatically when you share or export a photo to another app.</div></details>
+      <h2>Image Compressor FAQs</h2>
+      <details open><summary>Is this really free?</summary><div class="ans">Yes — there's no signup, no watermark, no file limit and no hidden paywall. The tool runs entirely in your browser, so there's no server cost on our end to pass on to you.</div></details>
+      <details><summary>Are my images uploaded anywhere?</summary><div class="ans">No. Compression happens entirely on your device using JavaScript in your browser. Your files are never sent to Nexsia or any third party — closing the tab is the same as deleting them.</div></details>
+      <details><summary>Why doesn't PNG shrink as much as JPG?</summary><div class="ans">PNG is a lossless format, so the quality slider doesn't apply to it the way it does JPG or WebP. For a PNG with a lot of colour or photographic detail, switching the output format to JPG or WebP will usually give a much bigger size reduction — just note those formats are lossy.</div></details>
+      <details><summary>Will compressing reduce image quality?</summary><div class="ans">At 75-85% quality, most photos look identical to the original at normal viewing sizes — the compression targets data that's hard for the eye to notice. Push the slider lower and you'll start to see blockiness or blur, especially around sharp edges and text.</div></details>
+      <details><summary>Is there a file size or file count limit?</summary><div class="ans">No hard limit, though very large batches of high-resolution photos will take longer since your device is doing the work instead of a server.</div></details>
     </div>
   </section>
 
@@ -246,7 +248,7 @@
 <div id="site-footer"></div>
 
 <script src="nexsia.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
-<script src="jpg-to-pdf.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="image-compressor.js"></script>
 </body>
 </html>
