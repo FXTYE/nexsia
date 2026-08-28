@@ -19,7 +19,7 @@
   function loadEngine() {
     if (removeBackgroundFn) return Promise.resolve(removeBackgroundFn);
     return import(/* webpackIgnore: true */ BG_REMOVAL_URL).then(function (mod) {
-      removeBackgroundFn = mod.default;
+      removeBackgroundFn = mod.removeBackground;
       return removeBackgroundFn;
     });
   }
