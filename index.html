@@ -74,6 +74,8 @@
   @media(max-width:720px){.featured{grid-template-columns:1fr}}
   .featured .left{padding:30px}
   .featured .badge{display:inline-block;background:var(--good-tint);color:var(--good);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:4px 11px;border-radius:20px;margin-bottom:12px}
+  .featured .feat-mark{width:120px;height:44px;border-radius:10px;background:#fff;border:1px solid var(--line);box-shadow:0 2px 8px rgba(15,27,45,.06);display:flex;align-items:center;justify-content:center;padding:8px 12px;margin-bottom:14px}
+  .featured .feat-mark img{max-width:100%;max-height:100%;object-fit:contain}
   .featured h3{font-size:1.5rem;margin-bottom:8px}
   .featured .stars{color:var(--star);font-size:1.05rem;letter-spacing:2px}
   .featured p{font-size:.95rem;margin:12px 0 18px}
@@ -87,7 +89,8 @@
   @media(max-width:680px){.rev-grid{grid-template-columns:1fr}}
   .rev{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow);display:flex;gap:14px;align-items:flex-start;transition:transform .12s}
   .rev:hover{transform:translateY(-2px);text-decoration:none}
-  .rev .rmark{width:46px;height:46px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:1.2rem;flex-shrink:0}
+  .rev .rmark{width:46px;height:46px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;font-size:1.2rem;flex-shrink:0;background:#fff;border:1px solid var(--line);box-shadow:0 2px 8px rgba(15,27,45,.06);padding:7px}
+  .rev .rmark img{max-width:100%;max-height:100%;object-fit:contain}
   .rev .rbody{flex:1}
   .rev h3{margin:0 0 2px;font-size:1.02rem}
   .rev .rstars{color:var(--star);font-size:.85rem;letter-spacing:1px}
@@ -129,6 +132,7 @@
   .brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:1.15rem;color:#64748b;white-space:nowrap;opacity:.7;transition:opacity .2s}
   .brand:hover{opacity:1}
   .brand svg{flex-shrink:0}
+  .brand img{max-height:22px;max-width:100px;width:auto;height:auto;display:block}
   @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
   @media(prefers-reduced-motion:reduce){.marquee{animation:none;flex-wrap:wrap;justify-content:center;gap:30px}}
 
@@ -176,12 +180,12 @@
       <span class="brand"><svg width="22" height="22" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.5 15.5v-7l6.5 3.5-6.5 3.5z"/></svg>YouTube</span>
       <span class="brand"><svg width="20" height="20" viewBox="0 0 24 24" fill="#10A37F"><path d="M22 9.5a5.5 5.5 0 0 0-.5-4.6 5.6 5.6 0 0 0-6-2.7A5.5 5.5 0 0 0 2.5 5.1a5.5 5.5 0 0 0-3.7 2.7 5.6 5.6 0 0 0 .7 6.5 5.5 5.5 0 0 0 .5 4.6 5.6 5.6 0 0 0 6 2.7A5.5 5.5 0 0 0 21.5 18.9a5.5 5.5 0 0 0 3.7-2.7 5.6 5.6 0 0 0-.7-6.5z" transform="scale(0.9) translate(1 1)"/></svg>OpenAI</span>
       <span class="brand"><svg width="20" height="20" viewBox="0 0 24 24" fill="#D97757"><path d="M12 2 3 20h4l1.8-4h6.4L17 20h4L12 2zm-1.6 10L12 8l1.6 4h-3.2z"/></svg>Claude</span>
-      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#c4302b"><circle cx="12" cy="12" r="10"/></svg>vidIQ</span>
-      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#2a7de1"><rect x="3" y="3" width="18" height="18" rx="5"/></svg>TubeBuddy</span>
-      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#1a56db"><path d="M4 4h16v16H4z" transform="rotate(45 12 12)"/></svg>OpusClip</span>
-      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#5b3df6"><circle cx="7" cy="12" r="3"/><circle cx="17" cy="12" r="3"/></svg>ElevenLabs</span>
-      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#111"><path d="M4 6h16v3H4zm0 6h16v3H4z"/></svg>Descript</span>
-      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#7c3aed"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>Jasper</span>
+      <span class="brand"><img src="images/vidiq-logo-clean.png" alt="vidIQ"></span>
+      <span class="brand"><img src="images/tubebuddy-logo-clean.png" alt="TubeBuddy"></span>
+      <span class="brand"><img src="images/opusclip-logo-clean.png" alt="OpusClip"></span>
+      <span class="brand"><img src="images/elevenlabs-logo-clean.png" alt="ElevenLabs"></span>
+      <span class="brand"><img src="images/descript-logo-clean.png" alt="Descript"></span>
+      <span class="brand"><img src="images/jasper-logo-clean.png" alt="Jasper"></span>
       <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#e11d48"><rect x="4" y="4" width="16" height="16" rx="8"/></svg>Pictory</span>
     </div>
     <!-- Track B (duplicate for seamless loop) -->
@@ -189,12 +193,12 @@
       <span class="brand"><svg width="22" height="22" viewBox="0 0 24 24" fill="#FF0000"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.5 15.5v-7l6.5 3.5-6.5 3.5z"/></svg>YouTube</span>
       <span class="brand"><svg width="20" height="20" viewBox="0 0 24 24" fill="#10A37F"><path d="M22 9.5a5.5 5.5 0 0 0-.5-4.6 5.6 5.6 0 0 0-6-2.7A5.5 5.5 0 0 0 2.5 5.1a5.5 5.5 0 0 0-3.7 2.7 5.6 5.6 0 0 0 .7 6.5 5.5 5.5 0 0 0 .5 4.6 5.6 5.6 0 0 0 6 2.7A5.5 5.5 0 0 0 21.5 18.9a5.5 5.5 0 0 0 3.7-2.7 5.6 5.6 0 0 0-.7-6.5z" transform="scale(0.9) translate(1 1)"/></svg>OpenAI</span>
       <span class="brand"><svg width="20" height="20" viewBox="0 0 24 24" fill="#D97757"><path d="M12 2 3 20h4l1.8-4h6.4L17 20h4L12 2zm-1.6 10L12 8l1.6 4h-3.2z"/></svg>Claude</span>
-      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#c4302b"><circle cx="12" cy="12" r="10"/></svg>vidIQ</span>
-      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#2a7de1"><rect x="3" y="3" width="18" height="18" rx="5"/></svg>TubeBuddy</span>
-      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#1a56db"><path d="M4 4h16v16H4z" transform="rotate(45 12 12)"/></svg>OpusClip</span>
-      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#5b3df6"><circle cx="7" cy="12" r="3"/><circle cx="17" cy="12" r="3"/></svg>ElevenLabs</span>
-      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#111"><path d="M4 6h16v3H4zm0 6h16v3H4z"/></svg>Descript</span>
-      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#7c3aed"><path d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z"/></svg>Jasper</span>
+      <span class="brand"><img src="images/vidiq-logo-clean.png" alt="vidIQ"></span>
+      <span class="brand"><img src="images/tubebuddy-logo-clean.png" alt="TubeBuddy"></span>
+      <span class="brand"><img src="images/opusclip-logo-clean.png" alt="OpusClip"></span>
+      <span class="brand"><img src="images/elevenlabs-logo-clean.png" alt="ElevenLabs"></span>
+      <span class="brand"><img src="images/descript-logo-clean.png" alt="Descript"></span>
+      <span class="brand"><img src="images/jasper-logo-clean.png" alt="Jasper"></span>
       <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#e11d48"><rect x="4" y="4" width="16" height="16" rx="8"/></svg>Pictory</span>
     </div>
   </div>
@@ -264,6 +268,7 @@
     </div>
     <div class="featured">
       <div class="left">
+        <div class="feat-mark"><img src="images/opusclip-logo-clean.png" alt="OpusClip logo"></div>
         <span class="badge">★ Best for repurposing</span>
         <h3>OpusClip</h3>
         <div class="stars">★★★★½ <span style="color:var(--muted);font-size:.85rem">4.4 / 5</span></div>
@@ -290,7 +295,7 @@
     </div>
     <div class="rev-grid">
       <a class="rev" href="opusclip-review.html">
-        <div class="rmark" style="background:linear-gradient(135deg,#1a56db,#5b9bff)">O</div>
+        <div class="rmark"><img src="images/opusclip-logo-clean.png" alt="OpusClip logo"></div>
         <div class="rbody">
           <h3>OpusClip Review</h3>
           <div class="rstars">★★★★½</div>
@@ -299,7 +304,7 @@
         </div>
       </a>
       <a class="rev" href="vidiq-review.html">
-        <div class="rmark" style="background:linear-gradient(135deg,#e0463f,#c4302b)">V</div>
+        <div class="rmark"><img src="images/vidiq-logo-clean.png" alt="vidIQ logo"></div>
         <div class="rbody">
           <h3>vidIQ Review</h3>
           <div class="rstars">★★★★☆</div>
@@ -308,7 +313,7 @@
         </div>
       </a>
       <a class="rev" href="tubebuddy-review.html">
-        <div class="rmark" style="background:linear-gradient(135deg,#4a97ec,#2a7de1)">T</div>
+        <div class="rmark"><img src="images/tubebuddy-logo-clean.png" alt="TubeBuddy logo"></div>
         <div class="rbody">
           <h3>TubeBuddy Review</h3>
           <div class="rstars">★★★★☆</div>
@@ -317,7 +322,7 @@
         </div>
       </a>
       <a class="rev" href="elevenlabs-review.html">
-        <div class="rmark" style="background:linear-gradient(135deg,#5b3df6,#8b74ff)">E</div>
+        <div class="rmark"><img src="images/elevenlabs-logo-clean.png" alt="ElevenLabs logo"></div>
         <div class="rbody">
           <h3>ElevenLabs Review</h3>
           <div class="rstars">★★★★½</div>
