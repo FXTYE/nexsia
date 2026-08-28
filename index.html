@@ -126,14 +126,19 @@
   /* logo carousel */
   .logos{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0;overflow:hidden}
   .logos .label{text-align:center;font-size:.74rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
-  .marquee{display:flex;width:max-content;animation:scroll 120s linear infinite}
+  .marquee-row{overflow:hidden}
+  .marquee-row+.marquee-row{margin-top:18px}
+  .marquee{display:flex;width:max-content}
+  .marquee.scroll-left{animation:scroll-left 60s linear infinite}
+  .marquee.scroll-right{animation:scroll-right 60s linear infinite}
   .logos:hover .marquee{animation-play-state:paused}
   .marquee .track{display:flex;align-items:center;gap:46px;padding-right:46px}
   .brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:1.15rem;color:#64748b;white-space:nowrap;opacity:.7;transition:opacity .2s}
   .brand:hover{opacity:1}
   .brand svg{flex-shrink:0}
   .brand img{height:22px;width:auto;display:block}
-  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @keyframes scroll-left{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  @keyframes scroll-right{from{transform:translateX(-50%)}to{transform:translateX(0)}}
   @media(prefers-reduced-motion:reduce){.marquee{animation:none;flex-wrap:wrap;justify-content:center;gap:30px}}
 
 
@@ -174,8 +179,8 @@
 <!-- ===== LOGO CAROUSEL ("tools we review" — editorial framing, no endorsement implied) ===== -->
 <div class="logos">
   <div class="label">The apps we compare — across every category</div>
-  <div class="marquee">
-    <!-- Track A -->
+  <div class="marquee-row">
+    <div class="marquee scroll-left">
     <div class="track">
       <span class="brand"><img src="images/youtube-logo-clean.jpg" alt="YouTube"></span>
       <span class="brand"><img src="images/openai-logo-clean.png" alt="OpenAI"></span>
@@ -196,23 +201,7 @@
       <span class="brand"><img src="images/mailchimp-logo-clean.png" alt="Mailchimp"></span>
       <span class="brand"><img src="images/kit-logo-clean.svg" alt="Kit"></span>
       <span class="brand"><img src="images/activecampaign-logo-clean.svg" alt="ActiveCampaign"></span>
-      <span class="brand"><img src="images/getresponse-logo-clean.png" alt="GetResponse"></span>
-      <span class="brand"><img src="images/hostinger-logo-clean.png" alt="Hostinger"></span>
-      <span class="brand"><img src="images/bluehost-logo-clean.png" alt="Bluehost"></span>
-      <span class="brand"><img src="images/siteground-logo-clean.png" alt="SiteGround"></span>
-      <span class="brand"><img src="images/cloudways-logo-clean.png" alt="Cloudways"></span>
-      <span class="brand"><img src="images/copyai-logo-clean.png" alt="Copy.ai"></span>
-      <span class="brand"><img src="images/murf-logo-clean.png" alt="Murf"></span>
-      <span class="brand"><img src="images/vidyo-logo-clean.png" alt="Vidyo.ai"></span>
-      <span class="brand"><img src="images/capcut-logo-clean.png" alt="CapCut"></span>
-      <span class="brand"><img src="images/sora-logo-clean.jpg" alt="Sora"></span>
-      <span class="brand"><img src="images/veo-logo-clean.png" alt="Veo 3"></span>
-      <span class="brand"><img src="images/kling-logo-clean.png" alt="Kling AI"></span>
-      <span class="brand"><img src="images/runway-logo-clean.png" alt="Runway"></span>
-      <span class="brand"><img src="images/higgsfield-logo-clean.png" alt="Higgsfield"></span>
-      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#e11d48"><rect x="4" y="4" width="16" height="16" rx="8"/></svg>Pictory</span>
     </div>
-    <!-- Track B (duplicate for seamless loop) -->
     <div class="track" aria-hidden="true">
       <span class="brand"><img src="images/youtube-logo-clean.jpg" alt="YouTube"></span>
       <span class="brand"><img src="images/openai-logo-clean.png" alt="OpenAI"></span>
@@ -233,6 +222,12 @@
       <span class="brand"><img src="images/mailchimp-logo-clean.png" alt="Mailchimp"></span>
       <span class="brand"><img src="images/kit-logo-clean.svg" alt="Kit"></span>
       <span class="brand"><img src="images/activecampaign-logo-clean.svg" alt="ActiveCampaign"></span>
+    </div>
+    </div>
+  </div>
+  <div class="marquee-row">
+    <div class="marquee scroll-right">
+    <div class="track">
       <span class="brand"><img src="images/getresponse-logo-clean.png" alt="GetResponse"></span>
       <span class="brand"><img src="images/hostinger-logo-clean.png" alt="Hostinger"></span>
       <span class="brand"><img src="images/bluehost-logo-clean.png" alt="Bluehost"></span>
@@ -247,7 +242,31 @@
       <span class="brand"><img src="images/kling-logo-clean.png" alt="Kling AI"></span>
       <span class="brand"><img src="images/runway-logo-clean.png" alt="Runway"></span>
       <span class="brand"><img src="images/higgsfield-logo-clean.png" alt="Higgsfield"></span>
-      <span class="brand"><svg width="18" height="18" viewBox="0 0 24 24" fill="#e11d48"><rect x="4" y="4" width="16" height="16" rx="8"/></svg>Pictory</span>
+      <span class="brand"><img src="images/pictory-logo-clean.jpg" alt="Pictory"></span>
+      <span class="brand"><img src="images/adcreative-logo-clean.jpg" alt="AdCreative.ai"></span>
+      <span class="brand"><img src="images/canva-logo-clean.png" alt="Canva"></span>
+      <span class="brand"><img src="images/outlierkit-logo-clean.png" alt="OutlierKit"></span>
+    </div>
+    <div class="track" aria-hidden="true">
+      <span class="brand"><img src="images/getresponse-logo-clean.png" alt="GetResponse"></span>
+      <span class="brand"><img src="images/hostinger-logo-clean.png" alt="Hostinger"></span>
+      <span class="brand"><img src="images/bluehost-logo-clean.png" alt="Bluehost"></span>
+      <span class="brand"><img src="images/siteground-logo-clean.png" alt="SiteGround"></span>
+      <span class="brand"><img src="images/cloudways-logo-clean.png" alt="Cloudways"></span>
+      <span class="brand"><img src="images/copyai-logo-clean.png" alt="Copy.ai"></span>
+      <span class="brand"><img src="images/murf-logo-clean.png" alt="Murf"></span>
+      <span class="brand"><img src="images/vidyo-logo-clean.png" alt="Vidyo.ai"></span>
+      <span class="brand"><img src="images/capcut-logo-clean.png" alt="CapCut"></span>
+      <span class="brand"><img src="images/sora-logo-clean.jpg" alt="Sora"></span>
+      <span class="brand"><img src="images/veo-logo-clean.png" alt="Veo 3"></span>
+      <span class="brand"><img src="images/kling-logo-clean.png" alt="Kling AI"></span>
+      <span class="brand"><img src="images/runway-logo-clean.png" alt="Runway"></span>
+      <span class="brand"><img src="images/higgsfield-logo-clean.png" alt="Higgsfield"></span>
+      <span class="brand"><img src="images/pictory-logo-clean.jpg" alt="Pictory"></span>
+      <span class="brand"><img src="images/adcreative-logo-clean.jpg" alt="AdCreative.ai"></span>
+      <span class="brand"><img src="images/canva-logo-clean.png" alt="Canva"></span>
+      <span class="brand"><img src="images/outlierkit-logo-clean.png" alt="OutlierKit"></span>
+    </div>
     </div>
   </div>
 </div>
