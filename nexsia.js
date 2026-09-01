@@ -315,7 +315,9 @@ var SITE_PAGES = [
   {t:"PDF to JPG — Convert PDF Pages to Images Free",u:"pdf-to-jpg.html"},
   {t:"Pictory Review 2026: Turn Scripts & Blogs into Video",u:"pictory-review.html"},
   {t:"Privacy Policy",u:"privacy.html"},
+  {t:"Remove PDF Pages — Delete & Reorder, Free & Private",u:"remove-pdf-pages.html"},
   {t:"Review Methodology — How We Test AI Tools",u:"review-methodology.html"},
+  {t:"Rotate PDF — Free, Private, No Upload",u:"rotate-pdf.html"},
   {t:"Runway Review 2026: Gen-4.5, Pricing & Is It Worth It?",u:"runway-review.html"},
   {t:"Runway vs Higgsfield 2026: Editing Platform vs AI Characters",u:"runway-vs-higgsfield.html"},
   {t:"SiteGround Review 2026: Pricing, Features, Pros & Cons",u:"siteground-review.html"},
@@ -327,13 +329,15 @@ var SITE_PAGES = [
   {t:"Sora vs Kling AI 2026: Photorealism vs Value",u:"sora-vs-kling.html"},
   {t:"Sora vs Runway 2026: Raw Model vs Editing Platform",u:"sora-vs-runway.html"},
   {t:"Sora vs Veo 3 2026: Which AI Video Model Should You Use?",u:"sora-vs-veo.html"},
+  {t:"Split PDF — Extract Pages Free, No Upload",u:"split-pdf.html"},
   {t:"Terms of Service",u:"terms.html"},
   {t:"TubeBuddy Review 2026: Pricing, Features, Pros & Cons",u:"tubebuddy-review.html"},
   {t:"Veo 3 Review 2026: Google's AI Video Model, Tested",u:"veo-review.html"},
   {t:"Veo 3 vs Higgsfield 2026: Native Audio vs AI Characters",u:"veo-vs-higgsfield.html"},
   {t:"Veo 3 vs Runway 2026: Native Audio vs Editing Platform",u:"veo-vs-runway.html"},
   {t:"vidIQ Review 2026: Pricing, Features, Pros & Cons",u:"vidiq-review.html"},
-  {t:"vidIQ vs TubeBuddy 2026: Which YouTube Tool Wins?",u:"vidiq-vs-tubebuddy.html"}
+  {t:"vidIQ vs TubeBuddy 2026: Which YouTube Tool Wins?",u:"vidiq-vs-tubebuddy.html"},
+  {t:"Watermark PDF — Add Text & Page Numbers Free",u:"watermark-pdf.html"}
 ];
 
 /* Ranks a page URL into a rough "kind" so results can be sorted with the
