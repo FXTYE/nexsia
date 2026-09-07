@@ -13,6 +13,7 @@
   <url><loc>https://www.example.com/best-email-marketing-software.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.example.com/best-sales-funnel-software.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.example.com/best-web-hosting.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.example.com/best-vpn-services.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.example.com/bluehost-review.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/bluehost-vs-siteground.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/cloudways-review.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
@@ -92,4 +93,19 @@
   <url><loc>https://www.example.com/veo-vs-higgsfield.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/vidiq-review.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/vidiq-vs-tubebuddy.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/nordvpn-review.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/expressvpn-review.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/surfshark-review.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/protonvpn-review.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/cyberghost-review.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/nordvpn-vs-expressvpn.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/nordvpn-vs-surfshark.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/nordvpn-vs-protonvpn.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/nordvpn-vs-cyberghost.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/expressvpn-vs-surfshark.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/expressvpn-vs-protonvpn.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/expressvpn-vs-cyberghost.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/surfshark-vs-protonvpn.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/surfshark-vs-cyberghost.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/protonvpn-vs-cyberghost.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 </urlset>

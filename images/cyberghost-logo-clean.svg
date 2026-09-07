@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 500" role="img" aria-label="CyberGhost logo">
+  <path d="M40 260 C40 150 90 55 145 55 C200 55 250 150 250 260 V420 L215 385 L180 420 L145 385 L110 420 L75 385 L40 420 Z" fill="#0f1b2d"/>
+  <circle cx="105" cy="220" r="16" fill="#ffd200"/>
+  <circle cx="185" cy="220" r="16" fill="#ffd200"/>
+  <text x="300" y="330" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="230" letter-spacing="-4" fill="#0f1b2d">Cyber<tspan fill="#e0a800">Ghost</tspan></text>
+</svg>

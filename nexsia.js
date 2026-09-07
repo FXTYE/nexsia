@@ -56,6 +56,12 @@ const AFFILIATE_LINKS = {
   runway:      "#",  // runwayml.com — verify current program
   higgsfield:  "#",  // higgsfield.ai — verify current program
   openart:     "#",  // openart.ai — verify current program
+  // --- VPN & Security ---
+  nordvpn:     "#",  // nordvpn.com — verify current program
+  expressvpn:  "#",  // expressvpn.com — verify current program
+  surfshark:   "#",  // surfshark.com — verify current program
+  protonvpn:   "#",  // protonvpn.com — verify current program
+  cyberghost:  "#",  // cyberghost.com — verify current program
 };
 
 /* ============================================================================
@@ -265,6 +271,7 @@ var SITE_PAGES = [
   {t:"Best AI Video Generators 2026: Veo 3 vs Kling vs Runway vs Sora",u:"best-ai-video-generators.html"},
   {t:"Best Email Marketing Software 2026: Mailchimp vs Kit vs ActiveCampaign",u:"best-email-marketing-software.html"},
   {t:"Best Sales Funnel Software 2026: ClickFunnels vs Kajabi vs GoHighLevel",u:"best-sales-funnel-software.html"},
+  {t:"Best VPN Services 2026: NordVPN vs Surfshark vs ExpressVPN",u:"best-vpn-services.html"},
   {t:"Best Web Hosting 2026: Hostinger vs SiteGround vs Bluehost",u:"best-web-hosting.html"},
   {t:"Bluehost Review 2026: Pricing, Features, Pros & Cons",u:"bluehost-review.html"},
   {t:"Bluehost vs SiteGround 2026: Which Web Host Wins?",u:"bluehost-vs-siteground.html"},
@@ -278,10 +285,15 @@ var SITE_PAGES = [
   {t:"Cloudways vs SiteGround 2026: Which Web Host Wins?",u:"cloudways-vs-siteground.html"},
   {t:"Contact Us",u:"contact.html"},
   {t:"Copy.ai Review 2026: GTM Platform or Overpriced Writer?",u:"copyai-review.html"},
+  {t:"CyberGhost Review 2026: Huge Server Count, Pricing & Verdict",u:"cyberghost-review.html"},
   {t:"Descript Review 2026: Best AI Video Editor for Creators?",u:"descript-review.html"},
   {t:"Descript vs CapCut 2026: Best Editor for YouTubers?",u:"descript-vs-capcut.html"},
   {t:"ElevenLabs Review 2026: Best AI Voice for Creators?",u:"elevenlabs-review.html"},
   {t:"ElevenLabs vs Murf 2026: Best AI Voice for YouTubers?",u:"elevenlabs-vs-murf.html"},
+  {t:"ExpressVPN Review 2026: Lightway Speed, Pricing & Verdict",u:"expressvpn-review.html"},
+  {t:"ExpressVPN vs CyberGhost 2026: Premium Polish vs Budget",u:"expressvpn-vs-cyberghost.html"},
+  {t:"ExpressVPN vs ProtonVPN 2026: Polish vs Free & Audited",u:"expressvpn-vs-protonvpn.html"},
+  {t:"ExpressVPN vs Surfshark 2026: Polish vs Unlimited Devices",u:"expressvpn-vs-surfshark.html"},
   {t:"Favicon Generator — Every Size, Free & Private",u:"favicon-generator.html"},
   {t:"GetResponse Review 2026: Pricing, Features, Pros & Cons",u:"getresponse-review.html"},
   {t:"GetResponse vs ActiveCampaign 2026: Which Email Platform Wins?",u:"getresponse-vs-activecampaign.html"},
@@ -310,6 +322,11 @@ var SITE_PAGES = [
   {t:"Mailchimp vs ActiveCampaign 2026: Which Email Platform Wins?",u:"mailchimp-vs-activecampaign.html"},
   {t:"Mailchimp vs Kit 2026: Which Email Platform Wins?",u:"mailchimp-vs-kit.html"},
   {t:"Merge PDF — Combine PDFs Free, No Upload",u:"merge-pdf.html"},
+  {t:"NordVPN Review 2026: Fastest VPN? Pricing, Speed & Verdict",u:"nordvpn-review.html"},
+  {t:"NordVPN vs CyberGhost 2026: Speed Leader vs Budget Servers",u:"nordvpn-vs-cyberghost.html"},
+  {t:"NordVPN vs ExpressVPN 2026: Speed & Scale vs Polish",u:"nordvpn-vs-expressvpn.html"},
+  {t:"NordVPN vs ProtonVPN 2026: Speed vs Free & Audited Privacy",u:"nordvpn-vs-protonvpn.html"},
+  {t:"NordVPN vs Surfshark 2026: Speed vs Unlimited Devices",u:"nordvpn-vs-surfshark.html"},
   {t:"OpenArt Review 2026: The All-in-One AI Creative Platform, Tested",u:"openart-review.html"},
   {t:"OpenArt vs Higgsfield 2026: The Closest Real Rivalry, Compared",u:"openart-vs-higgsfield.html"},
   {t:"OpenArt vs Kling AI 2026: All-in-One Platform vs Value Video Model",u:"openart-vs-kling.html"},
@@ -322,6 +339,8 @@ var SITE_PAGES = [
   {t:"PDF to JPG — Convert PDF Pages to Images Free",u:"pdf-to-jpg.html"},
   {t:"Pictory Review 2026: Turn Scripts & Blogs into Video",u:"pictory-review.html"},
   {t:"Privacy Policy",u:"privacy.html"},
+  {t:"ProtonVPN Review 2026: Free Plan, Audited Privacy & Verdict",u:"protonvpn-review.html"},
+  {t:"ProtonVPN vs CyberGhost 2026: Free & Audited vs Server Count",u:"protonvpn-vs-cyberghost.html"},
   {t:"QR Code Generator — Free, Private, No Upload",u:"qr-code-generator.html"},
   {t:"Remove PDF Pages — Delete & Reorder, Free & Private",u:"remove-pdf-pages.html"},
   {t:"Review Methodology — How We Test AI Tools",u:"review-methodology.html"},
@@ -338,6 +357,9 @@ var SITE_PAGES = [
   {t:"Sora vs Runway 2026: Raw Model vs Editing Platform",u:"sora-vs-runway.html"},
   {t:"Sora vs Veo 3 2026: Which AI Video Model Should You Use?",u:"sora-vs-veo.html"},
   {t:"Split PDF — Extract Pages Free, No Upload",u:"split-pdf.html"},
+  {t:"Surfshark Review 2026: Unlimited Devices, Pricing & Verdict",u:"surfshark-review.html"},
+  {t:"Surfshark vs CyberGhost 2026: Unlimited Devices vs Server Count",u:"surfshark-vs-cyberghost.html"},
+  {t:"Surfshark vs ProtonVPN 2026: Unlimited Devices vs Free & Audited",u:"surfshark-vs-protonvpn.html"},
   {t:"Terms of Service",u:"terms.html"},
   {t:"TubeBuddy Review 2026: Pricing, Features, Pros & Cons",u:"tubebuddy-review.html"},
   {t:"Veo 3 Review 2026: Google's AI Video Model, Tested",u:"veo-review.html"},

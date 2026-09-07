@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 500" role="img" aria-label="Proton VPN logo">
+  <path d="M130 40 L235 85 V240 C235 340 190 400 130 460 C70 400 25 340 25 240 V85 Z" fill="#6d4aff"/>
+  <circle cx="130" cy="230" r="55" fill="none" stroke="#fff" stroke-width="20"/>
+  <circle cx="130" cy="230" r="14" fill="#fff"/>
+  <text x="290" y="330" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="230" letter-spacing="-4" fill="#0f1b2d">Proton<tspan fill="#6d4aff"> VPN</tspan></text>
+</svg>
