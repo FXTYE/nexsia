@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 500" role="img" aria-label="ExpressVPN logo">
-  <circle cx="130" cy="250" r="115" fill="#da3940"/>
-  <path d="M85 250 L120 285 L185 205" stroke="#fff" stroke-width="24" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="290" y="330" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="230" letter-spacing="-4" fill="#0f1b2d">Express<tspan fill="#da3940">VPN</tspan></text>
-</svg>
