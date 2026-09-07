@@ -55,6 +55,7 @@ const AFFILIATE_LINKS = {
   veo:         "#",  // gemini.google.com / Flow — access via Google AI Pro/Ultra (no separate affiliate program)
   runway:      "#",  // runwayml.com — verify current program
   higgsfield:  "#",  // higgsfield.ai — verify current program
+  openart:     "#",  // openart.ai — verify current program
 };
 
 /* ============================================================================
@@ -309,6 +310,12 @@ var SITE_PAGES = [
   {t:"Mailchimp vs ActiveCampaign 2026: Which Email Platform Wins?",u:"mailchimp-vs-activecampaign.html"},
   {t:"Mailchimp vs Kit 2026: Which Email Platform Wins?",u:"mailchimp-vs-kit.html"},
   {t:"Merge PDF — Combine PDFs Free, No Upload",u:"merge-pdf.html"},
+  {t:"OpenArt Review 2026: The All-in-One AI Creative Platform, Tested",u:"openart-review.html"},
+  {t:"OpenArt vs Higgsfield 2026: The Closest Real Rivalry, Compared",u:"openart-vs-higgsfield.html"},
+  {t:"OpenArt vs Kling AI 2026: All-in-One Platform vs Value Video Model",u:"openart-vs-kling.html"},
+  {t:"OpenArt vs Runway 2026: All-in-One Platform vs Editing Platform",u:"openart-vs-runway.html"},
+  {t:"OpenArt vs Sora 2026: All-in-One Platform vs a Product in Decline",u:"openart-vs-sora.html"},
+  {t:"OpenArt vs Veo 3 2026: All-in-One Platform vs Single Model",u:"openart-vs-veo.html"},
   {t:"OpusClip Review 2026: Features, Pricing, Pros & Cons",u:"opusclip-review.html"},
   {t:"OpusClip vs Vidyo.ai 2026: Best AI Clipping Tool?",u:"opusclip-vs-vidyo.html"},
   {t:"OutlierKit Review 2026: YouTube Outlier Research Tool",u:"outlierkit-review.html"},

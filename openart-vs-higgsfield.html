@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="color-scheme" content="light only">
+<title>OpenArt vs Higgsfield 2026: The Closest Real Rivalry, Compared | Nexsia</title>
+<meta name="description" content="OpenArt vs Higgsfield compared for 2026 — the two closest all-in-one AI creative platforms, on image breadth, character consistency, pricing, and marketing tools.">
+<style>
+  :root{
+    --ink:#0f1b2d;--body:#3d4b5c;--muted:#6b7887;--line:#e3e8ef;
+    --bg:#f6f8fb;--card:#fff;--brand:#1a56db;--brand-dark:#12409c;
+    --brand-tint:#eef3fe;--good:#188a5b;--good-tint:#e7f5ee;
+    --bad:#c23b52;--bad-tint:#fbeaed;--star:#f5a623;--cta:#ff6a2b;--cta-dark:#e5551a;
+    --a:#7c3aed;   /* OpenArt violet */
+    --b:#d6336c;   /* Higgsfield pink */
+    --radius:12px;--shadow:0 1px 3px rgba(15,27,45,.06),0 8px 24px rgba(15,27,45,.05);--maxw:960px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;color-scheme:light;background:var(--bg)}
+  body{margin:0;background:var(--bg);color:var(--body);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{color:var(--ink);line-height:1.25;margin:0 0 .5em}
+  h1{font-size:1.95rem;letter-spacing:-.02em}h2{font-size:1.4rem;letter-spacing:-.01em}h3{font-size:1.05rem}
+  a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  section{padding:34px 0;border-top:1px solid var(--line)}section:first-of-type{border-top:none}
+  .eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--brand);margin-bottom:8px}
+
+  .disclosure{background:var(--brand-tint);color:var(--muted);font-size:.8rem}.disclosure .wrap{padding:10px 20px}
+  .hero{text-align:center;padding-top:36px}.hero .eyebrow{display:block}
+  .vs-logos{display:flex;align-items:center;justify-content:center;gap:22px;margin:18px 0 6px}
+  .vs-mark{width:160px;height:72px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.6rem;color:#fff;border:1px solid var(--line);box-shadow:0 2px 10px rgba(15,27,45,.08);padding:14px 18px}
+  .vs-mark img{max-width:100%;max-height:100%;object-fit:contain}
+  .vs-mark.a{background:var(--a)}
+  .vs-mark.b{background:var(--b)}
+  .vs-logos .vs-mark.a,.vs-logos .vs-mark.b{background:#fff}
+  .vs-badge{font-weight:800;color:var(--muted);font-size:1.1rem}
+  @media(max-width:680px){.vs-logos{gap:10px}.vs-mark,.vs-mark.a,.vs-mark.b{width:112px;height:50px;padding:8px 10px;font-size:1.15rem}}
+  .hero p.lede{font-size:1.05rem;max-width:640px;margin:10px auto 0}
+  .updated{color:var(--muted);font-size:.82rem;margin-top:14px}
+  .quickpick{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+  @media(max-width:640px){.quickpick{grid-template-columns:1fr}}
+  .pick{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+  .pick.a{border-top:4px solid var(--a)}.pick.b{border-top:4px solid var(--b)}
+  .pick .who{font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+  .pick h3{margin:6px 0 4px;font-size:1.15rem}.pick p{font-size:.92rem;margin:0 0 14px}
+  .cta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--cta);color:#fff;font-weight:700;font-size:.95rem;padding:11px 22px;border-radius:10px;box-shadow:0 4px 14px rgba(255,106,43,.3);transition:transform .12s,background .12s}
+  .cta-btn:hover{background:var(--cta-dark);text-decoration:none;transform:translateY(-1px)}
+  .cta-btn.ghost{background:#fff;color:var(--brand);border:1.5px solid var(--brand);box-shadow:none}.cta-btn.ghost:hover{background:var(--brand-tint)}
+  .tbl-scroll{overflow-x:auto}
+  .ctbl{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;font-size:.93rem}
+  .ctbl th,.ctbl td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  .ctbl thead th{font-size:.9rem;color:#fff}
+  .ctbl thead th:nth-child(1){background:var(--ink)}.ctbl thead th:nth-child(2){background:var(--a)}.ctbl thead th:nth-child(3){background:var(--b)}
+  .ctbl td:first-child{font-weight:600;color:var(--ink);width:30%}.ctbl tr:last-child td{border-bottom:none}
+  .win::after{content:"✓ Winner";display:inline-block;margin-left:6px;font-size:.68rem;font-weight:700;color:var(--good);background:var(--good-tint);padding:1px 7px;border-radius:5px;vertical-align:middle}
+  .cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:640px){.cat-grid{grid-template-columns:1fr}}
+  .cat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+  .cat .cat-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+  .cat h3{margin:0;font-size:.98rem}
+  .cat .winner-pill{font-size:.72rem;font-weight:700;padding:3px 9px;border-radius:20px;color:#fff}
+  .cat .winner-pill.a{background:var(--a)}.cat .winner-pill.b{background:var(--b)}
+  .cat p{font-size:.88rem;margin:0}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:640px){.split{grid-template-columns:1fr}}
+  .pbox{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+  .pbox.a{border-top:3px solid var(--a)}.pbox.b{border-top:3px solid var(--b)}
+  .pbox h3{display:flex;align-items:center;gap:8px}
+  .pbox ul{margin:10px 0 0;padding-left:20px;font-size:.92rem}.pbox li{margin-bottom:7px}
+  .verdict{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow)}
+  .verdict p{margin:0 0 10px;font-size:1.02rem;color:var(--ink)}.verdict p:last-child{margin-bottom:0}
+  .faq details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;overflow:hidden}
+  .faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:.97rem}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:1.4rem;color:var(--brand)}.faq details[open] summary::after{content:"–"}
+  .faq details[open] summary{border-bottom:1px solid var(--line)}.faq .ans{padding:14px 20px;font-size:.92rem}
+  .disc-note{font-size:.8rem;color:var(--muted);font-style:italic;margin-top:14px}
+
+  .jump{position:sticky;top:56px;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .jump .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:0;padding-bottom:0;scrollbar-width:none}
+  .jump .wrap::-webkit-scrollbar{display:none}
+  .jump a{white-space:nowrap;color:var(--muted);font-size:.86rem;font-weight:600;padding:13px 12px;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+  .jump a:hover{color:var(--brand);text-decoration:none;border-bottom-color:var(--brand)}
+  .jump a.active{color:var(--brand);border-bottom-color:var(--brand)}
+  figure:has(.vsslider){margin:22px 0 8px}
+  .vsslider{position:relative;width:100%;aspect-ratio:16/9;border-radius:12px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);user-select:none;touch-action:none;background:#0f1b2d;--vs-pos:50%;--vs-skew:34px}
+  .vsslider img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+  .vsslider .vs-right{z-index:1}
+  .vsslider .vs-left{z-index:2;clip-path:polygon(0 0, calc(var(--vs-pos) + var(--vs-skew)) 0, calc(var(--vs-pos) - var(--vs-skew)) 100%, 0 100%)}
+  .vsslider .vs-seam{position:absolute;top:-8%;bottom:-8%;left:var(--vs-pos);width:2px;z-index:4;pointer-events:none;background:var(--cta,#ff6a2b);transform-origin:center;transform:translateX(-50%) rotate(var(--vs-angle,9deg))}
+  .vsslider .vs-seam i.core{position:absolute;inset:0;display:block}
+  .vsslider .vs-handle{position:absolute;top:50%;left:var(--vs-pos);transform:translate(-50%,-50%);z-index:5;
+    width:110px;height:80px;display:flex;align-items:center;justify-content:center;cursor:ew-resize;background:none;border:none}
+  .vsslider .vs-handle .vs-word{position:relative;display:block;width:100%;height:100%;
+    font-weight:800;color:var(--cta,#ff6a2b);line-height:1;font-family:'Arial Narrow',Arial,sans-serif}
+  .vsslider .vs-handle .vs-word .v,.vsslider .vs-handle .vs-word .s{position:absolute;font-size:3.1rem;letter-spacing:-.03em}
+  .vsslider .vs-handle .vs-word .v{right:50%;top:0;margin-right:-10px}
+  .vsslider .vs-handle .vs-word .s{left:50%;bottom:0;margin-left:-10px}
+  .vsslider .vs-hint{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:6;font-size:.72rem;color:#fff;background:rgba(15,27,45,.6);padding:4px 12px;border-radius:20px;pointer-events:none;transition:opacity .3s}
+  .vsslider.touched .vs-hint{opacity:0}
+  .vs-ph{display:none;position:absolute;inset:0;z-index:7;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;color:#c7d2e0;background:repeating-linear-gradient(135deg,#16233a,#16233a 12px,#1b2b45 12px,#1b2b45 24px)}
+  .vsslider.vs-noimg .vs-ph{display:flex}
+  .vs-ph b{color:#fff;font-size:1rem;display:block;margin-bottom:6px}
+  .vs-ph span{font-size:.84rem;max-width:420px;line-height:1.5}
+  .vs-ph code{background:rgba(255,255,255,.12);padding:1px 6px;border-radius:5px;font-size:.85em}
+  .pc-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  @media(max-width:680px){.pc-cols{grid-template-columns:1fr}}
+  .col-h{display:flex;align-items:center;gap:10px;font-size:1.05rem;margin-bottom:14px}
+  .pc-detail{display:flex;flex-direction:column;gap:14px}
+  .pc-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px}
+  .pc-item .head{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+  .pc-item .tag{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 9px;border-radius:5px}
+  .pc-item.pro .tag{background:var(--good-tint);color:var(--good)}
+  .pc-item.con .tag{background:var(--bad-tint);color:var(--bad)}
+  .pc-item h3{margin:0;font-size:1rem}
+  .pc-item p{margin:4px 0 0;font-size:.93rem}
+  .quote{margin:12px 0 0;padding:10px 14px;background:var(--bg);border-left:3px solid var(--line);border-radius:0 8px 8px 0;font-size:.88rem;color:var(--body);font-style:italic}
+  .price-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media(max-width:680px){.price-cols{grid-template-columns:1fr}}
+  .price-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow)}
+  .price-card h3{margin:0 0 8px}
+  .price-card .mark{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;font-weight:700;font-size:.85rem;color:#fff}
+  .price-card .mark.a{background:var(--a,#1a56db)}
+  .price-card .mark.b{background:var(--b,#ff6a2b)}
+  .price-card .sub{font-size:.87rem;color:var(--muted);margin:0 0 14px}
+  .ptier{display:flex;justify-content:space-between;align-items:flex-start;padding:10px 0;border-top:1px solid var(--line);gap:12px}
+  .ptier:first-of-type{border-top:none}
+  .ptier .nm{font-size:.9rem;font-weight:600}
+  .ptier .nm small{display:block;font-weight:400;color:var(--muted);font-size:.8rem;margin-top:2px}
+  .ptier .amt{font-size:.95rem;font-weight:700;white-space:nowrap}
+  .feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:640px){.feat-grid{grid-template-columns:1fr}}
+  .feat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+  .feat h3{font-size:.95rem;margin-bottom:3px}
+  .feat p{font-size:.87rem;margin:0}
+</style>
+<link rel="stylesheet" href="shared.css">
+
+</head>
+<body>
+
+<div id="site-header"></div>
+
+
+<div class="jump"><div class="wrap">
+  <a href="#compare">Compare</a><a href="#categories">Round by round</a>
+  <a href="#pros-cons">Pros &amp; Cons</a><a href="#features">Features</a>
+  <a href="#pricing">Pricing</a><a href="#fit">Best for</a><a href="#verdict">Verdict</a><a href="#faq">FAQs</a>
+</div></div>
+
+<div class="wrap">
+
+  <section class="hero">
+    <span class="eyebrow">Head-to-head comparison</span>
+    <div class="vs-logos"><div class="vs-mark a"><img src="images/openart-logo-clean.svg" alt="OpenArt logo"></div><span class="vs-badge">vs</span><div class="vs-mark b"><img src="images/higgsfield-logo-clean.png" alt="higgsfield logo"></div></div>
+    <h1>OpenArt vs Higgsfield: Which Should You Actually Use in 2026?</h1>
+    <p class="lede">These are the two closest competitors in the "all-in-one AI creative platform" category — both aggregate underlying video models and both solve character consistency. The real difference is focus: OpenArt goes wider on image generation and cost; Higgsfield goes deeper on social and marketing-specific tooling.</p>
+    <p class="updated">Last updated September 2026 · Prices verified against each provider's site · Reviewed by [Your Name]</p>
+  </section>
+
+  <section style="border-top:none;padding-top:6px">
+    <div class="quickpick">
+      <div class="pick a">
+        <div class="who">Pick OpenArt if…</div>
+        <h3>You want the widest toolkit and the best price</h3>
+        <p>You need serious image generation alongside video, the lowest cost per generation, and character consistency that works across both.</p>
+        <a class="cta-btn" href="#" data-aff="openart">Try OpenArt free →</a>
+      </div>
+      <div class="pick b">
+        <div class="who">Pick Higgsfield if…</div>
+        <h3>You're building social/marketing content specifically</h3>
+        <p>You want Soul ID's persistent identity and purpose-built tools like Marketing Studio for URL-to-ad production, and video is your main output.</p>
+        <a class="cta-btn ghost" href="#" data-aff="higgsfield">Try Higgsfield →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="compare">
+    <div class="eyebrow">Side by side</div>
+    <h2>The full comparison</h2>
+    <div class="tbl-scroll"><table class="ctbl">
+      <thead><tr><th>&nbsp;</th><th>OpenArt</th><th>Higgsfield</th></tr></thead>
+      <tbody><tr><td>Our score</td><td class="win">4.7 ★</td><td>4.2 ★</td></tr><tr><td>Starting price</td><td class="win">Free / $7 mo</td><td>Free / $9 mo</td></tr><tr><td>Image generation</td><td class="win">Yes, 100+ models</td><td>Limited</td></tr><tr><td>Video model access</td><td>Veo, Kling, Seedance &amp; more</td><td>Veo, Kling, Sora &amp; more</td></tr><tr><td>Character consistency</td><td class="win">AI Character, one reference image</td><td>Soul ID</td></tr><tr><td>Marketing/ad-specific tools</td><td>General product-ad workflows</td><td class="win">Marketing Studio, URL-to-ad</td></tr><tr><td>Cost per generation</td><td class="win">Lowest measured across several models</td><td>Priced above going direct to one model</td></tr><tr><td>Best for</td><td>All-in-one image + video workspace</td><td>Social/marketing-first character content</td></tr></tbody>
+    </table></div>
+    <p class="disc-note">Prices checked September 2026 and change often — confirm on each provider's site before buying.</p>
+  </section>
+
+  <section id="categories">
+    <div class="eyebrow">Round by round</div>
+    <h2>Who wins each category</h2>
+    <div class="cat-grid"><div class="cat"><div class="cat-top"><h3>Image generation</h3><span class="winner-pill a">OpenArt</span></div><p>100+ image models to Higgsfield's limited offering — this isn't close if image output matters to you.</p></div><div class="cat"><div class="cat-top"><h3>Character consistency</h3><span class="winner-pill a">OpenArt</span></div><p>AI Character is rated the strongest platform for this specific use case in independent 2026 testing, with Higgsfield's Soul ID a close second.</p></div><div class="cat"><div class="cat-top"><h3>Marketing/ad-specific tooling</h3><span class="winner-pill b">Higgsfield</span></div><p>Marketing Studio's URL-to-ad workflow is more purpose-built for turning a product page into finished ad creative than OpenArt's general workflows.</p></div><div class="cat"><div class="cat-top"><h3>Cost per generation</h3><span class="winner-pill a">OpenArt</span></div><p>OpenArt has the lowest cost per generation we measured across several underlying video models; Higgsfield is priced above going direct.</p></div><div class="cat"><div class="cat-top"><h3>Video model access</h3><span class="winner-pill a">OpenArt</span></div><p>Both aggregate several providers, but OpenArt's roster (Veo, Kling, Seedance and more) edges Higgsfield's on breadth and per-model cost.</p></div><div class="cat"><div class="cat-top"><h3>Monetization &amp; social features</h3><span class="winner-pill b">Higgsfield</span></div><p>Higgsfield's built-in monetization program and lipsync tools are more tailored to social/influencer-style content specifically.</p></div></div>
+
+    <figure>
+      <div class="vsslider" id="vs-openart-higgsfield" style="--vs-pos:50%">
+        <img class="vs-right" src="images_demo_higgsfield.png" alt="Higgsfield dashboard screenshot — swap for your own capture" data-src="images/higgsfield-dashboard.png" onerror="this.closest('.vsslider').classList.add('vs-noimg')">
+        <img class="vs-left" src="images_demo_openart.png" alt="OpenArt workspace screenshot — swap for your own capture" data-src="images/openart-dashboard.png" onerror="this.closest('.vsslider').classList.add('vs-noimg')">
+
+        <div class="vs-seam" aria-hidden="true"><i class="core"></i></div>
+        <div class="vs-handle" role="slider" tabindex="0" aria-label="Drag to compare OpenArt and Higgsfield screenshots" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span class="vs-word"><span class="v">V</span><span class="s">S</span></span></div>
+        <span class="vs-hint">◄ Drag to compare ►</span>
+
+        <div class="vs-ph"><b><svg class="svg-ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg> Screenshot comparison</b><span>Two app screenshots load here with a draggable VS divider. Add <code>images_demo_openart.png</code> and <code>images_demo_higgsfield.png</code> to see it live.</span></div>
+      </div>
+      <figcaption>Drag the VS handle to compare OpenArt's workspace and Higgsfield's dashboard</figcaption>
+    </figure>
+  </section>
+
+  <section id="pros-cons">
+    <div class="eyebrow">In depth</div>
+    <h2>Pros &amp; cons of each platform</h2>
+    <div class="pc-cols">
+      <div>
+        <h3 class="col-h"><span style="width:24px;height:24px;font-size:.7rem;border-radius:6px;background:var(--a);color:#fff;display:inline-flex;align-items:center;justify-content:center">O</span> OpenArt</h3>
+        <div class="pc-detail">
+          <div class="pc-item pro"><div class="head"><span class="tag">Pro</span><h3>Real image generation, not just video</h3></div><p>100+ image models put OpenArt in a different category from Higgsfield's more limited image capabilities.</p></div>
+          <div class="pc-item pro"><div class="head"><span class="tag">Pro</span><h3>Better economics across the board</h3></div><p>Lower entry price and the lowest cost per generation we measured on several models, versus Higgsfield's premium over going direct.</p></div>
+          <div class="pc-item con"><div class="head"><span class="tag">Con</span><h3>Less purpose-built for marketing/ads</h3></div><p>OpenArt's product-ad workflows are more general than Higgsfield's Marketing Studio, which is built specifically around URL-to-ad production.</p></div>
+        </div>
+      </div>
+      <div>
+        <h3 class="col-h"><span style="width:24px;height:24px;font-size:.7rem;border-radius:6px;background:var(--b);color:#fff;display:inline-flex;align-items:center;justify-content:center">H</span> Higgsfield</h3>
+        <div class="pc-detail">
+          <div class="pc-item pro"><div class="head"><span class="tag">Pro</span><h3>Sharper social/marketing focus</h3></div><p>Marketing Studio and Cinema Studio are purpose-built for ad and social content in a way OpenArt's more general workflows aren't.</p></div>
+          <div class="pc-item pro"><div class="head"><span class="tag">Pro</span><h3>Soul ID keeps a character consistent</h3></div><p>A genuinely strong persistent-identity system, close behind AI Character on consistency for social use cases.</p></div>
+          <div class="pc-item con"><div class="head"><span class="tag">Con</span><h3>Priced above going direct, weaker image gen</h3></div><p>A real premium over the underlying models, and image generation is limited compared to OpenArt's 100+ model library.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="eyebrow">Feature by feature</div>
+    <h2>What each tool gives you</h2>
+    <div class="feat-grid">
+      <div class="feat"><h3>Image generation</h3><p><b>OpenArt:</b> 100+ models. <b>Higgsfield:</b> limited.</p></div>
+      <div class="feat"><h3>Character consistency</h3><p><b>OpenArt:</b> AI Character, one reference image. <b>Higgsfield:</b> Soul ID, persistent identity.</p></div>
+      <div class="feat"><h3>Marketing tools</h3><p><b>Higgsfield:</b> Marketing Studio (URL-to-ad), Cinema Studio. <b>OpenArt:</b> general product-ad workflows.</p></div>
+      <div class="feat"><h3>Video model access</h3><p>Both aggregate multiple providers (Veo, Kling and more); rosters and per-model pricing differ.</p></div>
+      <div class="feat"><h3>Cost per generation</h3><p>OpenArt came out cheapest across several models tested; Higgsfield carries a premium over direct access.</p></div>
+      <div class="feat"><h3>Monetization/social features</h3><p><b>Higgsfield:</b> built-in monetization program, lipsync. <b>OpenArt:</b> not a focus area.</p></div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="eyebrow">What it costs</div>
+    <h2>Pricing side by side (2026)</h2>
+    <div class="price-cols">
+      <div class="price-card">
+        <h3><span class="mark a">O</span> OpenArt</h3>
+        <p class="sub">Free: limited monthly credits, image + video.</p>
+        <div class="ptier"><div class="nm">Essential <small>Full model library, AI Character</small></div><div class="amt">$7/mo</div></div>
+        <div class="ptier"><div class="nm">Advanced <small>Higher credit allowance, priority</small></div><div class="amt">$14.50/mo</div></div>
+      </div>
+      <div class="price-card">
+        <h3><span class="mark b">H</span> Higgsfield</h3>
+        <p class="sub">Free: limited tier available.</p>
+        <div class="ptier"><div class="nm">Entry plan <small>Soul ID, model access</small></div><div class="amt">From $9/mo</div></div>
+        <div class="ptier"><div class="nm">Higher tiers <small>Marketing Studio, more credits</small></div><div class="amt">Varies</div></div>
+      </div>
+    </div>
+    <p class="disc-note" style="margin-top:14px">OpenArt's Team ($17.40/mo) and Infinite ($28/mo) tiers add seats and higher allowances. Confirm current terms on openart.ai and higgsfield.ai before buying.</p>
+  </section>
+
+  <section id="fit">
+    <div class="eyebrow">Match it to your project</div>
+    <h2>Which one fits you?</h2>
+
+    <figure>
+      <svg class="fig-desktop" viewBox="0 0 900 210" role="img" aria-label="Decision guide: if you want image generation plus video and the best price choose OpenArt; if you're building social or marketing ad content specifically choose Higgsfield">
+        <rect width="900" height="210" fill="#f6f8fb"/>
+        <rect x="300" y="18" width="300" height="46" rx="10" fill="#0f1b2d"/>
+        <text x="450" y="46" font-size="15" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial">What are you building?</text>
+        <path d="M450 64 L230 110" stroke="#b9c4d4" stroke-width="2"/><path d="M450 64 L670 110" stroke="#b9c4d4" stroke-width="2"/>
+        <rect x="60" y="112" width="340" height="94" rx="12" fill="#fff" stroke="#e3e8ef"/>
+        <text x="80" y="140" font-size="13" fill="#3d4b5c" font-family="Arial">Image + video, widest toolkit, best price</text>
+        <rect x="80" y="152" width="110" height="26" rx="6" fill="#7c3aed"/><text x="135" y="170" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial">OpenArt</text>
+        <text x="80" y="200" font-size="11.5" fill="#6b7887" font-family="Arial">One workspace, one bill</text>
+        <rect x="500" y="112" width="340" height="94" rx="12" fill="#fff" stroke="#e3e8ef"/>
+        <text x="520" y="140" font-size="13" fill="#3d4b5c" font-family="Arial">Social/marketing ad content specifically</text>
+        <rect x="520" y="152" width="120" height="26" rx="6" fill="#d6336c"/><text x="580" y="170" font-size="13" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial">Higgsfield</text>
+        <text x="520" y="200" font-size="11.5" fill="#6b7887" font-family="Arial">Marketing Studio, Soul ID</text>
+      </svg>
+      <svg class="fig-mobile" viewBox="0 0 380 380" role="img" aria-label="Decision guide: if you want image generation plus video and the best price choose OpenArt; if you're building social or marketing ad content specifically choose Higgsfield">
+        <rect width="380" height="380" fill="#f6f8fb"/>
+        <rect x="40" y="16" width="300" height="48" rx="10" fill="#0f1b2d"/>
+        <text x="190" y="45" font-size="14" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial">What are you building?</text>
+        <path d="M190 64 L190 84" stroke="#b9c4d4" stroke-width="2.5"/>
+        <rect x="30" y="86" width="320" height="106" rx="12" fill="#fff" stroke="#e3e8ef"/>
+        <text x="50" y="114" font-size="14" fill="#3d4b5c" font-family="Arial">Image + video, widest toolkit, best price</text>
+        <rect x="50" y="126" width="110" height="30" rx="7" fill="#7c3aed"/><text x="105" y="147" font-size="14" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial">OpenArt</text>
+        <text x="50" y="178" font-size="12.5" fill="#6b7887" font-family="Arial">One workspace, one bill</text>
+        <rect x="30" y="200" width="320" height="106" rx="12" fill="#fff" stroke="#e3e8ef"/>
+        <text x="50" y="228" font-size="14" fill="#3d4b5c" font-family="Arial">Social/marketing ad content specifically</text>
+        <rect x="50" y="240" width="120" height="30" rx="7" fill="#d6336c"/><text x="110" y="261" font-size="14" font-weight="700" fill="#fff" text-anchor="middle" font-family="Arial">Higgsfield</text>
+        <text x="50" y="292" font-size="12.5" fill="#6b7887" font-family="Arial">Marketing Studio, Soul ID</text>
+      </svg>
+      <figcaption>Quick decision guide: match the tool to what you're actually building</figcaption>
+    </figure>
+
+    <div class="split">
+      <div class="pbox a"><h3><span class="vs-mark a" style="width:26px;height:26px;font-size:.8rem;border-radius:7px">O</span> Choose OpenArt</h3><ul><li>Want serious image generation, not just video</li><li>Care most about cost per generation</li><li>Need a character consistent across image and video alike</li><li>Want the widest range of underlying models to choose from</li></ul></div>
+      <div class="pbox b"><h3><span class="vs-mark b" style="width:26px;height:26px;font-size:.8rem;border-radius:7px">H</span> Choose Higgsfield</h3><ul><li>Are building social or influencer-style content specifically</li><li>Want Marketing Studio's URL-to-ad workflow</li><li>Value built-in monetization and lipsync tools</li><li>Don't need general-purpose image generation</li></ul></div>
+    </div>
+  </section>
+
+  <section id="verdict">
+    <div class="eyebrow">Our verdict</div>
+    <div class="verdict"><p><strong>This is the closest matchup in the category, and it comes down to focus.</strong> OpenArt is the wider, cheaper, more flexible workspace — real image generation, the lowest cost per generation we measured, and character consistency that spans both images and video. Higgsfield is sharper for one specific job: social and marketing-driven character content, with tooling built explicitly around that use case.</p><p>If you're not sure which describes you, start with OpenArt — its free plan and lower entry price make it the safer first move, and you can always add Higgsfield later if your work turns specifically social/marketing-first.</p></div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:18px">
+      <a class="cta-btn" href="#" data-aff="openart">Try OpenArt free →</a>
+      <a class="cta-btn ghost" href="#" data-aff="higgsfield">Try Higgsfield →</a>
+    </div>
+  </section>
+
+  <section class="faq" id="faq">
+    <div class="eyebrow">Common questions</div>
+    <h2>OpenArt vs Higgsfield FAQs</h2>
+    <details open><summary>Is OpenArt better than Higgsfield?</summary><div class="ans">For most people, yes — OpenArt offers real image generation (100+ models), a lower cost per generation, and character consistency that spans images and video, all at a lower entry price. Higgsfield wins specifically for social/marketing-focused character content, with tools like Marketing Studio built around that use case.</div></details>
+    <details><summary>Which has better character consistency, AI Character or Soul ID?</summary><div class="ans">Independent 2026 testing rates OpenArt's AI Character as the strongest platform for character consistency specifically, with Higgsfield's Soul ID a close second — both are genuinely effective, and the gap is narrow.</div></details>
+    <details><summary>Does OpenArt have anything like Higgsfield's Marketing Studio?</summary><div class="ans">OpenArt has general product-ad and workflow tools, but nothing as purpose-built as Higgsfield's Marketing Studio for URL-to-ad production specifically. If that exact workflow is your priority, Higgsfield is the stronger fit.</div></details>
+    <details><summary>Which is cheaper?</summary><div class="ans">OpenArt, on both entry price ($7/mo vs $9/mo) and cost per generation — it came out cheapest across several underlying models we measured, while Higgsfield carries a premium over going direct.</div></details>
+    <details><summary>Can I use both?</summary><div class="ans">Yes, and some creators do — OpenArt for general image and video work, Higgsfield specifically when a project needs its marketing-focused tooling. But for most people starting out, OpenArt's breadth and price make it the better single subscription.</div></details>
+  </section>
+
+</div>
+
+<div id="site-footer"></div>
+
+<script>
+/* Scroll-spy: highlight the jump-nav tab for the section currently in view. */
+(function () {
+  var links = document.querySelectorAll(".jump a[href^='#']");
+  if (!links.length) return;
+  var map = {};
+  links.forEach(function (a) {
+    var id = a.getAttribute("href").slice(1);
+    var el = document.getElementById(id);
+    if (el) map[id] = { link: a, el: el };
+  });
+
+  var current = null;
+  function setActive(id) {
+    if (id === current) return;
+    current = id;
+    links.forEach(function (a) { a.classList.remove("active"); });
+    if (map[id]) {
+      map[id].link.classList.add("active");
+      var linkEl = map[id].link;
+      var scrollParent = linkEl.closest(".jump .wrap") || linkEl.parentElement;
+      if (scrollParent && scrollParent.scrollWidth > scrollParent.clientWidth) {
+        var linkLeft = linkEl.offsetLeft;
+        var linkRight = linkLeft + linkEl.offsetWidth;
+        var viewLeft = scrollParent.scrollLeft;
+        var viewRight = viewLeft + scrollParent.clientWidth;
+        if (linkLeft < viewLeft || linkRight > viewRight) {
+          scrollParent.scrollTo({ left: linkLeft - scrollParent.clientWidth / 2 + linkEl.offsetWidth / 2, behavior: "smooth" });
+        }
+      }
+    }
+  }
+
+  function startObserving() {
+    var topbarH = (document.querySelector(".topbar") || {}).offsetHeight || 56;
+    var jumpH = topbarH + ((document.querySelector(".jump") || {}).offsetHeight || 50);
+    var observer = new IntersectionObserver(function (entries) {
+      var best = null;
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          if (!best || entry.boundingClientRect.top < best.boundingClientRect.top) best = entry;
+        }
+      });
+      if (best) setActive(best.target.id);
+    }, { rootMargin: "-" + (jumpH + 4) + "px 0px -70% 0px", threshold: 0 });
+
+    Object.keys(map).forEach(function (id) { observer.observe(map[id].el); });
+  }
+  if (document.querySelector(".topbar")) {
+    startObserving();
+  } else {
+    document.addEventListener("nexsia:chrome-ready", startObserving, { once: true });
+  }
+})();
+</script>
+<script>
+/* Interactive VS comparison slider — drag, touch or arrow-key to wipe. */
+(function () {
+  var s = document.getElementById("vs-openart-higgsfield");
+  if (!s) return;
+  var left = s.querySelector(".vs-left"), right = s.querySelector(".vs-right");
+  var ph = s.querySelector(".vs-ph"), handle = s.querySelector(".vs-handle");
+
+  function checkImg(img) {
+    if (img.complete && img.naturalWidth === 0) {
+      s.classList.add("vs-noimg");
+    }
+    img.addEventListener("error", function () { s.classList.add("vs-noimg"); });
+    img.addEventListener("load", function () {
+      if (img.naturalWidth === 0) s.classList.add("vs-noimg");
+    });
+  }
+  checkImg(left); checkImg(right);
+
+  function syncAngle() {
+    var skew = parseFloat(getComputedStyle(s).getPropertyValue("--vs-skew")) || 70;
+    var h = s.getBoundingClientRect().height || 1;
+    var deg = Math.atan(skew / (h / 2)) * (180 / Math.PI);
+    s.style.setProperty("--vs-angle", deg.toFixed(2) + "deg");
+  }
+  syncAngle();
+  window.addEventListener("resize", syncAngle);
+
+  function setPos(pct) {
+    pct = Math.max(0, Math.min(100, pct));
+    s.style.setProperty("--vs-pos", pct + "%");
+    handle.setAttribute("aria-valuenow", Math.round(pct));
+  }
+  function fromEvent(e) {
+    var r = s.getBoundingClientRect();
+    var x = (e.touches ? e.touches[0].clientX : e.clientX) - r.left;
+    setPos((x / r.width) * 100);
+    s.classList.add("touched");
+  }
+  var dragging = false;
+  s.addEventListener("mousedown", function (e) { dragging = true; fromEvent(e); });
+  window.addEventListener("mousemove", function (e) { if (dragging) fromEvent(e); });
+  window.addEventListener("mouseup", function () { dragging = false; });
+  s.addEventListener("touchstart", function (e) { fromEvent(e); }, { passive: true });
+  s.addEventListener("touchmove", function (e) { fromEvent(e); }, { passive: true });
+  handle.addEventListener("keydown", function (e) {
+    var cur = parseFloat(s.style.getPropertyValue("--vs-pos")) || 50;
+    if (e.key === "ArrowLeft") { setPos(cur - 4); s.classList.add("touched"); }
+    if (e.key === "ArrowRight") { setPos(cur + 4); s.classList.add("touched"); }
+  });
+})();
+</script>
+<script src="nexsia.js"></script>
+</body>
+</html>

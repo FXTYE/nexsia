@@ -51,6 +51,13 @@
 .topbar nav .search-results a.search-view-all{color:#1a56db;font-weight:600;border-top:1px solid #e3e8ef;margin-top:4px;padding-top:10px}
 .search-empty{padding:8px 10px;font-size:.85rem;color:#6b7887}
 
+/* ---- footer promo (site-wide OpenArt callout) ---- */
+.foot-promo{background:#2a1a52;color:#fff;padding:11px 0;text-align:center;font-size:.85rem}
+.foot-promo .wrap{display:flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
+.foot-promo a{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:2px}
+.foot-promo a:hover{color:#e4d4ff}
+@media(max-width:560px){.foot-promo{font-size:.8rem}}
+
 /* ---- footer ---- */
 footer{background:var(--ink);color:#9fb0c4;font-size:.85rem;padding:34px 0;border-top:1px solid #22334d}
 footer a{color:#c7d2e0}
