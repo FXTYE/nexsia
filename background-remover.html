@@ -79,7 +79,19 @@
   .compare-pane .cp-img{aspect-ratio:1;display:flex;align-items:center;justify-content:center;overflow:hidden;
     background:repeating-conic-gradient(#e9edf3 0% 25%, #fff 0% 50%) 50% / 16px 16px}
   .compare-pane.orig .cp-img{background:var(--bg)}
-  .compare-pane img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+  .compare-pane img,.compare-pane canvas{max-width:100%;max-height:100%;object-fit:contain;display:block}
+  .compare-pane canvas{cursor:crosshair;touch-action:none}
+
+  .brush-tools{margin:16px 22px 0;padding-top:16px;border-top:1px solid var(--line)}
+  .brush-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center}
+  .mode-toggle{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .mode-toggle .mt-btn{display:flex;align-items:center;gap:6px;padding:8px 14px;font-size:.86rem;font-weight:600;color:var(--muted);background:#fff;border:none;cursor:pointer}
+  .mode-toggle .mt-btn+.mt-btn{border-left:1px solid var(--line)}
+  .mode-toggle .mt-btn.active{background:var(--brand-tint);color:var(--brand)}
+  .mode-toggle .mt-btn:disabled,.brush-tools button:disabled,.brush-tools input:disabled{opacity:.45;cursor:not-allowed}
+  .brush-size-label{display:flex;align-items:center;gap:8px;font-size:.84rem;color:var(--muted);font-weight:600}
+  .brush-size-label input[type=range]{width:110px}
+  .brush-hint{text-align:center;font-size:.8rem;color:var(--muted);margin:10px 0 0}
 
   .file-info-row{display:none;align-items:center;gap:14px;padding:0 22px 20px;flex-wrap:wrap}
   .file-info-row.show{display:flex}
@@ -184,9 +196,31 @@
         </div>
         <div class="compare-pane">
           <div class="cp-label">Background removed</div>
-          <div class="cp-img"><img id="resultImg" alt="Background removed"></div>
+          <div class="cp-img"><canvas id="resultCanvas" tabindex="0" aria-label="Background removed — drag to fine-tune edges"></canvas></div>
         </div>
       </div>
+
+      <div class="brush-tools" id="brushTools">
+        <div class="brush-row">
+          <div class="mode-toggle" role="group" aria-label="Touch-up mode">
+            <button type="button" class="mt-btn active" id="modeRestoreBtn" data-mode="restore" aria-pressed="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11 3 17l4 4 6-6"/><path d="M14.5 8.5 21 2l-6.5 6.5"/><path d="m9 11 5.5-5.5 4 4L13 15"/></svg>
+              Restore
+            </button>
+            <button type="button" class="mt-btn" id="modeEraseBtn" data-mode="erase" aria-pressed="false">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 21-4.35-4.35a1 1 0 0 1 0-1.41L14.3 3.59a2 2 0 0 1 2.82 0l4.3 4.3a2 2 0 0 1 0 2.82L11.06 21z"/><path d="M22 21H7"/><path d="m5 11 9 9"/></svg>
+              Erase
+            </button>
+          </div>
+          <label class="brush-size-label">Brush size
+            <input type="range" id="brushSizeInput" min="8" max="160" value="40">
+          </label>
+          <button class="cta-btn ghost small" id="undoBtn" type="button" disabled>Undo</button>
+          <button class="cta-btn ghost small" id="resetEditsBtn" type="button">Reset touch-ups</button>
+        </div>
+        <p class="brush-hint">Drag on the image above to fix edges — <b>Restore</b> brings back original pixels, <b>Erase</b> removes more background.</p>
+      </div>
+
       <div style="text-align:center;margin-top:16px">
         <button class="cta-btn small" id="downloadBtn" type="button">Download PNG →</button>
       </div>
@@ -204,10 +238,11 @@
   <section>
     <div class="wrap-narrow" style="padding:0">
       <div class="eyebrow">How it works</div>
-      <h2>Remove a background in 2 steps</h2>
+      <h2>Remove a background in 3 steps</h2>
       <div class="steps">
         <div class="step"><div class="n">1</div><div><h3>Upload your photo</h3><p>Drop in a JPG, PNG or WebP with a reasonably clear subject — the AI model works best when the subject isn't blended into a busy background.</p></div></div>
-        <div class="step"><div class="n">2</div><div><h3>Remove and download</h3><p>Click "Remove background" and the model runs right in your browser. Compare the before and after, then download a transparent PNG.</p></div></div>
+        <div class="step"><div class="n">2</div><div><h3>Remove, and touch up if needed</h3><p>Click "Remove background" and the model runs right in your browser. If it left a stray edge or cut too much, drag on the result with the Restore or Erase brush to fix it by hand.</p></div></div>
+        <div class="step"><div class="n">3</div><div><h3>Download</h3><p>Once it looks right, download a transparent PNG — your edits are baked in.</p></div></div>
       </div>
     </div>
   </section>
@@ -232,7 +267,8 @@
       <details open><summary>Is this really free?</summary><div class="ans">Yes — there's no signup, no watermark and no hidden paywall. The tool runs entirely in your browser using an open AI model, so there's no per-image server cost on our end to pass on to you.</div></details>
       <details><summary>Is my photo uploaded anywhere?</summary><div class="ans">No. Both the image and the AI model that processes it stay on your device. Nothing is sent to Nexsia or any third party — closing the tab is the same as deleting your photo.</div></details>
       <details><summary>Why does the first run take longer?</summary><div class="ans">The AI model itself (tens of megabytes) has to download before it can run the first time. Your browser caches it after that, so later uses on the same device are much faster. This is a one-time cost per browser, not per image.</div></details>
-      <details><summary>Will it work on any photo?</summary><div class="ans">It works best when there's a clear, reasonably distinct subject — people, products, animals, vehicles. Very busy backgrounds, transparent or reflective subjects (glass, smoke) or low-contrast edges are harder for any background-removal model, including this one, and may need manual touch-up afterward.</div></details>
+      <details><summary>Will it work on any photo?</summary><div class="ans">It works best when there's a clear, reasonably distinct subject — people, products, animals, vehicles. Very busy backgrounds, transparent or reflective subjects (glass, smoke) or low-contrast edges are harder for any background-removal model, including this one — use the Restore/Erase brush below the result to fix any spot it got wrong.</div></details>
+      <details><summary>How does the manual touch-up brush work?</summary><div class="ans">After the AI removes the background, drag directly on the result image. <b>Restore</b> paints the original photo back in (use it where the AI accidentally cut part of your subject away), and <b>Erase</b> removes more background (use it on stray edges or spots the AI left behind). Adjust the brush size slider for fine detail or broad strokes, use Undo to step back a stroke at a time, or Reset touch-ups to return to the AI's original result. Everything happens on your device, same as the removal itself.</div></details>
       <details><summary>Does this work on my phone?</summary><div class="ans">Yes, though the AI model needs a reasonably capable device to run smoothly — very old phones may be slow. The download size also matters more on mobile data, so using Wi-Fi for the first run is a good idea.</div></details>
     </div>
   </section>
