@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="color-scheme" content="light only">
+<title>QR Code Generator — Free, Private, No Upload | Nexsia</title>
+<meta name="description" content="Turn any link or text into a QR code instantly. Free, no signup, no expiring codes — generated entirely in your browser and downloadable as PNG or SVG.">
+<style>
+  /* ============================================================
+     QR CODE GENERATOR — shares the Nexsia tool design system.
+     ============================================================ */
+  :root{
+    --ink:#0f1b2d;--body:#3d4b5c;--muted:#6b7887;--line:#e3e8ef;
+    --bg:#f6f8fb;--card:#fff;--brand:#1a56db;--brand-dark:#12409c;
+    --brand-tint:#eef3fe;--good:#188a5b;--good-tint:#e7f5ee;
+    --bad:#c23b52;--star:#f5a623;--cta:#ff6a2b;--cta-dark:#e5551a;
+    --radius:12px;--shadow:0 1px 3px rgba(15,27,45,.06),0 8px 24px rgba(15,27,45,.05);--maxw:1000px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;color-scheme:light;background:var(--bg)}
+  body{margin:0;background:var(--bg);color:var(--body);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{color:var(--ink);line-height:1.22;margin:0 0 .5em}
+  h1{font-size:2.1rem;letter-spacing:-.03em}
+  h2{font-size:1.4rem;letter-spacing:-.01em}
+  h3{font-size:1.02rem}
+  a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  .wrap-narrow{max-width:720px;margin:0 auto;padding:0 20px}
+  section{padding:42px 0}
+  .eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--brand);margin-bottom:8px}
+
+  @media(max-width:1040px){.mega{left:0;transform:none;min-width:560px}}
+  @media(max-width:680px){
+    .topbar nav{display:flex;position:fixed;top:60px;left:0;right:0;bottom:0;flex-direction:column;
+      background:#0f1b2d;border-top:1px solid #22334d;padding:10px 16px 16px;gap:4px;
+      max-height:0;overflow:hidden;opacity:0;pointer-events:none;transition:max-height .3s ease,opacity .2s ease;
+      -webkit-overflow-scrolling:touch}
+  }
+
+  .cta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--cta);color:#fff;font-weight:700;font-size:1rem;padding:13px 26px;border-radius:10px;box-shadow:0 4px 14px rgba(255,106,43,.3);transition:transform .12s,background .12s;border:none;cursor:pointer}
+  .cta-btn:hover{background:var(--cta-dark);text-decoration:none;transform:translateY(-1px)}
+  .cta-btn:disabled{background:#b9c4d4;box-shadow:none;cursor:not-allowed;transform:none}
+  .cta-btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);box-shadow:none}
+  .cta-btn.ghost:hover{background:var(--brand-tint)}
+  .cta-btn.small{padding:9px 16px;font-size:.88rem}
+
+  .tool-hero{background:linear-gradient(160deg,#0f1b2d 0%,#12409c 100%);color:#fff;text-align:center;padding:52px 0 40px}
+  .tool-hero h1{color:#fff;max-width:680px;margin:0 auto .3em}
+  .tool-hero .kicker{display:inline-block;background:rgba(91,155,255,.18);color:#a9c8ff;font-size:.8rem;font-weight:600;padding:6px 14px;border-radius:20px;margin-bottom:18px;letter-spacing:.02em}
+  .tool-hero p.sub{font-size:1.06rem;color:#c7d6ef;max-width:560px;margin:0 auto}
+  .trust-row{margin-top:22px;font-size:.84rem;color:#93a7c6;display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+  .trust-row b{color:#dce8ff}
+
+  .tool-card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:0 4px 20px rgba(15,27,45,.08);margin-top:-30px;position:relative;z-index:2;overflow:hidden}
+
+  .qr-layout{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  @media(max-width:680px){.qr-layout{grid-template-columns:1fr}}
+  .qr-form{padding:24px 22px;display:flex;flex-direction:column;gap:16px}
+  .qr-form label{font-size:.84rem;font-weight:700;color:var(--ink);display:block;margin-bottom:6px}
+  .qr-form textarea{width:100%;min-height:88px;border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-family:inherit;font-size:.96rem;color:var(--ink);resize:vertical}
+  .qr-form textarea:focus{outline:2px solid var(--brand);outline-offset:-2px}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .qr-form select{width:100%;border:1px solid var(--line);border-radius:9px;padding:9px 10px;font-size:.9rem;color:var(--ink);background:#fff;font-family:inherit}
+  .color-row{display:flex;align-items:center;gap:10px}
+  .color-row input[type=color]{width:38px;height:38px;border:1px solid var(--line);border-radius:8px;padding:2px;background:#fff;cursor:pointer}
+  .color-row span{font-size:.82rem;color:var(--muted)}
+  .char-count{font-size:.78rem;color:var(--muted);text-align:right;margin-top:-8px}
+
+  .qr-preview{background:var(--bg);border-left:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 22px;gap:16px}
+  @media(max-width:680px){.qr-preview{border-left:none;border-top:1px solid var(--line)}}
+  .qr-canvas-wrap{background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:16px;display:flex;align-items:center;justify-content:center;min-height:200px;min-width:200px}
+  .qr-canvas-wrap canvas{display:block;max-width:100%;height:auto}
+  .qr-empty{color:var(--muted);font-size:.88rem;text-align:center;max-width:180px}
+  .qr-download-row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+
+  .status-bar{padding:14px 22px;border-top:1px solid var(--line);display:none;align-items:center;gap:12px}
+  .status-bar.show{display:flex}
+  .status-bar.error{background:#fdf0f2;color:var(--bad)}
+
+  .privacy-note{display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--muted);justify-content:center;margin-top:16px}
+  .privacy-note svg{flex-shrink:0}
+
+  .steps{counter-reset:step}
+  .step{display:flex;gap:16px;margin-bottom:18px}
+  .step .n{counter-increment:step;flex-shrink:0;width:32px;height:32px;border-radius:9px;background:var(--brand);color:#fff;font-weight:700;font-size:.95rem;display:flex;align-items:center;justify-content:center}
+  .step p{margin:0;padding-top:4px}
+  .step h3{margin-bottom:3px}
+
+  .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:18px}
+  .related-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+  .related-card h3{margin-bottom:4px;font-size:.98rem}
+  .related-card p{font-size:.86rem;color:var(--muted);margin:0 0 10px}
+
+  .faq details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;overflow:hidden}
+  .faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:.98rem}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:1.4rem;color:var(--brand);font-weight:400}
+  .faq details[open] summary::after{content:"–"}
+  .faq details[open] summary{border-bottom:1px solid var(--line)}
+  .faq .ans{padding:14px 20px;font-size:.92rem}
+
+  @media(max-width:600px){
+    .tool-hero{padding:40px 0 32px}
+    h1{font-size:1.7rem}
+    .tool-card{margin:-24px 0 0;border-radius:14px}
+  }
+</style>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<div class="tool-hero">
+  <div class="wrap">
+    <span class="kicker">Free Tool · No Signup</span>
+    <h1>QR Code Generator</h1>
+    <p class="sub">Turn any link or text into a QR code instantly. No account, no expiring codes, no tracking — the code is generated on your device.</p>
+    <div class="trust-row">
+      <span><b>100%</b> private</span>
+      <span><b>Never</b> expires</span>
+      <span><b>PNG &amp; SVG</b> download</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap-narrow">
+  <div class="tool-card">
+    <div class="qr-layout">
+      <div class="qr-form">
+        <div>
+          <label for="qrText">Link or text</label>
+          <textarea id="qrText" placeholder="https://example.com or any text…" aria-label="Text to encode"></textarea>
+          <div class="char-count"><span id="charCount">0</span> characters</div>
+        </div>
+        <div class="field-row">
+          <div>
+            <label for="ecLevel">Error correction</label>
+            <select id="ecLevel">
+              <option value="L">Low (7%)</option>
+              <option value="M" selected>Medium (15%)</option>
+              <option value="Q">Quartile (25%)</option>
+              <option value="H">High (30%)</option>
+            </select>
+          </div>
+          <div>
+            <label for="qrSize">Output size</label>
+            <select id="qrSize">
+              <option value="300">Small (300px)</option>
+              <option value="500" selected>Medium (500px)</option>
+              <option value="800">Large (800px)</option>
+              <option value="1200">Extra large (1200px)</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div>
+            <label for="fgColor">Foreground</label>
+            <div class="color-row"><input type="color" id="fgColor" value="#0f1b2d"><span>Code color</span></div>
+          </div>
+          <div>
+            <label for="bgColor">Background</label>
+            <div class="color-row"><input type="color" id="bgColor" value="#ffffff"><span>Background color</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="qr-preview">
+        <div class="qr-canvas-wrap" id="canvasWrap">
+          <div class="qr-empty" id="qrEmpty">Your QR code preview will appear here once you type something.</div>
+          <canvas id="qrCanvas" hidden></canvas>
+        </div>
+        <div class="qr-download-row">
+          <button class="cta-btn small" id="downloadPngBtn" type="button" disabled>Download PNG</button>
+          <button class="cta-btn ghost small" id="downloadSvgBtn" type="button" disabled>Download SVG</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="status-bar" id="statusBar"></div>
+  </div>
+
+  <p class="privacy-note">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5l-8-3z"/></svg>
+    Your text and the QR code are generated entirely in your browser. Nothing is sent to Nexsia or anyone else.
+  </p>
+</div>
+
+<div class="wrap">
+
+  <section>
+    <div class="wrap-narrow" style="padding:0">
+      <div class="eyebrow">How it works</div>
+      <h2>Generate a QR code in 2 steps</h2>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><div><h3>Enter your link or text</h3><p>Paste a URL, a WiFi string, contact details, or any plain text — the preview updates instantly.</p></div></div>
+        <div class="step"><div class="n">2</div><div><h3>Customize and download</h3><p>Pick a size, colors and error-correction level, then download as a PNG or a scalable SVG.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-top:1px solid var(--line)">
+    <div class="wrap-narrow" style="padding:0">
+      <div class="eyebrow">More free tools</div>
+      <h2>Related tools</h2>
+      <div class="related-grid">
+        <div class="related-card"><h3>Word &amp; Character Counter</h3><p>Instant word, character and reading-time stats.</p><a href="word-counter.html" style="font-size:.86rem;font-weight:600">Try it free →</a></div>
+        <div class="related-card"><h3>Favicon Generator</h3><p>One image in, every favicon size out.</p><a href="favicon-generator.html" style="font-size:.86rem;font-weight:600">Try it free →</a></div>
+        <div class="related-card"><h3>Image Compressor</h3><p>Shrink image file sizes with an adjustable quality slider.</p><a href="image-compressor.html" style="font-size:.86rem;font-weight:600">Try it free →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" style="border-top:1px solid var(--line)">
+    <div class="wrap-narrow" style="padding:0">
+      <div class="eyebrow">Common questions</div>
+      <h2>QR Code Generator FAQs</h2>
+      <details open><summary>Is this really free?</summary><div class="ans">Yes — there's no signup, no watermark and no limit on how many codes you generate. It runs entirely in your browser, so there's no server cost on our end to pass on to you.</div></details>
+      <details><summary>Do these QR codes expire?</summary><div class="ans">No. This generates a static QR code that encodes your text or link directly — there's no server-side redirect involved, so it will keep working for as long as the destination link itself works. It never "expires" on our end because we're not hosting anything.</div></details>
+      <details><summary>Is my text or link uploaded anywhere?</summary><div class="ans">No. The QR code is generated entirely on your device using JavaScript in your browser. Nothing is sent to Nexsia or any third party.</div></details>
+      <details><summary>What error-correction level should I use?</summary><div class="ans">Medium (15%) is a good default for most uses. Use a higher level (Quartile or High) if the code will be printed small, placed somewhere it might get scuffed or partially obscured, or if you plan to add a logo on top. Higher error correction makes the code slightly denser for the same content.</div></details>
+      <details><summary>PNG or SVG — which should I download?</summary><div class="ans">PNG is the simplest choice for most uses (social posts, docs, printing at the size shown). SVG is a vector format, so it stays crisp at any size — better if you're placing it on a poster, banner or anything printed large.</div></details>
+      <details><summary>Is there a limit on how much text I can encode?</summary><div class="ans">QR codes can hold up to a few thousand characters depending on the error-correction level, but codes built from very long text become dense and harder to scan reliably. For anything you want people to actually scan, a short URL or a few hundred characters works best.</div></details>
+    </div>
+  </section>
+
+</div>
+
+<div id="site-footer"></div>
+
+<script src="nexsia.js"></script>
+<script src="qr-tables-data.js"></script>
+<script src="qr-lib.js"></script>
+<script src="qr-code-generator.js"></script>
+</body>
+</html>

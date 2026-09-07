@@ -322,6 +322,7 @@ var SITE_PAGES = [
   {t:"PDF to JPG — Convert PDF Pages to Images Free",u:"pdf-to-jpg.html"},
   {t:"Pictory Review 2026: Turn Scripts & Blogs into Video",u:"pictory-review.html"},
   {t:"Privacy Policy",u:"privacy.html"},
+  {t:"QR Code Generator — Free, Private, No Upload",u:"qr-code-generator.html"},
   {t:"Remove PDF Pages — Delete & Reorder, Free & Private",u:"remove-pdf-pages.html"},
   {t:"Review Methodology — How We Test AI Tools",u:"review-methodology.html"},
   {t:"Rotate PDF — Free, Private, No Upload",u:"rotate-pdf.html"},
@@ -344,7 +345,8 @@ var SITE_PAGES = [
   {t:"Veo 3 vs Runway 2026: Native Audio vs Editing Platform",u:"veo-vs-runway.html"},
   {t:"vidIQ Review 2026: Pricing, Features, Pros & Cons",u:"vidiq-review.html"},
   {t:"vidIQ vs TubeBuddy 2026: Which YouTube Tool Wins?",u:"vidiq-vs-tubebuddy.html"},
-  {t:"Watermark PDF — Add Text & Page Numbers Free",u:"watermark-pdf.html"}
+  {t:"Watermark PDF — Add Text & Page Numbers Free",u:"watermark-pdf.html"},
+  {t:"Word & Character Counter — Free, Instant, No Upload",u:"word-counter.html"}
 ];
 
 /* Ranks a page URL into a rough "kind" so results can be sorted with the

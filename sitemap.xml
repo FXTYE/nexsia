@@ -67,6 +67,8 @@
   <url><loc>https://www.example.com/image-converter.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/favicon-generator.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/background-remover.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/word-counter.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.example.com/qr-code-generator.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/split-pdf.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/rotate-pdf.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.example.com/remove-pdf-pages.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
