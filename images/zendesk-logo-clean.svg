@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 500" role="img" aria-label="Zendesk logo">
+  <rect x="30" y="60" width="220" height="220" rx="26" fill="#03363d"/>
+  <path d="M70 240 L210 100 M70 100 H210 M70 240 H210" stroke="#7dffb3" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="300" y="330" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="230" letter-spacing="-4" fill="#0f1b2d">Zen<tspan fill="#17a35c">desk</tspan></text>
+</svg>

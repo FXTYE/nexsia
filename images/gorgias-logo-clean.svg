@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 500" role="img" aria-label="Gorgias logo">
+  <path d="M50 140 C50 105 78 80 115 80 H225 C262 80 290 105 290 140 V220 C290 255 262 280 225 280 H160 L100 330 V280 H115 C78 280 50 255 50 220 Z" fill="#5c3bfe"/>
+  <path d="M110 195 A60 55 0 1 1 230 195" stroke="#fff" stroke-width="20" fill="none" stroke-linecap="round"/>
+  <text x="330" y="330" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="230" letter-spacing="-4" fill="#0f1b2d">Gorg<tspan fill="#5c3bfe">ias</tspan></text>
+</svg>

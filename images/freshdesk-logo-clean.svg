@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 500" role="img" aria-label="Freshdesk logo">
+  <circle cx="140" cy="160" r="110" fill="#00a67e"/>
+  <path d="M140 60 C170 110 170 150 140 160 C110 150 110 110 140 60 Z" fill="#0f1b2d"/>
+  <path d="M40 300 Q140 340 240 300" stroke="#00a67e" stroke-width="24" stroke-linecap="round" fill="none"/>
+  <text x="300" y="330" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="230" letter-spacing="-4" fill="#0f1b2d">Fresh<tspan fill="#00a67e">desk</tspan></text>
+</svg>

@@ -62,6 +62,14 @@ const AFFILIATE_LINKS = {
   surfshark:   "#",  // surfshark.com — verify current program
   protonvpn:   "#",  // protonvpn.com — verify current program
   cyberghost:  "#",  // cyberghost.com — verify current program
+  // --- AI Customer Support & Chatbots ---
+  zendesk:     "#",  // zendesk.com — verify current program
+  freshdesk:   "#",  // freshworks.com — verify current program
+  tidio:       "#",  // tidio.com — verify current program
+  crisp:       "#",  // crisp.chat — verify current program
+  gorgias:     "#",  // gorgias.com — verify current program
+  manychat:    "#",  // manychat.com — verify current program
+  intercom:    "#",  // intercom.com — no confirmed public affiliate program as of 2026
 };
 
 /* ============================================================================
@@ -267,6 +275,7 @@ var SITE_PAGES = [
   {t:"Affiliate Disclosure",u:"affiliate-disclosure.html"},
   {t:"Background Remover — Free, Private, No Upload",u:"background-remover.html"},
   {t:"Best AI Copywriting & Ad Tools 2026: Jasper vs Copy.ai vs AdCreative.ai",u:"best-ai-copywriting-tools.html"},
+  {t:"Best AI Customer Support Chatbots 2026: Zendesk vs Intercom vs Gorgias",u:"best-ai-customer-support-chatbots.html"},
   {t:"Best AI Tools for YouTubers in 2026 (Tested & Compared)",u:"best-ai-tools-for-youtubers.html"},
   {t:"Best AI Video Generators 2026: Veo 3 vs Kling vs Runway vs Sora",u:"best-ai-video-generators.html"},
   {t:"Best Email Marketing Software 2026: Mailchimp vs Kit vs ActiveCampaign",u:"best-email-marketing-software.html"},
@@ -285,6 +294,8 @@ var SITE_PAGES = [
   {t:"Cloudways vs SiteGround 2026: Which Web Host Wins?",u:"cloudways-vs-siteground.html"},
   {t:"Contact Us",u:"contact.html"},
   {t:"Copy.ai Review 2026: GTM Platform or Overpriced Writer?",u:"copyai-review.html"},
+  {t:"Crisp Review 2026: Pricing, Hugo AI & Verdict",u:"crisp-review.html"},
+  {t:"Crisp vs Intercom 2026: Workspace Pricing vs Premium Messaging",u:"crisp-vs-intercom.html"},
   {t:"CyberGhost Review 2026: Huge Server Count, Pricing & Verdict",u:"cyberghost-review.html"},
   {t:"Descript Review 2026: Best AI Video Editor for Creators?",u:"descript-review.html"},
   {t:"Descript vs CapCut 2026: Best Editor for YouTubers?",u:"descript-vs-capcut.html"},
@@ -295,10 +306,14 @@ var SITE_PAGES = [
   {t:"ExpressVPN vs ProtonVPN 2026: Polish vs Free & Audited",u:"expressvpn-vs-protonvpn.html"},
   {t:"ExpressVPN vs Surfshark 2026: Polish vs Unlimited Devices",u:"expressvpn-vs-surfshark.html"},
   {t:"Favicon Generator — Every Size, Free & Private",u:"favicon-generator.html"},
+  {t:"Freshdesk Review 2026: Pricing, Freddy AI & Verdict",u:"freshdesk-review.html"},
+  {t:"Freshdesk vs Gorgias 2026: General Helpdesk vs Ecommerce",u:"freshdesk-vs-gorgias.html"},
+  {t:"Freshdesk vs Intercom 2026: Value vs Live Chat Polish",u:"freshdesk-vs-intercom.html"},
   {t:"GetResponse Review 2026: Pricing, Features, Pros & Cons",u:"getresponse-review.html"},
   {t:"GetResponse vs ActiveCampaign 2026: Which Email Platform Wins?",u:"getresponse-vs-activecampaign.html"},
   {t:"GetResponse vs Mailchimp 2026: Which Email Platform Wins?",u:"getresponse-vs-mailchimp.html"},
   {t:"GoHighLevel Review 2026: Pricing, Features, Pros & Cons",u:"gohighlevel-review.html"},
+  {t:"Gorgias Review 2026: Pricing, AI Agent & Verdict",u:"gorgias-review.html"},
   {t:"Higgsfield AI Review 2026: Pricing, Soul ID & Verdict",u:"higgsfield-review.html"},
   {t:"Hostinger Review 2026: Pricing, Features, Pros & Cons",u:"hostinger-review.html"},
   {t:"Hostinger vs Bluehost 2026: Which Web Host Wins?",u:"hostinger-vs-bluehost.html"},
@@ -306,6 +321,8 @@ var SITE_PAGES = [
   {t:"Image Compressor — Free, Private, No Upload",u:"image-compressor.html"},
   {t:"Image Converter — JPG, PNG & WebP, Free & Private",u:"image-converter.html"},
   {t:"Image Resizer — Free, Private, No Upload",u:"image-resizer.html"},
+  {t:"Intercom Review 2026: Pricing, Fin AI & Verdict",u:"intercom-review.html"},
+  {t:"Intercom vs Gorgias 2026: SaaS Messaging vs Ecommerce",u:"intercom-vs-gorgias.html"},
   {t:"Nexsia — Honest App Comparisons for Online Businesses",u:"index.html"},
   {t:"Jasper Review 2026: Is the AI Writer Worth It for Creators?",u:"jasper-review.html"},
   {t:"Jasper vs Copy.ai 2026: Best AI Writer for Creators?",u:"jasper-vs-copyai.html"},
@@ -321,6 +338,9 @@ var SITE_PAGES = [
   {t:"Mailchimp Review 2026: Pricing, Features, Pros & Cons",u:"mailchimp-review.html"},
   {t:"Mailchimp vs ActiveCampaign 2026: Which Email Platform Wins?",u:"mailchimp-vs-activecampaign.html"},
   {t:"Mailchimp vs Kit 2026: Which Email Platform Wins?",u:"mailchimp-vs-kit.html"},
+  {t:"ManyChat Review 2026: Pricing, Instagram DMs & Verdict",u:"manychat-review.html"},
+  {t:"ManyChat vs Intercom 2026: Social Automation vs In-App Messaging",u:"manychat-vs-intercom.html"},
+  {t:"ManyChat vs Tidio 2026: Social DM Automation vs Live Chat",u:"manychat-vs-tidio.html"},
   {t:"Merge PDF — Combine PDFs Free, No Upload",u:"merge-pdf.html"},
   {t:"NordVPN Review 2026: Fastest VPN? Pricing, Speed & Verdict",u:"nordvpn-review.html"},
   {t:"NordVPN vs CyberGhost 2026: Speed Leader vs Budget Servers",u:"nordvpn-vs-cyberghost.html"},
@@ -361,6 +381,10 @@ var SITE_PAGES = [
   {t:"Surfshark vs CyberGhost 2026: Unlimited Devices vs Server Count",u:"surfshark-vs-cyberghost.html"},
   {t:"Surfshark vs ProtonVPN 2026: Unlimited Devices vs Free & Audited",u:"surfshark-vs-protonvpn.html"},
   {t:"Terms of Service",u:"terms.html"},
+  {t:"Tidio Review 2026: Pricing, Lyro AI & Verdict",u:"tidio-review.html"},
+  {t:"Tidio vs Crisp 2026: Conversation Pricing vs Workspace Pricing",u:"tidio-vs-crisp.html"},
+  {t:"Tidio vs Freshdesk 2026: Simple Widget vs Full Helpdesk",u:"tidio-vs-freshdesk.html"},
+  {t:"Tidio vs Intercom 2026: Budget Widget vs Premium Messaging",u:"tidio-vs-intercom.html"},
   {t:"TubeBuddy Review 2026: Pricing, Features, Pros & Cons",u:"tubebuddy-review.html"},
   {t:"Veo 3 Review 2026: Google's AI Video Model, Tested",u:"veo-review.html"},
   {t:"Veo 3 vs Higgsfield 2026: Native Audio vs AI Characters",u:"veo-vs-higgsfield.html"},
@@ -368,7 +392,11 @@ var SITE_PAGES = [
   {t:"vidIQ Review 2026: Pricing, Features, Pros & Cons",u:"vidiq-review.html"},
   {t:"vidIQ vs TubeBuddy 2026: Which YouTube Tool Wins?",u:"vidiq-vs-tubebuddy.html"},
   {t:"Watermark PDF — Add Text & Page Numbers Free",u:"watermark-pdf.html"},
-  {t:"Word & Character Counter — Free, Instant, No Upload",u:"word-counter.html"}
+  {t:"Word & Character Counter — Free, Instant, No Upload",u:"word-counter.html"},
+  {t:"Zendesk Review 2026: Pricing, AI Agents & Verdict",u:"zendesk-review.html"},
+  {t:"Zendesk vs Freshdesk 2026: Enterprise Depth vs Value",u:"zendesk-vs-freshdesk.html"},
+  {t:"Zendesk vs Gorgias 2026: Enterprise Generalist vs Ecommerce",u:"zendesk-vs-gorgias.html"},
+  {t:"Zendesk vs Intercom 2026: Enterprise Scale vs Live Chat",u:"zendesk-vs-intercom.html"}
 ];
 
 /* Ranks a page URL into a rough "kind" so results can be sorted with the

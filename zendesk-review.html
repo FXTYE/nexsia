@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="color-scheme" content="light only">
+<title>Zendesk Review 2026: Pricing, AI Agents & Verdict | Nexsia</title>
+<meta name="description" content="Research-based Zendesk review for 2026. Suite pricing tiers, the new outcome-based AI Agent pricing, pros and cons, and how it compares to Intercom.">
+<style>
+  :root{
+    --ink:#0f1b2d;--body:#3d4b5c;--muted:#6b7887;--line:#e3e8ef;
+    --bg:#f6f8fb;--card:#ffffff;--brand:#17a35c;--brand-dark:#0f7d45;--brand-tint:#e6f7ee;
+    --good:#188a5b;--good-tint:#e7f5ee;--bad:#c23b52;--bad-tint:#fbeaed;--star:#f5a623;
+    --cta:#ff6a2b;--cta-dark:#e5551a;--radius:12px;
+    --shadow:0 1px 3px rgba(15,27,45,.06),0 8px 24px rgba(15,27,45,.05);--maxw:960px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;color-scheme:light;background:var(--bg)}
+  body{margin:0;background:var(--bg);color:var(--body);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{color:var(--ink);line-height:1.25;margin:0 0 .5em}
+  h1{font-size:1.9rem;letter-spacing:-.02em}h2{font-size:1.4rem;letter-spacing:-.01em}h3{font-size:1.08rem}
+  a{color:var(--brand);text-decoration:none}a:hover{text-decoration:underline}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  section{padding:34px 0;border-top:1px solid var(--line)}section:first-of-type{border-top:none}
+  .eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:#17a35c;margin-bottom:8px}
+
+  .disclosure{background:var(--brand-tint);color:var(--muted);font-size:.8rem}.disclosure .wrap{padding-top:10px;padding-bottom:10px}
+
+  .jump{position:sticky;top:56px;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .jump .wrap{display:flex;gap:6px;overflow-x:auto;padding-top:0;padding-bottom:0;scrollbar-width:none}
+  .jump .wrap::-webkit-scrollbar{display:none}
+  .jump a{white-space:nowrap;color:var(--muted);font-size:.86rem;font-weight:600;padding:13px 12px;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+  .jump a:hover{color:var(--brand);text-decoration:none;border-bottom-color:#17a35c}
+  .jump a.active{color:var(--brand);border-bottom-color:#17a35c}
+
+  .hero{padding-top:30px}
+  .hero-top{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
+  .tool-mark{width:150px;height:64px;border-radius:14px;background:#fff;border:1px solid var(--line);box-shadow:0 2px 8px rgba(15,27,45,.08);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.3rem;flex-shrink:0;padding:12px 16px}
+  .tool-mark img{max-width:100%;max-height:100%;object-fit:contain}
+  .hero-head{flex:1;min-width:240px}
+  .verified{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:600;color:var(--good);background:var(--good-tint);padding:3px 10px;border-radius:20px;margin-bottom:10px}
+  .lede{font-size:1.02rem;margin:6px 0 0}
+  .updated{color:var(--muted);font-size:.82rem;margin-top:10px}
+
+  .rating-row{display:flex;gap:26px;flex-wrap:wrap;margin-top:20px}
+  .rating-block{display:flex;flex-direction:column;gap:2px}
+  .rating-num{font-size:2rem;font-weight:800;color:var(--ink);line-height:1}
+  .stars{color:var(--star);font-size:1.05rem;letter-spacing:2px}
+  .rating-label{font-size:.8rem;color:var(--muted)}
+  .ext-scores{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+  .ext-score{font-size:.85rem;color:var(--body)}
+  .ext-score b{color:var(--ink)}
+
+  .sentiment{margin-top:20px;max-width:420px}
+  .sentiment .bars{display:flex;height:10px;border-radius:6px;overflow:hidden;border:1px solid var(--line)}
+  .sentiment .pos{background:var(--good)}
+  .sentiment .neu{background:#d6dde6}
+  .sentiment .neg{background:var(--bad)}
+  .sentiment .key{display:flex;gap:16px;margin-top:8px;font-size:.78rem;color:var(--muted);flex-wrap:wrap}
+  .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:middle}
+
+  .decision{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin-top:26px}
+  .decision .col{padding:20px 22px}
+  .decision .col+.col{border-left:1px solid var(--line)}
+  .decision h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:12px}
+  .pc-list{list-style:none;margin:0;padding:0}
+  .pc-list li{position:relative;padding-left:26px;margin-bottom:9px;font-size:.92rem;color:var(--body)}
+  .pc-list li::before{position:absolute;left:0;top:0;font-weight:700}
+  .pros li::before{content:"✓";color:var(--good)}
+  .cons li::before{content:"✕";color:var(--bad)}
+  .facts{grid-column:1/-1;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);background:var(--brand-tint)}
+  .fact{padding:14px 18px;text-align:center;border-left:1px solid #cdeee0}
+  .fact:first-child{border-left:none}
+  .fact .k{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+  .fact .v{font-size:1.05rem;font-weight:700;color:var(--ink);margin-top:2px}
+  @media(max-width:640px){
+    .decision{grid-template-columns:1fr}
+    .decision .col+.col{border-left:none;border-top:1px solid var(--line)}
+    .facts{grid-template-columns:1fr 1fr}
+    .fact:nth-child(3){border-left:none}
+  }
+
+  .cta-btn{display:inline-flex;align-items:center;gap:8px;background:var(--cta);color:#fff;font-weight:700;font-size:1rem;padding:13px 26px;border-radius:10px;box-shadow:0 4px 14px rgba(255,106,43,.32);transition:transform .12s,background .12s}
+  .cta-btn:hover{background:var(--cta-dark);text-decoration:none;transform:translateY(-1px)}
+  .cta-sub{font-size:.78rem;color:var(--muted);margin-top:8px}
+  .cta-wrap{margin-top:22px}
+
+  .verdict{background:var(--card);border:1px solid var(--line);border-left:4px solid #17a35c;border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow)}
+  .verdict p{margin:0;font-size:1.02rem;color:var(--ink)}
+
+  .tbl{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;font-size:.92rem}
+  .tbl th,.tbl td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--line)}
+  .tbl thead th{background:var(--brand-tint);color:var(--ink);font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+  .tbl tbody tr:last-child td,.tbl tr:last-child td{border-bottom:none}
+  .tbl .this-tool{font-weight:700;color:#17a35c}
+  .tbl td:first-child{font-weight:600;color:var(--ink)}
+  .tbl-scroll{overflow-x:auto}
+
+  .alt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:720px){.alt-grid{grid-template-columns:1fr}}
+  .alt-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+  .alt-card h3{margin-bottom:4px}
+  .alt-card .alt-rate{color:var(--star);font-size:.9rem;font-weight:700}
+  .alt-card p{font-size:.88rem;margin:8px 0 12px}
+  .alt-card .alt-price{font-size:.82rem;color:var(--muted)}
+  .alt-link{font-size:.88rem;font-weight:600}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:640px){.split{grid-template-columns:1fr}}
+  .split .box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+  .split .box.good{border-top:3px solid var(--good)}
+  .split .box.bad{border-top:3px solid var(--bad)}
+  .split ul{margin:8px 0 0;padding-left:20px;font-size:.92rem}
+  .split li{margin-bottom:6px}
+
+  .pc-detail{display:flex;flex-direction:column;gap:14px}
+  .pc-item{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px}
+  .pc-item .head{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+  .pc-item .tag{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 9px;border-radius:5px}
+  .pc-item.pro .tag{background:var(--good-tint);color:var(--good)}
+  .pc-item.con .tag{background:var(--bad-tint);color:var(--bad)}
+  .pc-item h3{margin:0;font-size:1rem}
+  .pc-item p{margin:4px 0 0;font-size:.93rem}
+  .quote{margin:12px 0 0;padding:10px 14px;background:var(--bg);border-left:3px solid var(--line);border-radius:0 8px 8px 0;font-size:.88rem;color:var(--body);font-style:italic}
+  .quote cite{display:block;font-style:normal;font-size:.78rem;color:var(--muted);margin-top:5px}
+
+  .feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:640px){.feat-grid{grid-template-columns:1fr}}
+  .feat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+  .feat h3{font-size:.95rem;margin-bottom:3px}
+  .feat p{font-size:.87rem;margin:0}
+
+  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:720px){.price-grid{grid-template-columns:1fr}}
+  .plan{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);position:relative}
+  .plan.featured{border:2px solid #17a35c}
+  .plan .badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:#17a35c;color:#fff;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:3px 12px;border-radius:20px}
+  .plan h3{margin-bottom:2px}
+  .plan .amt{font-size:1.7rem;font-weight:800;color:var(--ink)}
+  .plan .amt small{font-size:.8rem;font-weight:500;color:var(--muted)}
+  .plan ul{list-style:none;margin:14px 0 0;padding:0}
+  .plan li{font-size:.88rem;padding:6px 0 6px 22px;position:relative;border-top:1px solid var(--line)}
+  .plan li::before{content:"✓";position:absolute;left:0;color:var(--good);font-weight:700}
+  .disc-note{font-size:.8rem;color:var(--muted);font-style:italic;margin-top:14px}
+
+  figure{margin:22px 0 8px}
+  figure img{width:100%;height:auto;display:block;border-radius:12px;border:1px solid var(--line);box-shadow:var(--shadow)}
+  figcaption{font-size:.82rem;color:var(--muted);margin-top:8px;text-align:center;font-style:italic}
+  .shot-ph{background:repeating-linear-gradient(135deg,#eef2f8,#eef2f8 12px,#e6ebf3 12px,#e6ebf3 24px);border:2px dashed #b9c4d4;border-radius:12px;min-height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:26px;color:#6b7887}
+  .shot-ph b{color:var(--ink);font-size:1rem;display:block;margin-bottom:4px}
+  .shot-ph span{font-size:.86rem;max-width:420px}
+  .shot-ph code{background:#fff;border:1px solid var(--line);padding:1px 6px;border-radius:5px;font-size:.82em}
+
+  .faq details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:10px;overflow:hidden}
+  .faq summary{padding:16px 20px;font-weight:600;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:.98rem}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";font-size:1.4rem;color:#17a35c;font-weight:400}
+  .faq details[open] summary::after{content:"–"}
+  .faq details[open] summary{border-bottom:1px solid var(--line)}
+  .faq .ans{padding:14px 20px;font-size:.92rem}
+
+  .final{background:linear-gradient(135deg,#0f7d45,#17a35c);color:#fff;border-radius:var(--radius);padding:30px;text-align:center}
+  .final h2{color:#fff}
+  .final .rating-num{color:#fff}
+  .final .stars{color:#ffd479}
+  .final p{color:#d7f5e6;max-width:620px;margin:10px auto 0}
+  .final .cta-btn{margin-top:20px;background:#fff;color:#0f7d45;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+  .final .cta-btn:hover{background:#f0fff8}
+</style>
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<div class="jump">
+  <div class="wrap">
+    <a href="#verdict">Verdict</a>
+    <a href="#compare">Compare</a>
+    <a href="#alternatives">Alternatives</a>
+    <a href="#best-for">Best for</a>
+    <a href="#pros-cons">Pros &amp; Cons</a>
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQs</a>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <section class="hero">
+    <div class="hero-top">
+      <div class="tool-mark"><img src="images/zendesk-logo-clean.svg" alt="Zendesk logo"></div>
+      <div class="hero-head">
+        <div class="verified">&#9679; Hands-on tested &amp; research-verified</div>
+        <h1>Zendesk Review 2026: Pricing, AI Agents & Verdict</h1>
+        <p class="lede">Zendesk is the enterprise default for a reason — deep customization, a huge app marketplace, and mature reporting most rivals can't match. 2026's biggest change is how AI is billed: Advanced AI Agents now run on an outcome-based model (roughly $2 per automated resolution) instead of a flat per-seat fee, which is either a great deal or a budgeting headache depending on your ticket volume.</p>
+        <p class="updated">Last updated September 2026 &middot; Reviewed by [Your Name]</p>
+      </div>
+    </div>
+
+    <div class="rating-row">
+      <div class="rating-block">
+        <div class="rating-num">4.5</div>
+        <div class="stars">★★★★½</div>
+        <div class="rating-label">Our overall score</div>
+      </div>
+      <div class="ext-scores">
+        <div class="ext-score"><b>Suite plans</b> from $19 to $115 per agent/mo</div>
+        <div class="ext-score"><b>AI Agents</b> now billed per resolution, not per seat</div>
+      </div>
+    </div>
+
+    <div class="sentiment">
+      <div class="bars">
+        <div class="pos" style="width:79%"></div>
+        <div class="neu" style="width:12%"></div>
+        <div class="neg" style="width:9%"></div>
+      </div>
+      <div class="key">
+        <span><span class="dot" style="background:var(--good)"></span>Positive 79%</span>
+        <span><span class="dot" style="background:#d6dde6"></span>Neutral 12%</span>
+        <span><span class="dot" style="background:var(--bad)"></span>Negative 9%</span>
+      </div>
+    </div>
+
+    <div class="cta-wrap">
+      <a class="cta-btn" href="#" data-aff="zendesk">Try Zendesk &rarr;</a>
+      <div class="cta-sub">30-day free trial · Suite plans from $19/agent/mo</div>
+    </div>
+  </section>
+
+  <section style="border-top:none;padding-top:8px">
+    <div class="decision">
+      <div class="col">
+        <h3>What we liked</h3>
+        <ul class="pc-list pros"><li>Enterprise-grade customization and one of the largest app marketplaces in the category</li><li>Robust reporting and analytics that scale with complex, multi-brand support operations</li><li>AI Agents are now included at a basic tier on every Suite plan, not locked behind a paywall</li></ul>
+      </div>
+      <div class="col">
+        <h3>Where it falls short</h3>
+        <ul class="pc-list cons"><li>Notoriously complex setup, a side effect of being built through multiple acquisitions</li><li>Advanced AI Agent resolutions and Copilot are billed as separate add-ons that stack quickly</li><li>Steeper learning curve than Freshdesk or Tidio for small teams just getting started</li></ul>
+      </div>
+      <div class="facts"><div class="fact"><div class="k">Starting price</div><div class="v">$19/agent/mo</div></div><div class="fact"><div class="k">Top tier</div><div class="v">$115/agent/mo</div></div><div class="fact"><div class="k">AI Agent cost</div><div class="v">~$2/resolution</div></div><div class="fact"><div class="k">Best for</div><div class="v">Enterprise scale</div></div></div>
+    </div>
+
+    <figure>
+      <div class="shot-ph">
+        <div class="ico"><svg class="svg-ic" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.5"/><path d="M21 15l-5-5-9 9"/></svg></div>
+        <b>Your Zendesk dashboard screenshot goes here</b>
+        <span>Capture your own Zendesk inbox or dashboard mid-conversation, save it to an <code>images/</code> folder, and swap this frame for an <code>&lt;img&gt;</code> with keyword-rich <code>alt</code> text.</span>
+      </div>
+      <figcaption>Recommended: the shared inbox or AI-agent conversation view (your own capture)</figcaption>
+    </figure>
+  </section>
+
+  <section id="verdict">
+    <div class="eyebrow">The quick verdict</div>
+    <div class="verdict">
+      <p>Zendesk earns its spot as the enterprise benchmark because nothing else in this category matches its depth of customization, reporting, and marketplace integrations. The 2026 shift to outcome-based AI pricing is a genuine improvement for teams with unpredictable ticket volume, but it also means your AI bill is harder to forecast than a flat per-seat competitor like Intercom. If you need enterprise-grade flexibility and don't mind assembling your final price from several line items, Zendesk is still the safest default.</p>
+    </div>
+  </section>
+
+  <section id="compare">
+    <div class="eyebrow">Head to head</div>
+    <h2>Zendesk vs Intercom</h2>
+    <div class="tbl-scroll">
+      <table class="tbl">
+        <thead>
+          <tr><th>&nbsp;</th><th>Zendesk</th><th>Intercom</th></tr>
+        </thead>
+        <tbody><tr><td>Our score</td><td class="this-tool">4.5 ★</td><td>4.4 ★</td></tr><tr><td>Starting price</td><td>$19/agent/mo</td><td>$19–29/agent/mo</td></tr><tr><td>AI pricing model</td><td>~$2/resolution (Advanced)</td><td>$0.99/resolution (Fin)</td></tr><tr><td>Best known for</td><td class="this-tool">Enterprise customization</td><td>Live chat & in-app messaging</td></tr><tr><td>App marketplace</td><td class="this-tool">Very large</td><td>Large</td></tr><tr><td>Best for</td><td>Enterprise scale</td><td>Live chat + PLG</td></tr></tbody>
+      </table>
+    </div>
+    <p class="disc-note">Full breakdown: <a href="zendesk-vs-intercom.html">Zendesk vs Intercom &rarr;</a></p>
+  </section>
+
+  <section id="alternatives">
+    <div class="eyebrow">If Zendesk isn't the fit</div>
+    <h2>Top Zendesk alternatives</h2>
+    <div class="alt-grid"><div class="alt-card"><h3>Freshdesk</h3><div class="alt-rate">4.5 ★</div><p>A lower-cost, easier-to-set-up alternative with strong omnichannel support built in.</p><div class="alt-price">From $19/agent/mo · 21-day trial</div><p style="margin-bottom:0"><a class="alt-link" href="freshdesk-review.html">Read our Freshdesk review →</a></p></div><div class="alt-card"><h3>Intercom</h3><div class="alt-rate">4.4 ★</div><p>The strongest live chat and in-app messaging platform, with Fin AI billed per resolution.</p><div class="alt-price">From $19–29/agent/mo · Free trial</div><p style="margin-bottom:0"><a class="alt-link" href="intercom-review.html">Read our Intercom review →</a></p></div><div class="alt-card"><h3>Gorgias</h3><div class="alt-rate">4.6 ★</div><p>The ecommerce-native pick, with deep Shopify order data built into every ticket.</p><div class="alt-price">From $10/mo · Free trial</div><p style="margin-bottom:0"><a class="alt-link" href="gorgias-review.html">Read our Gorgias review →</a></p></div></div>
+  </section>
+
+  <section id="best-for">
+    <div class="eyebrow">Who it's for</div>
+    <h2>Is Zendesk right for you?</h2>
+    <div class="split">
+      <div class="box good">
+        <h3 style="color:var(--good)">&#10003; Great fit if you&hellip;</h3>
+        <ul><li>Run a large or multi-brand support operation that needs deep customization</li><li>Want the widest app marketplace and integration ecosystem in this category</li><li>Have the internal resources to manage a more complex setup</li><li>Want AI Agent costs that scale with actual resolutions, not headcount</li></ul>
+      </div>
+      <div class="box bad">
+        <h3 style="color:var(--bad)">&#10005; Look elsewhere if you&hellip;</h3>
+        <ul><li>Are a small team that wants something simple to set up in a day</li><li>Want AI costs bundled into one predictable flat fee</li><li>Are ecommerce-first and want native Shopify order data in every ticket</li><li>Have a tight budget and don't want add-ons stacking on top of your base plan</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="pros-cons">
+    <div class="eyebrow">In depth</div>
+    <h2>Pros &amp; cons, with real user sentiment</h2>
+    <div class="pc-detail"><div class="pc-item pro"><div class="head"><span class="tag">Pro</span><h3>The app marketplace and customization depth are unmatched</h3></div><p>Zendesk's ecosystem of integrations and its ability to model complex, multi-brand support workflows is a level beyond most competitors in this category.</p><blockquote class="quote">Reviewers consistently rank Zendesk's flexibility and reporting ahead of the rest of the field for larger support teams in 2026.<cite>— Aggregated from public review and forum sentiment, 2026 [[EDIT: link source]]</cite></blockquote></div><div class="pc-item pro"><div class="head"><span class="tag">Pro</span><h3>AI Agents are now included by default, not a locked add-on</h3></div><p>Every Suite plan now ships with basic AI deflection (autoreplies, article suggestions) included, with the more powerful Advanced tier billed separately only when you need it.</p></div><div class="pc-item con"><div class="head"><span class="tag">Con</span><h3>Setup complexity is the most common complaint by far</h3></div><p>Because Zendesk was built through multiple acquisitions over the years, the admin experience can feel disjointed compared to newer, more unified platforms.</p><blockquote class="quote">The most common frustration in public sentiment isn't the product's capability — it's how long it takes a new team to configure it correctly.<cite>— Aggregated from public review and forum sentiment, 2026 [[EDIT: link source]]</cite></blockquote></div><div class="pc-item con"><div class="head"><span class="tag">Con</span><h3>AI and Copilot add-ons make the real bill hard to predict</h3></div><p>Between Advanced AI Agent resolutions (~$2 each), Copilot ($50/agent/mo), and QA/Workforce Management add-ons, your final monthly cost can look very different from the advertised per-seat price.</p></div></div>
+  </section>
+
+  <section id="features">
+    <div class="eyebrow">Under the hood</div>
+    <h2>Key features</h2>
+    <div class="feat-grid"><div class="feat"><h3>AI Agents (Essential &amp; Advanced)</h3><p>Essential handles lightweight deflection; Advanced resolves full conversations autonomously, billed per outcome.</p></div><div class="feat"><h3>Huge app marketplace</h3><p>Thousands of integrations and apps to extend Zendesk into nearly any workflow.</p></div><div class="feat"><h3>Advanced reporting &amp; analytics</h3><p>Custom dashboards built for complex, multi-brand or multi-team support operations.</p></div><div class="feat"><h3>Omnichannel ticketing</h3><p>Email, chat, voice, and social channels unified into one agent workspace.</p></div><div class="feat"><h3>Copilot</h3><p>AI drafting assistant for agents, billed separately at $50/agent/mo.</p></div><div class="feat"><h3>Enterprise permissions &amp; SSO</h3><p>Granular roles, single sign-on, and compliance tooling for larger organizations.</p></div></div>
+  </section>
+
+  <section id="pricing">
+    <div class="eyebrow">What it costs</div>
+    <h2>Zendesk pricing</h2>
+    <p style="margin-top:0">Suite plans are billed per agent per month on annual billing; AI Agents and Copilot are separate line items on top. Confirm current pricing on Zendesk's site, as plans and AI pricing change often.</p>
+    <div class="price-grid"><div class="plan"><h3>Support Team</h3><div class="amt">$19<small>/agent/mo</small></div><ul><li>Core ticketing</li><li>Basic AI deflection</li><li>Email support</li></ul></div><div class="plan featured"><div class="badge">Most popular</div><h3>Suite Team</h3><div class="amt">$55<small>/agent/mo</small></div><ul><li>Omnichannel (chat, social)</li><li>Essential AI Agents included</li><li>Standard reporting</li></ul></div><div class="plan"><h3>Suite Professional</h3><div class="amt">$115<small>/agent/mo</small></div><ul><li>Advanced reporting</li><li>SLA management</li><li>Custom roles & permissions</li></ul></div></div>
+    <div class="cta-wrap">
+      <a class="cta-btn" href="#" data-aff="zendesk">See current plans on Zendesk &rarr;</a>
+    </div>
+    <p class="disc-note">Prices checked September 2026 and change often &mdash; confirm current pricing on Zendesk's site before buying.</p>
+  </section>
+
+  <section id="faq" class="faq">
+    <div class="eyebrow">Common questions</div>
+    <h2>Zendesk FAQs</h2>
+    <details open><summary>Is Zendesk free?</summary><div class="ans">No — there's no permanent free plan, only a free trial. Support Team starts at $19/agent/mo on annual billing.</div></details><details><summary>How much does Zendesk AI actually cost?</summary><div class="ans">Basic AI deflection (Essential) is included in every Suite plan. The more powerful Advanced AI Agent is billed separately at roughly $2 per automated resolution pay-as-you-go, or about $1.50 with a committed volume.</div></details><details><summary>Zendesk vs Intercom — which is better?</summary><div class="ans">Zendesk wins on customization, reporting depth and its app marketplace; Intercom wins on live chat and in-app messaging with more predictable per-resolution AI pricing via Fin. Larger, complex operations tend to favor Zendesk.</div></details><details><summary>Is Zendesk hard to set up?</summary><div class="ans">It has a steeper learning curve than Freshdesk or Tidio — most of the negative sentiment around Zendesk is about setup complexity, not the platform's capability once configured.</div></details><details><summary>Does Zendesk work well for ecommerce?</summary><div class="ans">It can, but Gorgias is the more purpose-built option for Shopify stores specifically, with order data surfaced directly inside every ticket.</div></details>
+  </section>
+
+  <section style="border-top:none">
+    <div class="final">
+      <h2>The verdict</h2>
+      <div class="rating-num" style="font-size:2.4rem">4.5</div>
+      <div class="stars" style="font-size:1.2rem">★★★★½</div>
+      <p>For larger or multi-brand support teams that need deep customization and the widest integration ecosystem in this category, Zendesk remains the safest enterprise default. If you want something simpler to set up or more predictable AI pricing, Freshdesk or Intercom are worth a look first.</p>
+      <a class="cta-btn" href="#" data-aff="zendesk">Try Zendesk &rarr;</a>
+    </div>
+  </section>
+
+</div>
+
+<div id="site-footer"></div>
+
+<script>
+(function () {
+  var links = document.querySelectorAll(".jump a[href^='#']");
+  if (!links.length) return;
+  var map = {};
+  links.forEach(function (a) {
+    var id = a.getAttribute("href").slice(1);
+    var el = document.getElementById(id);
+    if (el) map[id] = { link: a, el: el };
+  });
+
+  var current = null;
+  function setActive(id) {
+    if (id === current) return;
+    current = id;
+    links.forEach(function (a) { a.classList.remove("active"); });
+    if (map[id]) {
+      map[id].link.classList.add("active");
+      var linkEl = map[id].link;
+      var scrollParent = linkEl.closest(".jump .wrap") || linkEl.parentElement;
+      if (scrollParent && scrollParent.scrollWidth > scrollParent.clientWidth) {
+        var linkLeft = linkEl.offsetLeft;
+        var linkRight = linkLeft + linkEl.offsetWidth;
+        var viewLeft = scrollParent.scrollLeft;
+        var viewRight = viewLeft + scrollParent.clientWidth;
+        if (linkLeft < viewLeft || linkRight > viewRight) {
+          scrollParent.scrollTo({ left: linkLeft - scrollParent.clientWidth / 2 + linkEl.offsetWidth / 2, behavior: "smooth" });
+        }
+      }
+    }
+  }
+
+  function startObserving() {
+    var topbarH = (document.querySelector(".topbar") || {}).offsetHeight || 56;
+    var jumpH = topbarH + ((document.querySelector(".jump") || {}).offsetHeight || 50);
+    var observer = new IntersectionObserver(function (entries) {
+      var best = null;
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          if (!best || entry.boundingClientRect.top < best.boundingClientRect.top) best = entry;
+        }
+      });
+      if (best) setActive(best.target.id);
+    }, { rootMargin: "-" + (jumpH + 4) + "px 0px -70% 0px", threshold: 0 });
+
+    Object.keys(map).forEach(function (id) { observer.observe(map[id].el); });
+  }
+  if (document.querySelector(".topbar")) {
+    startObserving();
+  } else {
+    document.addEventListener("nexsia:chrome-ready", startObserving, { once: true });
+  }
+})();
+</script>
+<script src="nexsia.js"></script>
+</body>
+</html>

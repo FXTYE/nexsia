@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 500" role="img" aria-label="ManyChat logo">
+  <rect x="40" y="80" width="230" height="190" rx="40" fill="#00b2ff"/>
+  <path d="M150 270 L110 330 L140 265 Z" fill="#00b2ff"/>
+  <path d="M95 195 L135 145 L165 185 L205 130" stroke="#fff" stroke-width="20" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="320" y="330" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="230" letter-spacing="-4" fill="#0f1b2d">Many<tspan fill="#00b2ff">Chat</tspan></text>
+</svg>

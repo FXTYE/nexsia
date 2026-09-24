@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 500" role="img" aria-label="Tidio logo">
+  <path d="M40 100 H260 A20 20 0 0 1 280 120 V230 C280 275 245 300 205 300 H140 L90 340 V300 H75 C55 300 40 285 40 265 Z" fill="#9066ff"/>
+  <circle cx="110" cy="200" r="16" fill="#fff"/>
+  <circle cx="165" cy="200" r="16" fill="#fff"/>
+  <circle cx="220" cy="200" r="16" fill="#fff"/>
+  <text x="330" y="330" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="230" letter-spacing="-4" fill="#0f1b2d">Tid<tspan fill="#9066ff">io</tspan></text>
+</svg>
